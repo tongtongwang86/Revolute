@@ -16,5 +16,27 @@ Cap only
 <p align="center"><img src="./Misc/Pictures/Revolute-Cap_3D.PNG" width="300px"></p>
 </br>
 
+## What you need to make this
 
-## ---More info---
+- 0402 component hot plate soldering experience
+- basic understanding of microchips 
+- alot of patience
+- common sense
+
+
+### Bill of materials: 
+- <a href = "./3D Prints"> 3D Printed parts </a>
+- <a href = "./Misc/Pictures/Revolute-Wire.png"> 2mm diameter 3 core wire </a>
+- F-Switch E10E7-4-12-30
+- <a href = "./hardware"> Pcb </a>
+- <a href = "./hardware/bom/ibom.html"> Pcb Components (iBOM) </a>
+
+### Other information
+- Revolute PCB is designed to act as its own usb plug, no need to solder male USB-A connectors. Just to be safe, glue a piece of card paper on the opposite side of the usb pins to prevent accidental short circuit.
+<p align="center"><img src="./Misc/Pictures/Revolute-Cap_3D.PNG" width="300px"></p>
+
+- To wire the scroll wheel onto the pcb: Connect the middle pin on the encoder to the ground pad on the pcb above P1.01, Connect the two side pins of the encoder to 1.01 and 1.02 (left right doesnt matter)
+
+
+
+
