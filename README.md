@@ -4,7 +4,7 @@
 
 ## ---More pictures---
 Top view
-<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D_2.png" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D_2.PNG" width="300px"></p>
 </br>
 Bottom view
 <p align="center"><img src="./Misc/Pictures/Revolute-Full_3D.PNG" width="300px"></p>
