@@ -13,7 +13,7 @@
 ### Bill of materials: 
 - <a href = "./3D Prints"> 3D Printed parts </a>
 - <a href = "./Misc/Pictures/Revolute-Wire.png"> 2mm diameter 3 core wire </a>
-- F-Switch E10E7-4-12-30
+- F-Switch E10E7-4-12-30 Rotary Encoder
 - <a href = "./Hardware"> Pcb </a>
 - <a href = "./Hardware/bom/ibom.html"> Pcb Components (iBOM) </a>
 
