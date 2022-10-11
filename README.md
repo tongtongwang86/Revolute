@@ -17,11 +17,15 @@
 - <a href = "./Hardware"> Pcb </a>
 - <a href = "./Hardware/bom/ibom.html"> Pcb Components (iBOM) </a>
 
-### Other information
+
+### Pcb information
 - Revolute PCB is designed to act as its own usb plug, no need to solder male USB-A connectors. Just to be safe, glue a piece of card paper on the opposite side of the usb pins to prevent accidental short circuit.
 <p align="center"><img src="./Misc/Pictures/Revolute-PCB_plugged_In2.png" width="300px"></p>
 
 - To wire the scroll wheel onto the pcb: Connect the middle pin on the encoder to the ground pad on the pcb above P1.01, Connect the two side pins of the encoder to 1.01 and 1.02 (left right doesnt matter)
+
+-Picture of pins on the Revolute Pcb
+<p align="center"><img src="./Misc/Pictures/Revolute-pins.png" width="300px"></p>
 
 ## ---More pictures---
 Top view
