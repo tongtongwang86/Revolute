@@ -25,7 +25,7 @@
 - To wire the scroll wheel onto the pcb: Connect the middle pin on the encoder to the ground pad on the pcb above P1.01, Connect the two side pins of the encoder to 1.01 and 1.02 (left right doesnt matter)
 
 -Picture of pins on the Revolute Pcb
-<p align="center"><img src="./Misc/Pictures/Revolute-pins.png" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Pins.png" width="300px"></p>
 
 ## ---More pictures---
 Top view
