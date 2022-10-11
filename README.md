@@ -26,6 +26,7 @@
 
 -Picture of pins on the Revolute Pcb
 <p align="center"><img src="./Misc/Pictures/Revolute-Pins.png" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-PCB.png" width="300px"></p>
 
 ## ---More pictures---
 Top view
