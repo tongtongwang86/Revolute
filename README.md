@@ -38,6 +38,9 @@
 - The rubber on the scroll wheel is salvaged from another <a href = "./Misc/Pictures/Scrollwheel.JPG"> scroll wheel </a>
 
 ## ---More pictures---
+Section Analysis
+<p align="center"><img src="./Misc/Pictures/Revolute-Cut.PNG" width="300px"></p>
+</br>
 Top view
 <p align="center"><img src="./Misc/Pictures/Revolute-Full_3D_2.PNG" width="300px"></p>
 </br>
