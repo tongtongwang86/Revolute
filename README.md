@@ -14,7 +14,7 @@
 - <a href = "./3D Prints"> 3D Printed parts </a>
 - <a href = "./Misc/Pictures/Revolute-Wire.png"> 2mm diameter 3 core wire </a>
 - F-Switch E10E7-4-12-30 Rotary Encoder
-- <a href = "./Misc/Pictures/Scrollwheel"> MR0017 Scroll wheel </a>
+- <a href = "./Misc/Pictures/Scrollwheel.JPG"> MR0017 Scroll wheel </a>
 - <a href = "./Hardware"> Pcb </a>
 - <a href = "./Hardware/bom/ibom.html"> Pcb Components (iBOM) </a>
 
@@ -35,7 +35,7 @@
 ## 3D Printing & Others
 - 3D printed parts are designed with a 0.2mm tolerance and the cap and base should snap together
 - be careful when snapping the cap onto the base with the encoder, the center beam in the cap is very fragile and may snap off into your encoder.
-- The rubber on the scroll wheel is salvaged from another <a href = "./Misc/Pictures/Scrollwheel"> scroll wheel </a>
+- The rubber on the scroll wheel is salvaged from another <a href = "./Misc/Pictures/Scrollwheel.JPG"> scroll wheel </a>
 
 
 
