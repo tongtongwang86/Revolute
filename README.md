@@ -18,15 +18,19 @@
 - <a href = "./Hardware/bom/ibom.html"> Pcb Components (iBOM) </a>
 
 
-### Pcb information
+### Pcb 
 - Revolute PCB is designed to act as its own usb plug, no need to solder male USB-A connectors. Just to be safe, glue a piece of card paper on the opposite side of the usb pins to prevent accidental short circuit.
 <p align="center"><img src="./Misc/Pictures/Revolute-PCB_plugged_In2.png" width="300px"></p>
 
 - To wire the scroll wheel onto the pcb: Connect the middle pin on the encoder to the ground pad on the pcb above P1.01, Connect the two side pins of the encoder to 1.01 and 1.02 (left right doesnt matter)
 
 -Picture of pins on the Revolute Pcb
-<p align="center"><img src="./Misc/Pictures/Revolute-Pins.png" width="300px"></p>
-<p align="center"><img src="./Misc/Pictures/Revolute-PCB.png" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Pins.png" height="300px"><img src="./Misc/Pictures/Revolute-PCB.png" height="300px"></p>
+
+### Software
+- Custom Nrf25840 UF2 bootloader for Revolute can be found in the <a href = "./Bootloader"> Bootloader folder </a>, upload using a SWD programmer
+- Pre compiled code can be found in the <a href = "./Revolute UF2 Variations"> Revolute UF2 Variations Folder </a> 
+
 
 ## ---More pictures---
 Top view
