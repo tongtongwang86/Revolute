@@ -5,7 +5,7 @@
 ## What you need to make this
 
 - 0402 component hot plate soldering experience
-- basic understanding of microchips 
+- basic understanding of nrf52840 chip 
 - alot of patience
 - common sense
 
