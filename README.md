@@ -1,6 +1,6 @@
 # Revolute
 - NRF52840 Based One key Scroll wheel
-<p align="center"><img src="./Misc/Pictures/Revolute-On_Keyboard.png" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-On_Keyboard.png" width="70%"></p>
 
 ## What you need to make this
 
@@ -21,12 +21,12 @@
 
 ### Pcb 
 - Revolute PCB is designed to act as its own usb plug, no need to solder male USB-A connectors. Just to be safe, glue a piece of card paper on the opposite side of the usb pins to prevent accidental short circuit.
-<p align="center"><img src="./Misc/Pictures/Revolute-PCB_plugged_In2.png" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-PCB_plugged_In2.png" width="30%"></p>
 
 - To wire the scroll wheel onto the pcb: Connect the middle pin on the encoder to the ground pad on the pcb above P1.01, Connect the two side pins of the encoder to 1.01 and 1.02 (left right doesnt matter)
 
 -Picture of pins on the Revolute Pcb
-<p align="center"><img src="./Misc/Pictures/Revolute-Pins.png" height="300px"><img src="./Misc/Pictures/Revolute-PCB.png" height="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Pins.png" height="500px"><img src="./Misc/Pictures/Revolute-PCB.png" height="500px"></p>
 
 ### Software
 - Custom Nrf25840 UF2 bootloader for Revolute can be found in the <a href = "./Bootloader"> Bootloader folder </a>, upload using a SWD programmer
@@ -39,22 +39,22 @@
 
 ## ---More pictures---
 Section Analysis
-<p align="center"><img src="./Misc/Pictures/Revolute-Cut.PNG" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Cut.PNG" width="60%"></p>
 </br>
 Top view
-<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D_2.PNG" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D_2.PNG" width="60%"></p>
 </br>
 Bottom view
-<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D.PNG" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D.PNG" width="60%"></p>
 </br>
 Base only
-<p align="center"><img src="./Misc/Pictures/Revolute-Base_3D.PNG" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Base_3D.PNG" width="60%"></p>
 </br>
 Cap only
-<p align="center"><img src="./Misc/Pictures/Revolute-Cap_3D.PNG" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-Cap_3D.PNG" width="60%"></p>
 </br>
 PCB
-<p align="center"><img src="./Misc/Pictures/Revolute-PCB_Closelook.png" width="300px"></p>
+<p align="center"><img src="./Misc/Pictures/Revolute-PCB_Closelook.png" width="60%"></p>
 </br>
 
 
