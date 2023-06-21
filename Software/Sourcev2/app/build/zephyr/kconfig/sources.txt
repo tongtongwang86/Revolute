@@ -1,8 +1,8 @@
-/Users/tongtong/Documents/nrfconnect/app2/Kconfig
-/Users/tongtong/Documents/nrfconnect/app2/build/Kconfig/Kconfig.dts
-/Users/tongtong/Documents/nrfconnect/app2/build/Kconfig/Kconfig.modules
-/Users/tongtong/Documents/nrfconnect/app2/build/Kconfig/Kconfig.shield
-/Users/tongtong/Documents/nrfconnect/app2/build/Kconfig/Kconfig.shield.defconfig
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/Kconfig
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/Kconfig/Kconfig.dts
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/Kconfig/Kconfig.modules
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/Kconfig/Kconfig.shield
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/Kconfig/Kconfig.shield.defconfig
 /Users/tongtong/Documents/nrfconnect/boards/arm/revolute/Kconfig
 /Users/tongtong/Documents/nrfconnect/boards/arm/revolute/Kconfig.board
 /Users/tongtong/Documents/nrfconnect/boards/arm/revolute/Kconfig.defconfig

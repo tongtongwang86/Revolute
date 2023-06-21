@@ -828,7 +828,7 @@ zephyr_udc0: &usbd {
  status = "okay";
 };
 # 0 "<command-line>" 2
-# 1 "/Users/tongtong/Documents/nrfconnect/app2/app.overlay" 1
+# 1 "/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/app.overlay" 1
 
 
 

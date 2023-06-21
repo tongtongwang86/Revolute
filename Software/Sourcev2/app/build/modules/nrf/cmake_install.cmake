@@ -39,36 +39,36 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/ext/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/ext/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/lib/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/samples/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/samples/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/subsys/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/subsys/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/modules/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/modules/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/drivers/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/drivers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/tests/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/tests/cmake_install.cmake")
 endif()
 

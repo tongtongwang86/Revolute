@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/samples/common/mcumgr_bt_ota_dfu/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/samples/common/mcumgr_bt_ota_dfu/cmake_install.cmake")
 endif()
 

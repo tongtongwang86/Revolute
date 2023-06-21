@@ -39,231 +39,231 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/arch/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/arch/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/lib/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/soc/arm/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/soc/arm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/boards/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/boards/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/subsys/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/drivers/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/hostap/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/hostap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/mcuboot/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/mcuboot/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/mbedtls/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/trusted-firmware-m/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/trusted-firmware-m/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/cjson/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/cjson/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/azure-sdk-for-c/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/azure-sdk-for-c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/cirrus-logic/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/cirrus-logic/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/openthread/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/openthread/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/memfault-firmware-sdk/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/memfault-firmware-sdk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/canopennode/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/canopennode/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/chre/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/chre/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/cmsis/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/cmsis/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/fatfs/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/fatfs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/hal_nordic/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/hal_nordic/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/st/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/st/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/hal_wurthelektronik/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/hal_wurthelektronik/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/libmetal/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/libmetal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/liblc3/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/liblc3/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/littlefs/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/littlefs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/loramac-node/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/loramac-node/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/lvgl/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/lvgl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/lz4/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/lz4/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/mipi-sys-t/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/mipi-sys-t/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nanopb/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nanopb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrf_hw_models/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrf_hw_models/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/open-amp/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/open-amp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/picolibc/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/picolibc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/segger/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/segger/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/tinycrypt/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/tinycrypt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/TraceRecorder/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/TraceRecorder/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/uoscore-uedhoc/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/uoscore-uedhoc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/zcbor/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/zcbor/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/zscilib/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/zscilib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/nrfxlib/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/nrfxlib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/modules/connectedhomeip/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/modules/connectedhomeip/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/kernel/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/kernel/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/cmake/flash/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/cmake/flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/cmake/usage/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/cmake/usage/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/cmake/reports/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/cmake/reports/cmake_install.cmake")
 endif()
 

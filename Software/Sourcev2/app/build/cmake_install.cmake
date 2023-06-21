@@ -1,4 +1,4 @@
-# Install script for directory: /Users/tongtong/Documents/nrfconnect/app2
+# Install script for directory: /Users/tongtong/Documents/Revolute/Software/Sourcev2/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/tongtong/Documents/nrfconnect/app2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

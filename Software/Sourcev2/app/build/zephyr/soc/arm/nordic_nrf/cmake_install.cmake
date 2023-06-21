@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/soc/arm/nordic_nrf/nrf52/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/soc/arm/nordic_nrf/nrf52/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/nrfconnect/app2/build/zephyr/soc/arm/nordic_nrf/common/cmake_install.cmake")
+  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/soc/arm/nordic_nrf/common/cmake_install.cmake")
 endif()
 

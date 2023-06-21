@@ -19,4 +19,4 @@ empty_file.o: /opt/nordic/ncs/v2.4.0/zephyr/misc/empty_file.c \
  /opt/nordic/ncs/v2.4.0/zephyr/dts/common/freq.h \
  /opt/nordic/ncs/v2.4.0/zephyr/dts/arm/nordic/override.dtsi \
  /Users/tongtong/Documents/nrfconnect/boards/arm/revolute/fstab-stock.dts \
- /Users/tongtong/Documents/nrfconnect/app2/app.overlay
+ /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/app.overlay
