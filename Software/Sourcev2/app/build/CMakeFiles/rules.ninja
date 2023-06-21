@@ -347,6 +347,25 @@ rule C_STATIC_LIBRARY_LINKER__soc__arm__nordic_nrf__nrf52_
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER__subsys__usb__device__class__hid_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /opt/nordic/ncs/toolchains/4ef6631da0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__subsys__usb__device__class__hid_
+  command = $PRE_LINK && ccache /opt/nordic/ncs/toolchains/4ef6631da0/Cellar/cmake/3.20.5/bin/cmake -E rm -f $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/4ef6631da0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /opt/nordic/ncs/toolchains/4ef6631da0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && ccache /opt/nordic/ncs/toolchains/4ef6631da0/Cellar/cmake/3.20.5/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER__drivers__interrupt_controller_
   depfile = $DEP_FILE
   deps = gcc

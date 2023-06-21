@@ -131,6 +131,9 @@
 /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/CMakeFiles/edit_cache.dir
 /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/CMakeFiles/rebuild_cache.dir
 /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/CMakeFiles/edit_cache.dir
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/hid/CMakeFiles/rebuild_cache.dir
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/hid/CMakeFiles/edit_cache.dir
+/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/hid/CMakeFiles/subsys__usb__device__class__hid.dir
 /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/CMakeFiles/rebuild_cache.dir
 /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/CMakeFiles/edit_cache.dir
 /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/disk/CMakeFiles/rebuild_cache.dir

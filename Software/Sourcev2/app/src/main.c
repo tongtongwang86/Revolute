@@ -12,29 +12,7 @@
 #include <zephyr/drivers/i2c.h>
 #include <zephyr/drivers/sensor.h>
 #include <stdio.h>
-#include <zephyr/init.h>
-#include <zephyr/usb/class/usb_hid.h>
 
-
-#define LOG_LEVEL LOG_LEVEL_INF
-LOG_MODULE_REGISTER(main);
-
-static bool configured;
-static const struct device *hdev;
-static struct k_work report_send;
-static ATOMIC_DEFINE(hid_ep_in_busy, 1);
-
-#define HID_EP_BUSY_FLAG	0
-#define REPORT_ID_1		0x01
-#define REPORT_PERIOD		K_SECONDS(2)
-
-static struct report {
-	uint8_t id;
-	uint8_t value;
-} __packed report_1 = {
-	.id = REPORT_ID_1,
-	.value = 0,
-};
 
 BUILD_ASSERT(DT_NODE_HAS_COMPAT(DT_CHOSEN(zephyr_console), zephyr_cdc_acm_uart),
 	     "Console device is not ACM CDC UART device");
@@ -109,7 +87,7 @@ void print_as5600_value(const struct device *dev)
 	
     ret = sensor_sample_fetch_chan(dev,SENSOR_CHAN_ROTATION);
 	if (ret != 0){
-			printk("gay,%d\n", ret);
+			printk("ono dis not good, ur err code is :,%d\n", ret);
 		}
     sensor_channel_get(dev,SENSOR_CHAN_ROTATION, &rot_raw);
 	
