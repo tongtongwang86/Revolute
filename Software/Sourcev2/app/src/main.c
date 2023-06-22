@@ -19,8 +19,8 @@ BUILD_ASSERT(DT_NODE_HAS_COMPAT(DT_CHOSEN(zephyr_console), zephyr_cdc_acm_uart),
 
 #if defined(CONFIG_USB_DEVICE_STACK_NEXT)
 USBD_CONFIGURATION_DEFINE(config_1,
-			  USB_SCD_SELF_POWERED,
-			  200);
+              USB_SCD_SELF_POWERED,
+              200);
 
 USBD_DESC_LANG_DEFINE(sample_lang);
 USBD_DESC_STRING_DEFINE(sample_mfr, "ZEPHYR", 1);
