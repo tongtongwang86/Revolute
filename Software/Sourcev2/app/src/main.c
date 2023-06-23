@@ -169,13 +169,8 @@ int main(void)
     usb_hid_register_device(hid0_dev, hid_kbd_report_desc,
 				sizeof(hid_kbd_report_desc), &ops);
 
-	usb_hid_init(hid0_dev);
-	int ret;
-	ret = usb_enable(status_cb);
-	if (ret != 0) {
-		printk("Failed to enable USB");
-		return 0;
-	}
+	
+
       
 
     while (1) {
