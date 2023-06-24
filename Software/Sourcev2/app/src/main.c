@@ -79,20 +79,20 @@ static int enable_usb_device_next(void)
 }
 #endif /* IS_ENABLED(CONFIG_USB_DEVICE_STACK_NEXT) */
 
-void print_as5600_value(const struct device *dev)
+int as5600_refresh(const struct device *dev)
 {
 	int ret;
     struct sensor_value rot_raw;
-    
-	
     ret = sensor_sample_fetch_chan(dev,SENSOR_CHAN_ROTATION);
 	if (ret != 0){
 			printk("ono dis not good, ur err code is :,%d\n", ret);
 		}
     sensor_channel_get(dev,SENSOR_CHAN_ROTATION, &rot_raw);
 	
-    printk("angle: %d %d\n ", rot_raw.val1, rot_raw.val2);
+
+    
 	// printk("%d",rot_raw.val1)
+    return rot_raw.val1;
 }
 
 
@@ -100,22 +100,9 @@ void print_as5600_value(const struct device *dev)
 int main(void)
 {
 
-// const struct device *i2c_dev =
-// DEVICE_DT_GET(DT_NODELABEL(i2c0));
-
-//static const struct device *bme_1 = DEVICE_DT_GET(DT_NODELABEL(bme688_1));
-//const struct device *dek = DEVICE_DT_GET_ANY(ams_as5600);
-//const struct device *const dek = DEVICE_DT_GET(DT_NODELABEL(ams_as5600));
-
-
-
-//const struct i2c_dt_spec *i2c_port I2C_DT_SPEC_GET(),
-//static const struct i2c_dt_spec i2c_port = I2C_DT_SPEC_GET(I2C0_NODE);
 
 
 const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
-
-//AS5600_INIT(0);
 
 	const struct device *const dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
 	uint32_t dtr = 0;
@@ -145,25 +132,37 @@ const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
 	
 	printk("device is %p, name is %s\n", as, as->name);
 
-	// if (i2c_dev == NULL || !device_is_ready(i2c_dev)) {
-	// 	printk("Could not get 12C device\n");
-	// 	return;
-	// }
 
-	
-
+   int lastDegree = as5600_refresh(as);
+    printk("%d", lastDegree);
 
 	while (1) {
-	
-		printk("Hello World! %s\n", CONFIG_ARCH);
-		k_sleep(K_MSEC(100));
+        
+		//printk("Hello World! %s\n", CONFIG_ARCH);
+		//k_sleep(K_MSEC(100));
 		
-		print_as5600_value(as);
-		//const struct as5600_dev_cfg_usr *dev_cfg = dev->config;
-		
+		int degrees = as5600_refresh(as);
+        int deltaDegrees = degrees-lastDegree;
+        if (deltaDegrees > 5 ) {
+            printk("1\n");
 
-		//printk("Device %d\n", yes);
-		//printk("Device %s\n", &dev_cfg->i2c_port);
+            lastDegree=degrees;
+        }else if(deltaDegrees < -5 ){
+            printk("-1\n");
+            lastDegree=degrees;
+        }
+        
+
+        // if (lastDegree - degrees < 10 || lastDegree - degrees > -10){
+
+        //         printk("z");
+        //         lastDegree = degrees;
+        // }
+    
+        printk("delta: %d\n ", deltaDegrees);
+
+        
+
 		
 
 
