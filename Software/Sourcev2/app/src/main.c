@@ -14,70 +14,96 @@
 #include <stdio.h>
 
 
-BUILD_ASSERT(DT_NODE_HAS_COMPAT(DT_CHOSEN(zephyr_console), zephyr_cdc_acm_uart),
-	     "Console device is not ACM CDC UART device");
+#include <zephyr/usb/class/usb_hid.h>
 
-#if defined(CONFIG_USB_DEVICE_STACK_NEXT)
-USBD_CONFIGURATION_DEFINE(config_1,
-			  USB_SCD_SELF_POWERED,
-			  200);
+static struct k_work report_send;
+static struct k_work report_clear;
+static bool configured;
+static const struct device *hdev;
+static const uint8_t hid_kbd_report_desc[] = HID_KEYBOARD_REPORT_DESC();
 
-USBD_DESC_LANG_DEFINE(sample_lang);
-USBD_DESC_STRING_DEFINE(sample_mfr, "ZEPHYR", 1);
-USBD_DESC_STRING_DEFINE(sample_product, "Zephyr USBD ACM console", 2);
-USBD_DESC_STRING_DEFINE(sample_sn, "0123456789ABCDEF", 3);
+static ATOMIC_DEFINE(hid_ep_in_busy, 1);
+#define HID_EP_BUSY_FLAG	0
 
-USBD_DEVICE_DEFINE(sample_usbd,
-		   DEVICE_DT_GET(DT_NODELABEL(zephyr_udc0)),
-		   0x2fe3, 0x0001);
 
-static int enable_usb_device_next(void)
+static void send_report(struct k_work *work)
 {
-	int err;
 
-	err = usbd_add_descriptor(&sample_usbd, &sample_lang);
-	if (err) {
-		return err;
+	if (!atomic_test_and_set_bit(hid_ep_in_busy, HID_EP_BUSY_FLAG)) {
+
+		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		rep[7] = HID_KEY_Z;
+		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
+        k_sleep(K_MSEC(5));
+        rep[7] = 0x00;
+       // uint8_t rek[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		//rep[7] = HID_KEY_Z;
+		ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
+		
+	} else {
+		printk("HID IN endpoint busy");
 	}
 
-	err = usbd_add_descriptor(&sample_usbd, &sample_mfr);
-	if (err) {
-		return err;
-	}
-
-	err = usbd_add_descriptor(&sample_usbd, &sample_product);
-	if (err) {
-		return err;
-	}
-
-	err = usbd_add_descriptor(&sample_usbd, &sample_sn);
-	if (err) {
-		return err;
-	}
-
-	err = usbd_add_configuration(&sample_usbd, &config_1);
-	if (err) {
-		return err;
-	}
-
-	err = usbd_register_class(&sample_usbd, "cdc_acm_0", 1);
-	if (err) {
-		return err;
-	}
-
-	err = usbd_init(&sample_usbd);
-	if (err) {
-		return err;
-	}
-
-	err = usbd_enable(&sample_usbd);
-	if (err) {
-		return err;
-	}
-
-	return 0;
 }
-#endif /* IS_ENABLED(CONFIG_USB_DEVICE_STACK_NEXT) */
+
+static void clear_report(struct k_work *work)
+{
+
+	if (!atomic_test_and_set_bit(hid_ep_in_busy, HID_EP_BUSY_FLAG)) {
+
+		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		//rep[7] = HID_KEY_Z;
+		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
+		
+		if (ret != 0) {
+			/*
+			 * Do nothing and wait until host has reset the device
+			 * and hid_ep_in_busy is cleared.
+			 */
+			printk("Failed to submit report");
+		} else {
+			printk("Report submitted");
+		}
+	} else {
+		printk("HID IN endpoint busy");
+	}
+	
+}
+
+static void int_in_ready_cb(const struct device *dev)
+{
+	ARG_UNUSED(dev);
+	if (!atomic_test_and_clear_bit(hid_ep_in_busy, HID_EP_BUSY_FLAG)) {
+		printk("IN endpoint callback without preceding buffer write");
+	}
+}
+
+static const struct hid_ops ops = {
+	.int_in_ready = int_in_ready_cb,
+};
+
+static void status_cb(enum usb_dc_status_code status, const uint8_t *param)
+{
+	switch (status) {
+	case USB_DC_RESET:
+		configured = false;
+		break;
+	case USB_DC_CONFIGURED:
+		if (!configured) {
+			int_in_ready_cb(hdev);
+			configured = true;
+		}
+		break;
+	case USB_DC_SOF:
+		break;
+	default:
+		printk("status %u unhandled", status);
+		break;
+	}
+}
 
 int as5600_refresh(const struct device *dev)
 {
@@ -100,36 +126,30 @@ int as5600_refresh(const struct device *dev)
 int main(void)
 {
 
-
-
 const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
 
-	const struct device *const dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
-	uint32_t dtr = 0;
 
-#if defined(CONFIG_USB_DEVICE_STACK_NEXT)
-	if (enable_usb_device_next()) {
+
+     int ret = usb_enable(status_cb);
+
+	if (ret != 0) {
+		printk("Failed to enable USB");
 		return 0;
 	}
-#else
-	if (usb_enable(NULL)) {
-		return 0;
-	}
-#endif
+	//usb_hid_init(hdev);
+	k_work_init(&report_send, send_report);
+	k_work_init(&report_clear, clear_report);
 
-	/* Poll if the DTR flag was set */
-	while (!dtr) {
-		uart_line_ctrl_get(dev, UART_LINE_CTRL_DTR, &dtr);
-		/* Give CPU resources to low priority threads. */
-		k_sleep(K_MSEC(100));
-	}
+
+
+
 
 	if (as == NULL || !device_is_ready(as)) {
 		printk("\nono bad stuff sad no device tree\n");
 		return;
 	}
 
-	
+
 	printk("device is %p, name is %s\n", as, as->name);
 
 
@@ -145,10 +165,13 @@ const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
         int deltaDegrees = degrees-lastDegree;
         if (deltaDegrees > 5 ) {
             printk("1\n");
-
+            k_work_submit(&report_send);
+         
             lastDegree=degrees;
         }else if(deltaDegrees < -5 ){
             printk("-1\n");
+            k_work_submit(&report_send);
+            
             lastDegree=degrees;
         }
         
@@ -159,7 +182,7 @@ const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
         //         lastDegree = degrees;
         // }
     
-        printk("delta: %d\n ", deltaDegrees);
+       // printk("delta: %d\n ", deltaDegrees);
 
         
 
@@ -169,3 +192,31 @@ const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
 	
 	}
 }
+
+
+static int composite_pre_init(void)
+{
+	hdev = device_get_binding("HID_0");
+	if (hdev == NULL) {
+		printk("Cannot get USB HID Device");
+		return -ENODEV;
+	}
+
+	printk("HID Device: dev %p", hdev);
+
+	usb_hid_register_device(hdev, hid_kbd_report_desc,sizeof(hid_kbd_report_desc), &ops);
+
+
+	atomic_set_bit(hid_ep_in_busy, HID_EP_BUSY_FLAG);
+
+
+	if (usb_hid_set_proto_code(hdev, HID_BOOT_IFACE_CODE_NONE)) {
+		printk("Failed to set Protocol Code");
+	}
+
+	return usb_hid_init(hdev);
+}
+
+
+
+SYS_INIT(composite_pre_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEVICE);
