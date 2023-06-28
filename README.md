@@ -1,5 +1,5 @@
 # Revolute
-- NRF52840 Based One key Scroll wheel
+- nRF52840 Based One key Scroll wheel
 <p align="center"><img src="./Misc/Pictures/Revolute-On_Keyboard.png" width="70%"></p>
 
 ## What you need to make this
