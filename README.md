@@ -5,7 +5,7 @@
 ## What you need to make this
 
 - 0402 component hot plate soldering experience
-- basic understanding of nrf52840 chip 
+- basic understanding of nRF52840 chip
 - alot of patience
 - common sense
 
@@ -29,7 +29,7 @@
 <p align="center"><img src="./Misc/Pictures/Revolute-Pins.png" height="500px"><img src="./Misc/Pictures/Revolute-PCB.png" height="500px"></p>
 
 ### Software
-- Custom Nrf25840 UF2 bootloader for Revolute can be found in the <a href = "./Bootloader"> Bootloader folder </a>, upload using a SWD programmer
+- Custom nRF25840 UF2 bootloader for Revolute can be found in the <a href = "./Bootloader"> Bootloader folder </a>, upload using a SWD programmer
 - Pre compiled code can be found in the <a href = "./Revolute UF2 Variations"> Revolute UF2 Variations Folder </a> 
 
 ### 3D Printing & Others
