@@ -229,7 +229,7 @@ build CMakeFiles/menuconfig: CUSTOM_COMMAND
 # Custom command for CMakeFiles/boards
 
 build CMakeFiles/boards: CUSTOM_COMMAND
-  COMMAND = cd /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build && /opt/nordic/ncs/toolchains/4ef6631da0/opt/python@3.9/bin/python3.9 /opt/nordic/ncs/v2.4.0/zephyr/scripts/list_boards.py --board-root=/Users/tongtong/Documents/nrfconnect/ --board-root=/Users/tongtong/Documents/Revolute/Software/Sourcev2 --board-root=/opt/nordic/ncs/v2.4.0/nrf --board-root=/opt/nordic/ncs/v2.4.0/zephyr --arch-root=/opt/nordic/ncs/v2.4.0/zephyr
+  COMMAND = cd /Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build && /opt/nordic/ncs/toolchains/4ef6631da0/opt/python@3.9/bin/python3.9 /opt/nordic/ncs/v2.4.0/zephyr/scripts/list_boards.py --board-root=/Users/tongtong/Documents/nrfconnect --board-root=/Users/tongtong/Documents/Revolute/Software/Sourcev2 --board-root=/opt/nordic/ncs/v2.4.0/nrf --board-root=/opt/nordic/ncs/v2.4.0/zephyr --arch-root=/opt/nordic/ncs/v2.4.0/zephyr
   pool = console
 
 

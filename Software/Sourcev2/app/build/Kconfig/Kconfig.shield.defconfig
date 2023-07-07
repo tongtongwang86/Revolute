@@ -1,3 +1,3 @@
-osource "/Users/tongtong/Documents/nrfconnect//boards/shields/*/Kconfig.defconfig"
+osource "/Users/tongtong/Documents/nrfconnect/boards/shields/*/Kconfig.defconfig"
 osource "/Users/tongtong/Documents/Revolute/Software/Sourcev2/boards/shields/*/Kconfig.defconfig"
 osource "/opt/nordic/ncs/v2.4.0/nrf/boards/shields/*/Kconfig.defconfig"

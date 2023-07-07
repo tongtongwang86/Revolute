@@ -158,12 +158,12 @@ const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
 		
 		int degrees = as5600_refresh(as);
         int deltaDegrees = degrees-lastDegree;
-        if (deltaDegrees > 5 ) {
+        if (deltaDegrees > 6 ) {
             printk("1\n");
             k_work_submit(&report_send);
          
             lastDegree=degrees;
-        }else if(deltaDegrees < -5 ){
+        }else if(deltaDegrees < -6 ){
             printk("-1\n");
             k_work_submit(&report_send);
             

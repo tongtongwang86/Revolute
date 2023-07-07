@@ -27,7 +27,7 @@ BOARD:STRING=revolute
 BOARD_DIR:PATH=/Users/tongtong/Documents/nrfconnect/boards/arm/revolute
 
 //No help, variable specified on the command line.
-BOARD_ROOT:STRING=/Users/tongtong/Documents/nrfconnect/;/Users/tongtong/Documents/Revolute/Software/Sourcev2
+BOARD_ROOT:STRING=/Users/tongtong/Documents/nrfconnect;/Users/tongtong/Documents/Revolute/Software/Sourcev2
 
 //Path to a program.
 BOSSAC:FILEPATH=BOSSAC-NOTFOUND
