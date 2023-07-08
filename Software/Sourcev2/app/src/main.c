@@ -54,15 +54,16 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 		int degrees = as5600_refresh(as);
         int deltaDegrees = degrees-lastDegree;
         if (deltaDegrees >= 12 ) {
-          //  printk("1\n");
-           // k_work_submit(&report_send);
+      
 		k_sem_give(&my_sem);
 		printk("gave a sem \n");
 		printk("%d\n", as5600_refresh(as)); 
+		
             lastDegree=degrees;
+
+
         }else if(deltaDegrees <= -12 ){
-           // printk("-1\n");
-           // k_work_submit(&report_send);
+    
 		   k_sem_give(&my_sem);
 		printk("gave a sem \n");
             

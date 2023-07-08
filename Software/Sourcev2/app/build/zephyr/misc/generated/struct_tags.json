@@ -1,7 +1,7 @@
 {
     "__net_socket": [
-        "modem_socket",
         "net_context",
+        "modem_socket",
         "dispatcher_context",
         "spair",
         "net_mgmt_socket",
