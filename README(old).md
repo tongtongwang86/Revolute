@@ -1,24 +1,18 @@
-# Revolute V2
+# Revolute
 - nRF52840 Based One key Scroll wheel
 <p align="center"><img src="./Misc/Pictures/Revolute-On_Keyboard.png" width="70%"></p>
-
-## Changelog v1 -> v2 & v2.1
-- non contact 
-- magnetic angle sensor 
-- magnet idents (v2.1 only)
 
 ## What you need to make this
 
 - 0402 component hot plate soldering experience
 - basic understanding of nRF52840 chip
-- crazy good resin printer (only if attempting v2.1)
 - alot of patience
 - common sense
 
 
 ### Bill of materials: 
 - <a href = "./3D Prints"> 3D Printed parts </a>
-- <a href = "./Misc/Pictures/Revolute-Wire.png"> 2mm diameter 4 core wire </a>
+- <a href = "./Misc/Pictures/Revolute-Wire.png"> 2mm diameter 3 core wire </a>
 - <a href = "./Misc/Pictures/Revolute-Encoder.png"> F-Switch E10E7-4-12-30 Rotary Encoder </a>
 - <a href = "./Misc/Pictures/Scrollwheel.JPG"> MR0017 Scroll wheel </a>
 - <a href = "./Hardware"> Pcb </a>
