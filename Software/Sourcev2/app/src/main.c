@@ -4,6 +4,8 @@
 #include <zephyr/usb/usbd.h>
 #include <zephyr/drivers/uart.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/usb/class/usb_hid.h>
+
 
 #define STACKSIZE 1024
 #define PRIORITY 7
@@ -12,8 +14,26 @@ K_THREAD_STACK_DEFINE(threadA_stack_area, STACKSIZE);
 K_THREAD_STACK_DEFINE(threadB_stack_area, STACKSIZE);
 static struct k_thread threadA_data;
 static struct k_thread threadB_data;
+static const struct device *hdev;
+
+static const uint8_t hid_kbd_report_desc[] = HID_KEYBOARD_REPORT_DESC();
 
 K_SEM_DEFINE(my_sem, 0, 10);
+static K_SEM_DEFINE(usb_sem, 1, 1);	/* starts off "available" */
+
+static void int_in_ready_cb(const struct device *dev)
+{
+	ARG_UNUSED(dev);
+	printk("intinready");
+	k_sem_give(&usb_sem);
+	// if (!atomic_test_and_clear_bit(hid_ep_in_busy, HID_EP_BUSY_FLAG)) {
+	// 	printk("IN endpoint callback without preceding buffer write");
+	// }
+}
+
+static const struct hid_ops ops = {
+	.int_in_ready = int_in_ready_cb,
+};
 
 int as5600_refresh(const struct device *dev)
 {
@@ -54,19 +74,28 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 		int degrees = as5600_refresh(as);
         int deltaDegrees = degrees-lastDegree;
         if (deltaDegrees >= 12 ) {
-      
-		k_sem_give(&my_sem);
+			
+			uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		rep[7] = HID_KEY_Z;
+		k_sem_take(&usb_sem, K_FOREVER);
+		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
+		
 		printk("gave a sem \n");
 		printk("%d\n", as5600_refresh(as)); 
-		
+		k_sem_give(&my_sem);
             lastDegree=degrees;
 
 
         }else if(deltaDegrees <= -12 ){
-    
-		   k_sem_give(&my_sem);
+			
+			uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		rep[7] = HID_KEY_Z;
+		k_sem_take(&usb_sem, K_FOREVER);
+		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
 		printk("gave a sem \n");
-            
+        k_sem_give(&my_sem);
             lastDegree=degrees;
         }
 
@@ -90,7 +119,26 @@ void threadB(void *dummy1, void *dummy2, void *dummy3)
 		if (k_sem_take(&my_sem, K_MSEC(50)) != 0) {
        // printk("Input data not available!\n");
     } else {
-	printk("took a sem \n");
+
+		printk("took a sem \n");
+
+		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		// //rep[7] = HID_KEY_Z;
+		k_sem_take(&usb_sem, K_FOREVER);
+		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
+		
+		if (ret != 0) {
+			/*
+			 * Do nothing and wait until host has reset the device
+			 * and hid_ep_in_busy is cleared.
+			 */
+			printk("Failed to submit report");
+			printk ("%d",ret);
+		} else {
+			printk("Report submitted");
+		}
+
     }
 		// printk("thread_B: thread loop \n");
 		// k_msleep(SLEEPTIME);
@@ -179,3 +227,24 @@ int main(void)
 		k_sleep(K_SECONDS(1));
 	}
 }
+
+
+static int composite_pre_init(void)
+{
+	hdev = device_get_binding("HID_0");
+	if (hdev == NULL) {
+		printk("Cannot get USB HID Device");
+		return -ENODEV;
+	}
+
+	printk("HID Device: dev %p", hdev);
+
+	usb_hid_register_device(hdev, hid_kbd_report_desc,sizeof(hid_kbd_report_desc), &ops);
+
+
+
+	return usb_hid_init(hdev);
+}
+
+
+SYS_INIT(composite_pre_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEVICE);

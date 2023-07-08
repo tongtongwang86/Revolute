@@ -129,6 +129,9 @@ C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/
 C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/CMakeFiles/rebuild_cache.dir
 C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/CMakeFiles/edit_cache.dir
 C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/CMakeFiles/rebuild_cache.dir
+C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/hid/CMakeFiles/subsys__usb__device__class__hid.dir
+C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/hid/CMakeFiles/edit_cache.dir
+C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/hid/CMakeFiles/rebuild_cache.dir
 C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/CMakeFiles/edit_cache.dir
 C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/CMakeFiles/rebuild_cache.dir
 C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/disk/CMakeFiles/edit_cache.dir

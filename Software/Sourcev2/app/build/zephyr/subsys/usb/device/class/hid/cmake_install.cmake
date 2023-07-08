@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/T0ngx/Documents/zephyrproject/zephyr/subsys/usb/device/class
+# Install script for directory: C:/Users/T0ngx/Documents/zephyrproject/zephyr/subsys/usb/device/class/hid
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,10 +35,5 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "C:/Program Files/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/class/hid/cmake_install.cmake")
 endif()
 
