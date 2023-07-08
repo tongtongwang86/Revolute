@@ -6,9 +6,10 @@
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/usb/class/usb_hid.h>
 
-
+#define KEY_1_CONFIGURE HID_KEY_Z
+#define KEY_2_CONFIGURE HID_KEY_Z
 #define STACKSIZE 1024
-#define PRIORITY 7
+#define PRIORITY 3
 #define SLEEPTIME 500
 #define IDENT_OFFSET 1
 K_THREAD_STACK_DEFINE(threadA_stack_area, STACKSIZE);
@@ -52,16 +53,23 @@ int roundNumber (int num) {
 	
 	int snap;
 	int answer;
-	for (int i = 0 ;i<30;i++){
+	for (int i = 0 ; i<=30 ; i++){
 		
 		 snap = (12 *i) + IDENT_OFFSET;
 		int deviation = num - snap;
 
-		if (deviation <= 6 & deviation >= -5) {
+		if (deviation <= 6 && deviation >= -5) {
 			
-			answer = snap; 
+			if (snap == 361) {	
+				
+				answer = 1;
+
+			} else {
+				answer = snap; 
+				break;
+			}
+			
 		
-			
 		} 
 		 
 	}
@@ -83,9 +91,6 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 	int lastDegree = roundNumber(as5600_refresh(as));
 
 	
-	
-
-
 	ARG_UNUSED(dummy1);
 	ARG_UNUSED(dummy2);
 	ARG_UNUSED(dummy3);
@@ -97,19 +102,41 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 		
 		int degrees = roundNumber(as5600_refresh(as));
 
-		if (lastDegree != degrees) {
+		if (lastDegree != degrees ) {
 			
 		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-		rep[7] = HID_KEY_Z;
+
+
+
+
+			//degree is getting bigger
+		if (lastDegree < degrees) {
+
+			if (lastDegree == 1 && degrees == 349 ){
+			rep[7] = KEY_2_CONFIGURE;
+			}else{
+				rep[7] = KEY_1_CONFIGURE;
+			}
+
+			}else{
+			if (lastDegree == 349 && degrees == 1 ){
+			rep[7] = KEY_1_CONFIGURE;
+			}else{
+				rep[7] = KEY_2_CONFIGURE;
+			}
+		}
+
+
 		k_sem_take(&usb_sem, K_FOREVER);
 		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
-
+		// printk("snap:%d\n",degrees);
+		// printk("degrees:%d\n",as5600_refresh(as));
 		
 	
 		k_sem_give(&my_sem);
 
 			lastDegree = degrees;
-		}
+		} 
 
 
 	}
