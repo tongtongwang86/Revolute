@@ -25,11 +25,9 @@ static K_SEM_DEFINE(usb_sem, 1, 1);	/* starts off "available" */
 static void int_in_ready_cb(const struct device *dev)
 {
 	ARG_UNUSED(dev);
-	printk("intinready");
+	
 	k_sem_give(&usb_sem);
-	// if (!atomic_test_and_clear_bit(hid_ep_in_busy, HID_EP_BUSY_FLAG)) {
-	// 	printk("IN endpoint callback without preceding buffer write");
-	// }
+
 }
 
 static const struct hid_ops ops = {
@@ -42,13 +40,11 @@ int as5600_refresh(const struct device *dev)
     struct sensor_value rot_raw;
     ret = sensor_sample_fetch_chan(dev,SENSOR_CHAN_ROTATION);
 	if (ret != 0){
-			printk("ono dis not good, ur err code is :,%d\n", ret);
+			printk("sample fetch error code:,%d\n", ret);
 		}
     sensor_channel_get(dev,SENSOR_CHAN_ROTATION, &rot_raw);
 	
 
-    
-	// printk("%d",rot_raw.val1)
     return rot_raw.val1;
 }
 
@@ -64,8 +60,7 @@ int roundNumber (int num) {
 		if (deviation <= 6 & deviation >= -5) {
 			
 			answer = snap; 
-			//printk ("snap: %d\n", snap);
-			//printk ("deviation: %d\n", deviation);
+		
 			
 		} 
 		 
@@ -79,19 +74,15 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 	const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
 
 	if (as == NULL || !device_is_ready(as)) {
-		printk("ono bad stuff sad no device tree\n");
+		printk("as5600 device tree not configured\n");
 		return;
 	}
-	printk("device is %p, name is %s\n", as, as->name);
-
-	
 
 
 	
 	int lastDegree = roundNumber(as5600_refresh(as));
 
-	printk ("degree: %d\n", as5600_refresh(as));
-	printk ("passedsnap: %d\n", lastDegree);
+	
 	
 
 
@@ -99,7 +90,7 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 	ARG_UNUSED(dummy2);
 	ARG_UNUSED(dummy3);
 
-	printk("thread_a: thread started \n");
+
 
 	while (1)
 	{
@@ -114,44 +105,13 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
 
 		
-		printk("gave a sem \n");
-		printk("%d\n", as5600_refresh(as)); 
+	
 		k_sem_give(&my_sem);
 
 			lastDegree = degrees;
 		}
 
 
-		//printk("%d\n",degrees);
-        // int deltaDegrees = degrees-lastDegree;
-        // if (deltaDegrees >= 12 ) {
-			
-		// 	uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-		// rep[7] = HID_KEY_Z;
-		// k_sem_take(&usb_sem, K_FOREVER);
-		// int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
-
-		
-		// printk("gave a sem \n");
-		// printk("%d\n", as5600_refresh(as)); 
-		// k_sem_give(&my_sem);
-        //     lastDegree=degrees;
-
-
-        // }else if(deltaDegrees <= -12 ){
-			
-		// 	uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-		// rep[7] = HID_KEY_Z;
-		// k_sem_take(&usb_sem, K_FOREVER);
-		// int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
-
-		// printk("gave a sem \n");
-        // k_sem_give(&my_sem);
-        //     lastDegree=degrees;
-        // }
-
-		
-		//k_msleep(SLEEPTIME);
 	}
 
 }
@@ -162,37 +122,27 @@ void threadB(void *dummy1, void *dummy2, void *dummy3)
 	ARG_UNUSED(dummy2);
 	ARG_UNUSED(dummy3);
 
-	printk("thread_B: thread started \n");
+	
 
 	while (1)
 	{	
 
 		if (k_sem_take(&my_sem, K_MSEC(50)) != 0) {
-       // printk("Input data not available!\n");
+  
     } else {
 		
-		printk("took a sem \n");
+		
 
 		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-		// //rep[7] = HID_KEY_Z;
+	
 		k_sem_take(&usb_sem, K_FOREVER);
 		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
 
 		
-		if (ret != 0) {
-			/*
-			 * Do nothing and wait until host has reset the device
-			 * and hid_ep_in_busy is cleared.
-			 */
-			printk("Failed to submit report");
-			printk ("%d",ret);
-		} else {
-			printk("Report submitted");
-		}
+		
 
     }
-		// printk("thread_B: thread loop \n");
-		// k_msleep(SLEEPTIME);
+	
 	}
 
 }
@@ -249,12 +199,6 @@ int main(void)
 	}
 #endif
 
-	/* Poll if the DTR flag was set */
-	while (!dtr) {
-		uart_line_ctrl_get(dev, UART_LINE_CTRL_DTR, &dtr);
-		/* Give CPU resources to low priority threads. */
-		k_sleep(K_MSEC(100));
-	}
 	
 	k_thread_create(&threadA_data, threadA_stack_area,
 			K_THREAD_STACK_SIZEOF(threadA_stack_area),
@@ -273,10 +217,7 @@ int main(void)
 	k_thread_start(&threadB_data);
 
 
-	while (1) {
-		printk("Hello World! %s\n", CONFIG_ARCH);
-		k_sleep(K_SECONDS(1));
-	}
+	
 }
 
 
@@ -288,11 +229,8 @@ static int composite_pre_init(void)
 		return -ENODEV;
 	}
 
-	printk("HID Device: dev %p", hdev);
 
 	usb_hid_register_device(hdev, hid_kbd_report_desc,sizeof(hid_kbd_report_desc), &ops);
-
-
 
 	return usb_hid_init(hdev);
 }
