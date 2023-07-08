@@ -3,7 +3,7 @@
 <p align="center"><img src="./Misc/Pictures/Revolute-On_Keyboard.png" width="70%"></p>
 
 ## Changelog v1 -> v2 & v2.1
-- non contact 
+- non contact design
 - magnetic angle sensor 
 - magnet idents (v2.1 only)
 
@@ -45,22 +45,22 @@
 
 ## ---More pictures---
 Section Analysis
-<p align="center"><img src="./Misc/Pictures/Revolute-Cut.PNG" width="60%"></p>
+<p align="center"><img src="./Misc/Pictures V2.1/RevoluteV2.1-Section_3D.png" width="60%"></p>
 </br>
 Top view
-<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D_2.PNG" width="60%"></p>
+<p align="center"><img src="./Misc/Pictures V2.1/RevoluteV2.1-Top_3D.png" width="60%"></p>
 </br>
 Bottom view
-<p align="center"><img src="./Misc/Pictures/Revolute-Full_3D.PNG" width="60%"></p>
+<p align="center"><img src="./Misc/Pictures V2.1/RevoluteV2.1-Bottom_3D.png" width="60%"></p>
 </br>
 Base only
-<p align="center"><img src="./Misc/Pictures/Revolute-Base_3D.PNG" width="60%"></p>
+<p align="center"><img src="./Misc/Pictures V2.1/RevoluteV2.1-Base_3D.png" width="60%"></p>
 </br>
 Cap only
-<p align="center"><img src="./Misc/Pictures/Revolute-Cap_3D.PNG" width="60%"></p>
+<p align="center"><img src="./Misc/Pictures V2.1/RevoluteV2.1-Cap_3D.png" width="60%"></p>
 </br>
 PCB
-<p align="center"><img src="./Misc/Pictures/Revolute-PCB_Closelook.png" width="60%"></p>
+<p align="center"><img src="./Misc/Pictures V2.1/RevoluteV2-PCB_3D.png" width="60%"></p>
 </br>
 
 
