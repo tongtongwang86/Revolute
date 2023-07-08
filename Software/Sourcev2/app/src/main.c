@@ -53,13 +53,14 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 
 		int degrees = as5600_refresh(as);
         int deltaDegrees = degrees-lastDegree;
-        if (deltaDegrees > 6 ) {
+        if (deltaDegrees >= 12 ) {
           //  printk("1\n");
            // k_work_submit(&report_send);
 		k_sem_give(&my_sem);
 		printk("gave a sem \n");
+		printk("%d\n", as5600_refresh(as)); 
             lastDegree=degrees;
-        }else if(deltaDegrees < -6 ){
+        }else if(deltaDegrees <= -12 ){
            // printk("-1\n");
            // k_work_submit(&report_send);
 		   k_sem_give(&my_sem);
@@ -86,7 +87,7 @@ void threadB(void *dummy1, void *dummy2, void *dummy3)
 	{	
 
 		if (k_sem_take(&my_sem, K_MSEC(50)) != 0) {
-        printk("Input data not available!\n");
+       // printk("Input data not available!\n");
     } else {
 	printk("took a sem \n");
     }
