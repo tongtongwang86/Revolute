@@ -68,6 +68,32 @@ static inline int fuel_gauge_set_prop(const struct device * dev, struct fuel_gau
 #endif
 
 
+extern int z_impl_fuel_gauge_get_buffer_prop(const struct device * dev, struct fuel_gauge_get_buffer_property * prop, void * dst, size_t dst_len);
+
+__pinned_func
+static inline int fuel_gauge_get_buffer_prop(const struct device * dev, struct fuel_gauge_get_buffer_property * prop, void * dst, size_t dst_len)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; struct fuel_gauge_get_buffer_property * val; } parm1 = { .val = prop };
+		union { uintptr_t x; void * val; } parm2 = { .val = dst };
+		union { uintptr_t x; size_t val; } parm3 = { .val = dst_len };
+		return (int) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_FUEL_GAUGE_GET_BUFFER_PROP);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_fuel_gauge_get_buffer_prop(dev, prop, dst, dst_len);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define fuel_gauge_get_buffer_prop(dev, prop, dst, dst_len) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_FUEL_GAUGE_GET_BUFFER_PROP, fuel_gauge_get_buffer_prop, dev, prop, dst, dst_len); 	retval = fuel_gauge_get_buffer_prop(dev, prop, dst, dst_len); 	sys_port_trace_syscall_exit(K_SYSCALL_FUEL_GAUGE_GET_BUFFER_PROP, fuel_gauge_get_buffer_prop, dev, prop, dst, dst_len, retval); 	retval; })
+#endif
+#endif
+
+
 #ifdef __cplusplus
 }
 #endif

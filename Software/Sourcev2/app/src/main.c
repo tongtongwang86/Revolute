@@ -1,279 +1,179 @@
-/*
- * Copyright (c) 2019 Nordic Semiconductor ASA
- *
- * SPDX-License-Identifier: Apache-2.0
- */
 #include <zephyr/kernel.h>
-#include <zephyr/device.h>
-#include <zephyr/drivers/gpio.h>
-#include <zephyr/drivers/uart.h>
-#include <string.h>
-#include <zephyr/random/rand32.h>
-
+#include <zephyr/sys/printk.h>
 #include <zephyr/usb/usb_device.h>
-#include <zephyr/usb/class/usb_hid.h>
-#include <zephyr/usb/class/usb_cdc.h>
+#include <zephyr/usb/usbd.h>
+#include <zephyr/drivers/uart.h>
+#include <zephyr/drivers/sensor.h>
 
-// #define LOG_LEVEL LOG_LEVEL_DBG
-// LOG_MODULE_REGISTER(main);
+#define STACKSIZE 1024
+#define PRIORITY 7
+#define SLEEPTIME 500
+K_THREAD_STACK_DEFINE(threadA_stack_area, STACKSIZE);
+K_THREAD_STACK_DEFINE(threadB_stack_area, STACKSIZE);
+static struct k_thread threadA_data;
+static struct k_thread threadB_data;
 
-// #define SW0_NODE DT_ALIAS(sw0)
+K_SEM_DEFINE(my_sem, 0, 10);
 
-// #if DT_NODE_HAS_STATUS(SW0_NODE, okay)
-// static const struct gpio_dt_spec sw0_gpio = GPIO_DT_SPEC_GET(SW0_NODE, gpios);
-// #endif
-
-// #define SW1_NODE DT_ALIAS(sw1)
-
-// #if DT_NODE_HAS_STATUS(SW1_NODE, okay)
-// static const struct gpio_dt_spec sw1_gpio = GPIO_DT_SPEC_GET(SW1_NODE, gpios);
-// #endif
-
-// #define SW2_NODE DT_ALIAS(sw2)
-
-// #if DT_NODE_HAS_STATUS(SW2_NODE, okay)
-// static const struct gpio_dt_spec sw2_gpio = GPIO_DT_SPEC_GET(SW2_NODE, gpios);
-// #endif
-
-// #define SW3_NODE DT_ALIAS(sw3)
-
-// #if DT_NODE_HAS_STATUS(SW3_NODE, okay)
-// static const struct gpio_dt_spec sw3_gpio = GPIO_DT_SPEC_GET(SW3_NODE, gpios);
-// #endif
-
-/* Event FIFO */
-
-K_FIFO_DEFINE(evt_fifo);
-
-enum evt_t {
-	TRIGGER	= 0x00,
-	CLEAR	= 0x01,
-};
-
-struct app_evt_t {
-	sys_snode_t node;
-	enum evt_t event_type;
-};
-
-#define FIFO_ELEM_MIN_SZ        sizeof(struct app_evt_t)
-#define FIFO_ELEM_MAX_SZ        sizeof(struct app_evt_t)
-#define FIFO_ELEM_COUNT         255
-#define FIFO_ELEM_ALIGN         sizeof(unsigned int)
-
-K_HEAP_DEFINE(event_elem_pool, FIFO_ELEM_MAX_SZ * FIFO_ELEM_COUNT + 256);
-
-static inline void app_evt_free(struct app_evt_t *ev)
+int as5600_refresh(const struct device *dev)
 {
-	k_heap_free(&event_elem_pool, ev);
-}
-
-static inline void app_evt_put(struct app_evt_t *ev)
-{
-	k_fifo_put(&evt_fifo, ev);
-}
-
-static inline struct app_evt_t *app_evt_get(void)
-{
-	return k_fifo_get(&evt_fifo, K_NO_WAIT);
-}
-
-static inline void app_evt_flush(void)
-{
-	struct app_evt_t *ev;
-
-	do {
-		ev = app_evt_get();
-		if (ev) {
-			app_evt_free(ev);
+	int ret;
+    struct sensor_value rot_raw;
+    ret = sensor_sample_fetch_chan(dev,SENSOR_CHAN_ROTATION);
+	if (ret != 0){
+			printk("ono dis not good, ur err code is :,%d\n", ret);
 		}
-	} while (ev != NULL);
+    sensor_channel_get(dev,SENSOR_CHAN_ROTATION, &rot_raw);
+	
+
+    
+	// printk("%d",rot_raw.val1)
+    return rot_raw.val1;
 }
 
-static inline struct app_evt_t *app_evt_alloc(void)
-{
-	struct app_evt_t *ev;
+void threadA(void *dummy1, void *dummy2, void *dummy3)
+{	
+	const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
 
-	ev = k_heap_alloc(&event_elem_pool,
-			  sizeof(struct app_evt_t),
-			  K_NO_WAIT);
-	if (ev == NULL) {
-		LOG_ERR("APP event allocation failed!");
-		app_evt_flush();
+	if (as == NULL || !device_is_ready(as)) {
+		printk("ono bad stuff sad no device tree\n");
+		return;
+	}
+	printk("device is %p, name is %s\n", as, as->name);
 
-		ev = k_heap_alloc(&event_elem_pool,
-				  sizeof(struct app_evt_t),
-				  K_NO_WAIT);
-		if (ev == NULL) {
-			LOG_ERR("APP event memory corrupted.");
-			__ASSERT_NO_MSG(0);
-			return NULL;
-		}
-		return NULL;
+	int lastDegree = as5600_refresh(as);
+	ARG_UNUSED(dummy1);
+	ARG_UNUSED(dummy2);
+	ARG_UNUSED(dummy3);
+
+	printk("thread_a: thread started \n");
+
+	while (1)
+	{
+
+		int degrees = as5600_refresh(as);
+        int deltaDegrees = degrees-lastDegree;
+        if (deltaDegrees > 6 ) {
+          //  printk("1\n");
+           // k_work_submit(&report_send);
+		k_sem_give(&my_sem);
+		printk("gave a sem \n");
+            lastDegree=degrees;
+        }else if(deltaDegrees < -6 ){
+           // printk("-1\n");
+           // k_work_submit(&report_send);
+		   k_sem_give(&my_sem);
+		printk("gave a sem \n");
+            
+            lastDegree=degrees;
+        }
+
+		
+		//k_msleep(SLEEPTIME);
 	}
 
-	return ev;
 }
 
-/* HID */
-
-
-static const uint8_t hid_kbd_report_desc[] = HID_KEYBOARD_REPORT_DESC();
-
-static K_SEM_DEFINE(evt_sem, 0, 1);	/* starts off "not available" */
-static K_SEM_DEFINE(usb_sem, 1, 1);	/* starts off "available" */
-static struct gpio_callback callback[4];
-
-static char data_buf_kbd[64];
-static char string[64];
-static uint8_t chr_ptr_kbd, str_pointer;
-
-
-
-static void in_ready_cb(const struct device *dev)
+void threadB(void *dummy1, void *dummy2, void *dummy3)
 {
-	ARG_UNUSED(dev);
+	ARG_UNUSED(dummy1);
+	ARG_UNUSED(dummy2);
+	ARG_UNUSED(dummy3);
 
-	k_sem_give(&usb_sem);
-}
+	printk("thread_B: thread started \n");
 
-static const struct hid_ops ops = {
-	.int_in_ready = in_ready_cb,
-};
+	while (1)
+	{	
 
-
-static void clear_kbd_report(void)
-{
-	struct app_evt_t *new_evt = app_evt_alloc();
-
-	new_evt->event_type = HID_KBD_CLEAR;
-	app_evt_put(new_evt);
-	k_sem_give(&evt_sem);
-}
-
-
-
-
-static void btn0(const struct device *gpio, struct gpio_callback *cb,
-		 uint32_t pins)
-{
-	struct app_evt_t *ev = app_evt_alloc();
-
-	ev->event_type = TRIGGER,
-	app_evt_put(ev);
-	ev->event_type = CLEAR,
-	app_evt_put(ev);
-	k_sem_give(&evt_sem);
-}
-
-
-
-
-
-int callbacks_configure(const struct gpio_dt_spec *gpio,
-			void (*handler)(const struct device *, struct gpio_callback*,
-					uint32_t),
-			struct gpio_callback *callback)
-{
-	if (!device_is_ready(gpio->port)) {
-		LOG_ERR("%s: device not ready.", gpio->port->name);
-		return -ENODEV;
+		if (k_sem_take(&my_sem, K_MSEC(50)) != 0) {
+        printk("Input data not available!\n");
+    } else {
+	printk("took a sem \n");
+    }
+		// printk("thread_B: thread loop \n");
+		// k_msleep(SLEEPTIME);
 	}
 
-	gpio_pin_configure_dt(gpio, GPIO_INPUT);
+}
 
-	gpio_init_callback(callback, handler, BIT(gpio->pin));
-	gpio_add_callback(gpio->port, callback);
-	gpio_pin_interrupt_configure_dt(gpio, GPIO_INT_EDGE_TO_ACTIVE);
 
+
+
+BUILD_ASSERT(DT_NODE_HAS_COMPAT(DT_CHOSEN(zephyr_console), zephyr_cdc_acm_uart),
+	     "Console device is not ACM CDC UART device");
+
+#if defined(CONFIG_USB_DEVICE_STACK_NEXT)
+USBD_CONFIGURATION_DEFINE(config_1,
+			  USB_SCD_SELF_POWERED,
+			  200);
+
+USBD_DESC_LANG_DEFINE(sample_lang);
+USBD_DESC_MANUFACTURER_DEFINE(sample_mfr, "ZEPHYR");
+USBD_DESC_PRODUCT_DEFINE(sample_product, "Zephyr USBD ACM console");
+USBD_DESC_SERIAL_NUMBER_DEFINE(sample_sn, "0123456789ABCDEF");
+
+USBD_DEVICE_DEFINE(sample_usbd,
+		   DEVICE_DT_GET(DT_NODELABEL(zephyr_udc0)),
+		   0x2fe3, 0x0001);
+
+static int enable_usb_device_next(void)
+{
+
+	usbd_add_descriptor(&sample_usbd, &sample_lang);
+	usbd_add_descriptor(&sample_usbd, &sample_mfr);
+	usbd_add_descriptor(&sample_usbd, &sample_product);
+	usbd_add_descriptor(&sample_usbd, &sample_sn);
+	usbd_add_configuration(&sample_usbd, &config_1);
+	usbd_register_class(&sample_usbd, "cdc_acm_0", 1);
+	usbd_init(&sample_usbd);
+	usbd_enable(&sample_usbd);
+	
 	return 0;
 }
 
-static void status_cb(enum usb_dc_status_code status, const uint8_t *param)
-{
-	LOG_INF("Status %d", status);
-}
-
-#define DEVICE_AND_COMMA(node_id) DEVICE_DT_GET(node_id),
+#endif /* IS_ENABLED(CONFIG_USB_DEVICE_STACK_NEXT) */
 
 int main(void)
 {
-	const struct device *cdc_dev[] = {
-		DT_FOREACH_STATUS_OKAY(zephyr_cdc_acm_uart, DEVICE_AND_COMMA)
-	};
-	BUILD_ASSERT(ARRAY_SIZE(cdc_dev) >= 2, "Not enough CDC ACM instances");
-	const struct device *hid0_dev;
-	struct app_evt_t *ev;
-	uint32_t dtr = 0U;
-	int ret;
+	const struct device *const dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
+	uint32_t dtr = 0;
 
-	/* Configure devices */
-
-	hid0_dev = device_get_binding("HID_0");
-	if (hid0_dev == NULL) {
-		LOG_ERR("Cannot get USB HID 0 Device");
+#if defined(CONFIG_USB_DEVICE_STACK_NEXT)
+	if (enable_usb_device_next()) {
 		return 0;
 	}
-
-
-	if (callbacks_configure(&sw0_gpio, &btn0, &callback[0])) {
-		LOG_ERR("Failed configuring button 0 callback.");
+#else
+	if (usb_enable(NULL)) {
 		return 0;
 	}
+#endif
 
-
-
-	/* Initialize HID */
-
-
-	usb_hid_register_device(hid0_dev, hid_kbd_report_desc,
-				sizeof(hid_kbd_report_desc), &ops);
-
-	usb_hid_init(hid0_dev);
-
-	ret = usb_enable(status_cb);
-	if (ret != 0) {
-		LOG_ERR("Failed to enable USB");
-		return 0;
+	/* Poll if the DTR flag was set */
+	while (!dtr) {
+		uart_line_ctrl_get(dev, UART_LINE_CTRL_DTR, &dtr);
+		/* Give CPU resources to low priority threads. */
+		k_sleep(K_MSEC(100));
 	}
+	
+	k_thread_create(&threadA_data, threadA_stack_area,
+			K_THREAD_STACK_SIZEOF(threadA_stack_area),
+			threadA, NULL, NULL, NULL,
+			PRIORITY, 0, K_FOREVER);
+	k_thread_name_set(&threadA_data, "thread_a");
 
-	/* Initialize CDC ACM */
+	k_thread_start(&threadA_data);
 
-	/* Wait 1 sec for the host to do all settings */
-	k_busy_wait(USEC_PER_SEC);
+	k_thread_create(&threadB_data, threadB_stack_area,
+			K_THREAD_STACK_SIZEOF(threadB_stack_area),
+			threadB, NULL, NULL, NULL,
+			PRIORITY, 0, K_FOREVER);
+	k_thread_name_set(&threadB_data, "thread_b");
+
+	k_thread_start(&threadB_data);
 
 
-	while (true) {
-		k_sem_take(&evt_sem, K_FOREVER);
-
-		while ((ev = app_evt_get()) != NULL) {
-			switch (ev->event_type) {
-
-			case TRIGGER:
-			{
-				/* Clear kbd report */
-				uint8_t rep[] = {0x00, 0x00, 0x00, 0x00,
-					      0x00, 0x00, 0x00, 0x00};
-
-				k_sem_take(&usb_sem, K_FOREVER);
-				hid_int_ep_write(hid1_dev, rep, sizeof(rep), NULL);
-				break;
-			}
-
-			case CLEAR:
-			{
-				/* Clear kbd report */
-				uint8_t rep[] = {0x00, 0x00, 0x00, 0x00,
-					      0x00, 0x00, 0x00, 0x00};
-
-				k_sem_take(&usb_sem, K_FOREVER);
-				hid_int_ep_write(hid1_dev, rep, sizeof(rep), NULL);
-				break;
-			}
-			
-			break;
-			}
-			app_evt_free(ev);
-		}
+	while (1) {
+		printk("Hello World! %s\n", CONFIG_ARCH);
+		k_sleep(K_SECONDS(1));
 	}
 }
-

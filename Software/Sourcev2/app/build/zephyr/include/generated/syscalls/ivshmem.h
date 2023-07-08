@@ -138,6 +138,173 @@ static inline int ivshmem_register_handler(const struct device * dev, struct k_p
 #endif
 
 
+extern size_t z_impl_ivshmem_get_rw_mem_section(const struct device * dev, uintptr_t * memmap);
+
+__pinned_func
+static inline size_t ivshmem_get_rw_mem_section(const struct device * dev, uintptr_t * memmap)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uintptr_t * val; } parm1 = { .val = memmap };
+		return (size_t) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_IVSHMEM_GET_RW_MEM_SECTION);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_ivshmem_get_rw_mem_section(dev, memmap);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define ivshmem_get_rw_mem_section(dev, memmap) ({ 	size_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_IVSHMEM_GET_RW_MEM_SECTION, ivshmem_get_rw_mem_section, dev, memmap); 	retval = ivshmem_get_rw_mem_section(dev, memmap); 	sys_port_trace_syscall_exit(K_SYSCALL_IVSHMEM_GET_RW_MEM_SECTION, ivshmem_get_rw_mem_section, dev, memmap, retval); 	retval; })
+#endif
+#endif
+
+
+extern size_t z_impl_ivshmem_get_output_mem_section(const struct device * dev, uint32_t peer_id, uintptr_t * memmap);
+
+__pinned_func
+static inline size_t ivshmem_get_output_mem_section(const struct device * dev, uint32_t peer_id, uintptr_t * memmap)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = peer_id };
+		union { uintptr_t x; uintptr_t * val; } parm2 = { .val = memmap };
+		return (size_t) arch_syscall_invoke3(parm0.x, parm1.x, parm2.x, K_SYSCALL_IVSHMEM_GET_OUTPUT_MEM_SECTION);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_ivshmem_get_output_mem_section(dev, peer_id, memmap);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define ivshmem_get_output_mem_section(dev, peer_id, memmap) ({ 	size_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_IVSHMEM_GET_OUTPUT_MEM_SECTION, ivshmem_get_output_mem_section, dev, peer_id, memmap); 	retval = ivshmem_get_output_mem_section(dev, peer_id, memmap); 	sys_port_trace_syscall_exit(K_SYSCALL_IVSHMEM_GET_OUTPUT_MEM_SECTION, ivshmem_get_output_mem_section, dev, peer_id, memmap, retval); 	retval; })
+#endif
+#endif
+
+
+extern uint32_t z_impl_ivshmem_get_state(const struct device * dev, uint32_t peer_id);
+
+__pinned_func
+static inline uint32_t ivshmem_get_state(const struct device * dev, uint32_t peer_id)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = peer_id };
+		return (uint32_t) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_IVSHMEM_GET_STATE);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_ivshmem_get_state(dev, peer_id);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define ivshmem_get_state(dev, peer_id) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_IVSHMEM_GET_STATE, ivshmem_get_state, dev, peer_id); 	retval = ivshmem_get_state(dev, peer_id); 	sys_port_trace_syscall_exit(K_SYSCALL_IVSHMEM_GET_STATE, ivshmem_get_state, dev, peer_id, retval); 	retval; })
+#endif
+#endif
+
+
+extern int z_impl_ivshmem_set_state(const struct device * dev, uint32_t state);
+
+__pinned_func
+static inline int ivshmem_set_state(const struct device * dev, uint32_t state)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; uint32_t val; } parm1 = { .val = state };
+		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_IVSHMEM_SET_STATE);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_ivshmem_set_state(dev, state);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define ivshmem_set_state(dev, state) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_IVSHMEM_SET_STATE, ivshmem_set_state, dev, state); 	retval = ivshmem_set_state(dev, state); 	sys_port_trace_syscall_exit(K_SYSCALL_IVSHMEM_SET_STATE, ivshmem_set_state, dev, state, retval); 	retval; })
+#endif
+#endif
+
+
+extern uint32_t z_impl_ivshmem_get_max_peers(const struct device * dev);
+
+__pinned_func
+static inline uint32_t ivshmem_get_max_peers(const struct device * dev)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		return (uint32_t) arch_syscall_invoke1(parm0.x, K_SYSCALL_IVSHMEM_GET_MAX_PEERS);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_ivshmem_get_max_peers(dev);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define ivshmem_get_max_peers(dev) ({ 	uint32_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_IVSHMEM_GET_MAX_PEERS, ivshmem_get_max_peers, dev); 	retval = ivshmem_get_max_peers(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_IVSHMEM_GET_MAX_PEERS, ivshmem_get_max_peers, dev, retval); 	retval; })
+#endif
+#endif
+
+
+extern uint16_t z_impl_ivshmem_get_protocol(const struct device * dev);
+
+__pinned_func
+static inline uint16_t ivshmem_get_protocol(const struct device * dev)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		return (uint16_t) arch_syscall_invoke1(parm0.x, K_SYSCALL_IVSHMEM_GET_PROTOCOL);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_ivshmem_get_protocol(dev);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define ivshmem_get_protocol(dev) ({ 	uint16_t retval; 	sys_port_trace_syscall_enter(K_SYSCALL_IVSHMEM_GET_PROTOCOL, ivshmem_get_protocol, dev); 	retval = ivshmem_get_protocol(dev); 	sys_port_trace_syscall_exit(K_SYSCALL_IVSHMEM_GET_PROTOCOL, ivshmem_get_protocol, dev, retval); 	retval; })
+#endif
+#endif
+
+
+extern int z_impl_ivshmem_enable_interrupts(const struct device * dev, bool enable);
+
+__pinned_func
+static inline int ivshmem_enable_interrupts(const struct device * dev, bool enable)
+{
+#ifdef CONFIG_USERSPACE
+	if (z_syscall_trap()) {
+		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
+		union { uintptr_t x; bool val; } parm1 = { .val = enable };
+		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_IVSHMEM_ENABLE_INTERRUPTS);
+	}
+#endif
+	compiler_barrier();
+	return z_impl_ivshmem_enable_interrupts(dev, enable);
+}
+
+#if defined(CONFIG_TRACING_SYSCALL)
+#ifndef DISABLE_SYSCALL_TRACING
+
+#define ivshmem_enable_interrupts(dev, enable) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_IVSHMEM_ENABLE_INTERRUPTS, ivshmem_enable_interrupts, dev, enable); 	retval = ivshmem_enable_interrupts(dev, enable); 	sys_port_trace_syscall_exit(K_SYSCALL_IVSHMEM_ENABLE_INTERRUPTS, ivshmem_enable_interrupts, dev, enable, retval); 	retval; })
+#endif
+#endif
+
+
 #ifdef __cplusplus
 }
 #endif

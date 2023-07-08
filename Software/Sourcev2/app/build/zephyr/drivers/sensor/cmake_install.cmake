@@ -1,8 +1,8 @@
-# Install script for directory: /opt/nordic/ncs/v2.4.0/zephyr/drivers/sensor
+# Install script for directory: C:/Users/T0ngx/Documents/zephyrproject/zephyr/drivers/sensor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/Zephyr-Kernel")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,16 +34,16 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/opt/nordic/ncs/toolchains/4ef6631da0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+  set(CMAKE_OBJDUMP "C:/Program Files/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/sensor/ams_as5600/cmake_install.cmake")
+  include("C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/sensor/ams_as5600/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/tongtong/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/sensor/nrf5/cmake_install.cmake")
+  include("C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/drivers/sensor/nrf5/cmake_install.cmake")
 endif()
 

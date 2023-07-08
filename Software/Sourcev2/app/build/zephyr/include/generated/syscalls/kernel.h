@@ -760,76 +760,72 @@ static inline void k_event_init(struct k_event * event)
 }
 
 
-extern void z_impl_k_event_post(struct k_event * event, uint32_t events);
+extern uint32_t z_impl_k_event_post(struct k_event * event, uint32_t events);
 
 __pinned_func
-static inline void k_event_post(struct k_event * event, uint32_t events)
+static inline uint32_t k_event_post(struct k_event * event, uint32_t events)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; struct k_event * val; } parm0 = { .val = event };
 		union { uintptr_t x; uint32_t val; } parm1 = { .val = events };
-		(void) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_K_EVENT_POST);
-		return;
+		return (uint32_t) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_K_EVENT_POST);
 	}
 #endif
 	compiler_barrier();
-	z_impl_k_event_post(event, events);
+	return z_impl_k_event_post(event, events);
 }
 
 
-extern void z_impl_k_event_set(struct k_event * event, uint32_t events);
+extern uint32_t z_impl_k_event_set(struct k_event * event, uint32_t events);
 
 __pinned_func
-static inline void k_event_set(struct k_event * event, uint32_t events)
+static inline uint32_t k_event_set(struct k_event * event, uint32_t events)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; struct k_event * val; } parm0 = { .val = event };
 		union { uintptr_t x; uint32_t val; } parm1 = { .val = events };
-		(void) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_K_EVENT_SET);
-		return;
+		return (uint32_t) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_K_EVENT_SET);
 	}
 #endif
 	compiler_barrier();
-	z_impl_k_event_set(event, events);
+	return z_impl_k_event_set(event, events);
 }
 
 
-extern void z_impl_k_event_set_masked(struct k_event * event, uint32_t events, uint32_t events_mask);
+extern uint32_t z_impl_k_event_set_masked(struct k_event * event, uint32_t events, uint32_t events_mask);
 
 __pinned_func
-static inline void k_event_set_masked(struct k_event * event, uint32_t events, uint32_t events_mask)
+static inline uint32_t k_event_set_masked(struct k_event * event, uint32_t events, uint32_t events_mask)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; struct k_event * val; } parm0 = { .val = event };
 		union { uintptr_t x; uint32_t val; } parm1 = { .val = events };
 		union { uintptr_t x; uint32_t val; } parm2 = { .val = events_mask };
-		(void) arch_syscall_invoke3(parm0.x, parm1.x, parm2.x, K_SYSCALL_K_EVENT_SET_MASKED);
-		return;
+		return (uint32_t) arch_syscall_invoke3(parm0.x, parm1.x, parm2.x, K_SYSCALL_K_EVENT_SET_MASKED);
 	}
 #endif
 	compiler_barrier();
-	z_impl_k_event_set_masked(event, events, events_mask);
+	return z_impl_k_event_set_masked(event, events, events_mask);
 }
 
 
-extern void z_impl_k_event_clear(struct k_event * event, uint32_t events);
+extern uint32_t z_impl_k_event_clear(struct k_event * event, uint32_t events);
 
 __pinned_func
-static inline void k_event_clear(struct k_event * event, uint32_t events)
+static inline uint32_t k_event_clear(struct k_event * event, uint32_t events)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; struct k_event * val; } parm0 = { .val = event };
 		union { uintptr_t x; uint32_t val; } parm1 = { .val = events };
-		(void) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_K_EVENT_CLEAR);
-		return;
+		return (uint32_t) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_K_EVENT_CLEAR);
 	}
 #endif
 	compiler_barrier();
-	z_impl_k_event_clear(event, events);
+	return z_impl_k_event_clear(event, events);
 }
 
 
