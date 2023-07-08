@@ -10,6 +10,7 @@
 #define STACKSIZE 1024
 #define PRIORITY 7
 #define SLEEPTIME 500
+#define IDENT_OFFSET 1
 K_THREAD_STACK_DEFINE(threadA_stack_area, STACKSIZE);
 K_THREAD_STACK_DEFINE(threadB_stack_area, STACKSIZE);
 static struct k_thread threadA_data;
@@ -51,6 +52,28 @@ int as5600_refresh(const struct device *dev)
     return rot_raw.val1;
 }
 
+int roundNumber (int num) {
+	
+	int snap;
+	int answer;
+	for (int i = 0 ;i<30;i++){
+		
+		 snap = (12 *i) + IDENT_OFFSET;
+		int deviation = num - snap;
+
+		if (deviation <= 6 & deviation >= -5) {
+			
+			answer = snap; 
+			//printk ("snap: %d\n", snap);
+			//printk ("deviation: %d\n", deviation);
+			
+		} 
+		 
+	}
+	return answer; 
+	
+}
+
 void threadA(void *dummy1, void *dummy2, void *dummy3)
 {	
 	const struct device *const as = DEVICE_DT_GET(DT_INST(0,ams_as5600));
@@ -61,7 +84,17 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 	}
 	printk("device is %p, name is %s\n", as, as->name);
 
-	int lastDegree = as5600_refresh(as);
+	
+
+
+	
+	int lastDegree = roundNumber(as5600_refresh(as));
+
+	printk ("degree: %d\n", as5600_refresh(as));
+	printk ("passedsnap: %d\n", lastDegree);
+	
+
+
 	ARG_UNUSED(dummy1);
 	ARG_UNUSED(dummy2);
 	ARG_UNUSED(dummy3);
@@ -70,12 +103,12 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 
 	while (1)
 	{
+		
+		int degrees = roundNumber(as5600_refresh(as));
 
-		int degrees = as5600_refresh(as);
-        int deltaDegrees = degrees-lastDegree;
-        if (deltaDegrees >= 12 ) {
+		if (lastDegree != degrees) {
 			
-			uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 		rep[7] = HID_KEY_Z;
 		k_sem_take(&usb_sem, K_FOREVER);
 		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
@@ -84,20 +117,38 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 		printk("gave a sem \n");
 		printk("%d\n", as5600_refresh(as)); 
 		k_sem_give(&my_sem);
-            lastDegree=degrees;
+
+			lastDegree = degrees;
+		}
 
 
-        }else if(deltaDegrees <= -12 ){
+		//printk("%d\n",degrees);
+        // int deltaDegrees = degrees-lastDegree;
+        // if (deltaDegrees >= 12 ) {
 			
-			uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-		rep[7] = HID_KEY_Z;
-		k_sem_take(&usb_sem, K_FOREVER);
-		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+		// 	uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		// rep[7] = HID_KEY_Z;
+		// k_sem_take(&usb_sem, K_FOREVER);
+		// int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
 
-		printk("gave a sem \n");
-        k_sem_give(&my_sem);
-            lastDegree=degrees;
-        }
+		
+		// printk("gave a sem \n");
+		// printk("%d\n", as5600_refresh(as)); 
+		// k_sem_give(&my_sem);
+        //     lastDegree=degrees;
+
+
+        // }else if(deltaDegrees <= -12 ){
+			
+		// 	uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		// rep[7] = HID_KEY_Z;
+		// k_sem_take(&usb_sem, K_FOREVER);
+		// int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
+		// printk("gave a sem \n");
+        // k_sem_give(&my_sem);
+        //     lastDegree=degrees;
+        // }
 
 		
 		//k_msleep(SLEEPTIME);
@@ -119,7 +170,7 @@ void threadB(void *dummy1, void *dummy2, void *dummy3)
 		if (k_sem_take(&my_sem, K_MSEC(50)) != 0) {
        // printk("Input data not available!\n");
     } else {
-
+		
 		printk("took a sem \n");
 
 		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};

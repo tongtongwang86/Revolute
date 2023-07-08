@@ -86,7 +86,7 @@ static void status_cb(enum usb_dc_status_code status, const uint8_t *param)
 	case USB_DC_RESET:
 		configured = false;
 		break;
-	case USB_DC_CONFIGURED:
+	case USB_DC_CONFIGURED:	
 		if (!configured) {
 			int_in_ready_cb(hdev);
 			configured = true;
