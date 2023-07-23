@@ -6,16 +6,16 @@
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/usb/class/usb_hid.h>
 
-#define KEY_1_CONFIGURE HID_KEY_Z
-#define KEY_2_CONFIGURE HID_KEY_Z
+#define KEY_1_CONFIGURE HID_KEY_Z //clockwise key
+#define KEY_2_CONFIGURE HID_KEY_G //counter clockwise key
 #define STACKSIZE 1024
-#define PRIORITY 3
+#define PRIORITY 1
 #define SLEEPTIME 500
 #define IDENT_OFFSET 1
 K_THREAD_STACK_DEFINE(threadA_stack_area, STACKSIZE);
-K_THREAD_STACK_DEFINE(threadB_stack_area, STACKSIZE);
+
 static struct k_thread threadA_data;
-static struct k_thread threadB_data;
+
 static const struct device *hdev;
 
 static const uint8_t hid_kbd_report_desc[] = HID_KEYBOARD_REPORT_DESC();
@@ -31,6 +31,7 @@ static void int_in_ready_cb(const struct device *dev)
 
 }
 
+
 static const struct hid_ops ops = {
 	.int_in_ready = int_in_ready_cb,
 };
@@ -41,7 +42,7 @@ int as5600_refresh(const struct device *dev)
     struct sensor_value rot_raw;
     ret = sensor_sample_fetch_chan(dev,SENSOR_CHAN_ROTATION);
 	if (ret != 0){
-			printk("sample fetch error code:,%d\n", ret);
+			printk("sample fetch error:,%d\n", ret);
 		}
     sensor_channel_get(dev,SENSOR_CHAN_ROTATION, &rot_raw);
 	
@@ -49,33 +50,14 @@ int as5600_refresh(const struct device *dev)
     return rot_raw.val1;
 }
 
-int roundNumber (int num) {
-	
-	int snap;
-	int answer;
-	for (int i = 0 ; i<=30 ; i++){
-		
-		 snap = (12 *i) + IDENT_OFFSET;
-		int deviation = num - snap;
+// int getNearestSnap (int num){
 
-		if (deviation <= 6 && deviation >= -5) {
-			
-			if (snap == 361) {	
-				
-				answer = 1;
 
-			} else {
-				answer = snap; 
-				break;
-			}
-			
-		
-		} 
-		 
-	}
-	return answer; 
-	
-}
+
+
+// }
+
+
 
 void threadA(void *dummy1, void *dummy2, void *dummy3)
 {	
@@ -86,10 +68,10 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 		return;
 	}
 
-
+	int lastIdent = (as5600_refresh(as) - (as5600_refresh(as) % 12))/12 ;
 	
-	int lastDegree = roundNumber(as5600_refresh(as));
-
+	//int lastDeviation = as5600_refresh(as) % 12;
+	int lastDegree = as5600_refresh(as);
 	
 	ARG_UNUSED(dummy1);
 	ARG_UNUSED(dummy2);
@@ -97,34 +79,118 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 
 
 
+
+
 	while (1)
 	{
 		
-		int degrees = roundNumber(as5600_refresh(as));
+		int degrees = as5600_refresh(as)  ;//+ 6;
+		int deltadegrees = 0;
+		//int deviation = degrees % 12;
+		if (degrees-lastDegree < -200 ){
+			deltadegrees = (degrees-lastDegree) + 360 + 50;
 
-		if (lastDegree != degrees ) {
-			
+		} else if (degrees-lastDegree > 200){
+
+			deltadegrees = (degrees-lastDegree) - 360 - 50;
+
+		} else {
+
+			deltadegrees = (degrees-lastDegree);
+
+		}
+
+		//printk("%d\n", (degrees - (degrees % 12))/12);
+		//printk("%d\n", deltadegrees);
+
+		if (lastIdent != (((degrees+6+IDENT_OFFSET)) - ((degrees+6+IDENT_OFFSET) % 12))/12 && (((degrees+6+IDENT_OFFSET)) - ((degrees+6+IDENT_OFFSET) % 12))/12!= 30) {
+
 		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
+		
+		if (deltadegrees > 0){
+			rep[7] = KEY_1_CONFIGURE; 
+
+		}else{
+
+			rep[7] = KEY_2_CONFIGURE; 
+		}
+
+			//lastIdent = (degrees - deviation)/12 ;
+
+		// printk("%d\n", degrees-lastDegree);
+
+
+		//if (deviation > 6) {deviation = deviation - 12; }
+
+
+
+
+		// if ((lastDegree % 12)>6 && (degrees % 12 ) < 5 && lastIdent != (degrees - (degrees % 12))/12 ){
+		// 	rep[7] = KEY_1_CONFIGURE; 
+		// 	lastIdent = (degrees - (degrees % 12))/12 ;
+
+		// }else if ((lastDegree % 12)< 5 && (degrees % 12 ) >6 && lastIdent != (degrees - (degrees % 12))/12){
+
+		// 	rep[7] = KEY_2_CONFIGURE; 
+		// 	lastIdent = (degrees - (degrees % 12))/12 ;
+		// }
+
+
+		// if (lastDegree > 180 && degrees < 179) {
+		// 	// clockwize transition (360 -> 0)
+		// 	//isOnIdent (degrees,lastDegree);
+
+		// 	if (degrees % 12 == 0 && degrees % 12 != currentident) {
+
+		// 	rep[7] = KEY_1_CONFIGURE;
+
+		// 	currentident = degrees / 12;
+		// 	} else if (((lastDegree % 12) - 12 )< 0 && (degrees % 12)> 0){
+
+		// 	rep[7] = KEY_1_CONFIGURE;
+
+		// 	currentident = degrees - (degrees%12);
+
+		// 	}
+
+
+		// } else if (degrees < 179 && lastDegree > 180) {
+		// 	// counter clockwize transition (0 -> 360)
+
+		// 	if (degrees % 12 == 0 && degrees % 12 != currentident) {
+
+		// 		rep[7] = KEY_2_CONFIGURE;
+
+		// 	}	else if (((degrees % 12) - 12 )< 0 && (lastDegree % 12)> 0){
+
+		// 	rep[7] = KEY_2_CONFIGURE;
+
+		// 	currentident = degrees - (degrees%12);
+
+		// 	}
+
+
+		// }
 
 
 
 			//degree is getting bigger
-		if (lastDegree < degrees) {
+		// if (lastDegree < degrees) {
 
-			if (lastDegree == 1 && degrees == 349 ){
-			rep[7] = KEY_2_CONFIGURE;
-			}else{
-				rep[7] = KEY_1_CONFIGURE;
-			}
+		// 	if (lastDegree == 1 && degrees == 349 ){
+		// 	rep[7] = KEY_2_CONFIGURE;
+		// 	}else{
+		// 		rep[7] = KEY_1_CONFIGURE;
+		// 	}
 
-			}else{
-			if (lastDegree == 349 && degrees == 1 ){
-			rep[7] = KEY_1_CONFIGURE;
-			}else{
-				rep[7] = KEY_2_CONFIGURE;
-			}
-		}
+		// 	}else{
+		// 	if (lastDegree == 349 && degrees == 1 ){
+		// 	rep[7] = KEY_1_CONFIGURE;
+		// 	}else{
+		// 		rep[7] = KEY_2_CONFIGURE;
+		// 	}
+		// }
 
 
 		k_sem_take(&usb_sem, K_FOREVER);
@@ -134,8 +200,9 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 		
 	
 		k_sem_give(&my_sem);
-
+			lastIdent = ((degrees+6+IDENT_OFFSET) - ((degrees+6+IDENT_OFFSET) % 12))/12;
 			lastDegree = degrees;
+			//lastDeviation = deviation;
 		} 
 
 
@@ -143,36 +210,7 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 
 }
 
-void threadB(void *dummy1, void *dummy2, void *dummy3)
-{
-	ARG_UNUSED(dummy1);
-	ARG_UNUSED(dummy2);
-	ARG_UNUSED(dummy3);
 
-	
-
-	while (1)
-	{	
-
-		if (k_sem_take(&my_sem, K_MSEC(50)) != 0) {
-  
-    } else {
-		
-		
-
-		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-	
-		k_sem_take(&usb_sem, K_FOREVER);
-		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
-
-		
-		
-
-    }
-	
-	}
-
-}
 
 
 
@@ -235,14 +273,29 @@ int main(void)
 
 	k_thread_start(&threadA_data);
 
-	k_thread_create(&threadB_data, threadB_stack_area,
-			K_THREAD_STACK_SIZEOF(threadB_stack_area),
-			threadB, NULL, NULL, NULL,
-			PRIORITY, 0, K_FOREVER);
-	k_thread_name_set(&threadB_data, "thread_b");
+	
 
-	k_thread_start(&threadB_data);
 
+while (1)
+	{	
+
+		if (k_sem_take(&my_sem, K_MSEC(50)) != 0) {
+  
+    } else {
+		
+		
+
+		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+	
+		k_sem_take(&usb_sem, K_FOREVER);
+		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+
+		
+		
+
+    }
+	
+	}
 
 	
 }

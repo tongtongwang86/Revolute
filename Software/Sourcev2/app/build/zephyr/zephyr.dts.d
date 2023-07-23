@@ -1,23 +1,22 @@
-empty_file.o: \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/misc/empty_file.c \
- C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/boards/arm/revolute/revolute.dts \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/arm/nordic/nrf52840_qiaa.dtsi \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/common/mem.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/arm/nordic/nrf52840.dtsi \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/arm/armv7-m.dtsi \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/common/skeleton.dtsi \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/arm/nordic/nrf_common.dtsi \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/sys/util_macro.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/sys/util_internal.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/sys/util_loops.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/nrf-pinctrl.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/include/zephyr/dt-bindings/pwm/pwm.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/common/freq.h \
- C:/Users/T0ngx/Documents/zephyrproject/zephyr/dts/arm/nordic/override.dtsi \
- C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/boards/arm/revolute/fstab-stock.dts \
- c:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/app.overlay
+empty_file.o: /opt/nordic/ncs/v2.4.0/zephyr/misc/empty_file.c \
+ /Users/tongtong/Library/Mobile\ Documents/com~apple~CloudDocs/Personal/Projects/Revolute/Software/Sourcev2/boards/arm/revolute/revolute.dts \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/arm/nordic/nrf52840_qiaa.dtsi \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/common/mem.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/arm/nordic/nrf52840.dtsi \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/arm/armv7-m.dtsi \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/common/skeleton.dtsi \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/arm/nordic/nrf_common.dtsi \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/dt-bindings/adc/adc.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/dt-bindings/adc/nrf-adc.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/dt-bindings/dt-util.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/sys/util_macro.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/sys/util_internal.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/sys/util_loops.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/dt-bindings/pinctrl/nrf-pinctrl.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/include/zephyr/dt-bindings/pwm/pwm.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/common/freq.h \
+ /opt/nordic/ncs/v2.4.0/zephyr/dts/arm/nordic/override.dtsi \
+ /Users/tongtong/Library/Mobile\ Documents/com~apple~CloudDocs/Personal/Projects/Revolute/Software/Sourcev2/boards/arm/revolute/fstab-stock.dts \
+ /Users/tongtong/Projects/revolute/software/sourcev2/app/app.overlay

@@ -1,1 +1,2 @@
-osource "c:/users/t0ngx/documents/revolute/software/sourcev2/boards/shields/*/Kconfig.shield"
+osource "/Users/tongtong/Library/Mobile Documents/com~apple~CloudDocs/Personal/Projects/Revolute/Software/Sourcev2/boards/shields/*/Kconfig.shield"
+osource "/opt/nordic/ncs/v2.4.0/nrf/boards/shields/*/Kconfig.shield"

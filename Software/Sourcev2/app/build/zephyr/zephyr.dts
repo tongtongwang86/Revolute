@@ -6,7 +6,7 @@
 	model = "revolute";
 	compatible = "revolute";
 	chosen {
-		zephyr,entropy = &rng;
+		zephyr,entropy = &cryptocell;
 		zephyr,flash-controller = &flash_controller;
 		zephyr,console = &cdc_acm_uart0;
 		zephyr,shell-uart = &uart0;
@@ -69,15 +69,11 @@
 			#address-cells = < 0x1 >;
 			#size-cells = < 0x1 >;
 			gpregret1: gpregret1@4000051c {
-				#address-cells = < 0x1 >;
-				#size-cells = < 0x1 >;
 				compatible = "nordic,nrf-gpregret";
 				reg = < 0x4000051c 0x1 >;
 				status = "okay";
 			};
 			gpregret2: gpregret2@40000520 {
-				#address-cells = < 0x1 >;
-				#size-cells = < 0x1 >;
 				compatible = "nordic,nrf-gpregret";
 				reg = < 0x40000520 0x1 >;
 				status = "okay";

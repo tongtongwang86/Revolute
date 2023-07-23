@@ -44,77 +44,52 @@ static inline int rtio_cqe_get_mempool_buffer(const struct rtio * r, struct rtio
 #endif
 
 
-extern void z_impl_rtio_release_buffer(struct rtio * r, void * buff, uint32_t buff_len);
+extern void z_impl_rtio_release_buffer(struct rtio * r, void * buff);
 
 __pinned_func
-static inline void rtio_release_buffer(struct rtio * r, void * buff, uint32_t buff_len)
+static inline void rtio_release_buffer(struct rtio * r, void * buff)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; struct rtio * val; } parm0 = { .val = r };
 		union { uintptr_t x; void * val; } parm1 = { .val = buff };
-		union { uintptr_t x; uint32_t val; } parm2 = { .val = buff_len };
-		(void) arch_syscall_invoke3(parm0.x, parm1.x, parm2.x, K_SYSCALL_RTIO_RELEASE_BUFFER);
+		(void) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_RTIO_RELEASE_BUFFER);
 		return;
 	}
 #endif
 	compiler_barrier();
-	z_impl_rtio_release_buffer(r, buff, buff_len);
+	z_impl_rtio_release_buffer(r, buff);
 }
 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtio_release_buffer(r, buff, buff_len) do { 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_RELEASE_BUFFER, rtio_release_buffer, r, buff, buff_len); 	rtio_release_buffer(r, buff, buff_len); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_RELEASE_BUFFER, rtio_release_buffer, r, buff, buff_len); } while(false)
+#define rtio_release_buffer(r, buff) do { 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_RELEASE_BUFFER, rtio_release_buffer, r, buff); 	rtio_release_buffer(r, buff); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_RELEASE_BUFFER, rtio_release_buffer, r, buff); } while(false)
 #endif
 #endif
 
 
-extern int z_impl_rtio_sqe_cancel(struct rtio_sqe * sqe);
+extern int z_impl_rtio_sqe_copy_in(struct rtio * r, const struct rtio_sqe * sqes, size_t sqe_count);
 
 __pinned_func
-static inline int rtio_sqe_cancel(struct rtio_sqe * sqe)
-{
-#ifdef CONFIG_USERSPACE
-	if (z_syscall_trap()) {
-		union { uintptr_t x; struct rtio_sqe * val; } parm0 = { .val = sqe };
-		return (int) arch_syscall_invoke1(parm0.x, K_SYSCALL_RTIO_SQE_CANCEL);
-	}
-#endif
-	compiler_barrier();
-	return z_impl_rtio_sqe_cancel(sqe);
-}
-
-#if defined(CONFIG_TRACING_SYSCALL)
-#ifndef DISABLE_SYSCALL_TRACING
-
-#define rtio_sqe_cancel(sqe) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SQE_CANCEL, rtio_sqe_cancel, sqe); 	retval = rtio_sqe_cancel(sqe); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SQE_CANCEL, rtio_sqe_cancel, sqe, retval); 	retval; })
-#endif
-#endif
-
-
-extern int z_impl_rtio_sqe_copy_in_get_handles(struct rtio * r, const struct rtio_sqe * sqes, struct rtio_sqe ** handle, size_t sqe_count);
-
-__pinned_func
-static inline int rtio_sqe_copy_in_get_handles(struct rtio * r, const struct rtio_sqe * sqes, struct rtio_sqe ** handle, size_t sqe_count)
+static inline int rtio_sqe_copy_in(struct rtio * r, const struct rtio_sqe * sqes, size_t sqe_count)
 {
 #ifdef CONFIG_USERSPACE
 	if (z_syscall_trap()) {
 		union { uintptr_t x; struct rtio * val; } parm0 = { .val = r };
 		union { uintptr_t x; const struct rtio_sqe * val; } parm1 = { .val = sqes };
-		union { uintptr_t x; struct rtio_sqe ** val; } parm2 = { .val = handle };
-		union { uintptr_t x; size_t val; } parm3 = { .val = sqe_count };
-		return (int) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_RTIO_SQE_COPY_IN_GET_HANDLES);
+		union { uintptr_t x; size_t val; } parm2 = { .val = sqe_count };
+		return (int) arch_syscall_invoke3(parm0.x, parm1.x, parm2.x, K_SYSCALL_RTIO_SQE_COPY_IN);
 	}
 #endif
 	compiler_barrier();
-	return z_impl_rtio_sqe_copy_in_get_handles(r, sqes, handle, sqe_count);
+	return z_impl_rtio_sqe_copy_in(r, sqes, sqe_count);
 }
 
 #if defined(CONFIG_TRACING_SYSCALL)
 #ifndef DISABLE_SYSCALL_TRACING
 
-#define rtio_sqe_copy_in_get_handles(r, sqes, handle, sqe_count) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SQE_COPY_IN_GET_HANDLES, rtio_sqe_copy_in_get_handles, r, sqes, handle, sqe_count); 	retval = rtio_sqe_copy_in_get_handles(r, sqes, handle, sqe_count); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SQE_COPY_IN_GET_HANDLES, rtio_sqe_copy_in_get_handles, r, sqes, handle, sqe_count, retval); 	retval; })
+#define rtio_sqe_copy_in(r, sqes, sqe_count) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_RTIO_SQE_COPY_IN, rtio_sqe_copy_in, r, sqes, sqe_count); 	retval = rtio_sqe_copy_in(r, sqes, sqe_count); 	sys_port_trace_syscall_exit(K_SYSCALL_RTIO_SQE_COPY_IN, rtio_sqe_copy_in, r, sqes, sqe_count, retval); 	retval; })
 #endif
 #endif
 

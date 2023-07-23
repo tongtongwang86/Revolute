@@ -4,14 +4,6 @@
 		(Z_SYSCALL_OBJ(ptr, K_OBJ_DRIVER_##driver_upper_case) || \
 		 Z_SYSCALL_DRIVER_OP(ptr, driver_lower_case##_driver_api, op))
                 
-#define Z_SYSCALL_DRIVER_GPIO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, gpio, GPIO)
-
-#define Z_SYSCALL_DRIVER_I2C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2c, I2C)
-
-#define Z_SYSCALL_DRIVER_SENSOR(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sensor, SENSOR)
-
-#define Z_SYSCALL_DRIVER_UART(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
-
 #define Z_SYSCALL_DRIVER_CRYPTO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, crypto, CRYPTO)
 
 #define Z_SYSCALL_DRIVER_ADC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, adc, ADC)
@@ -34,8 +26,6 @@
 
 #define Z_SYSCALL_DRIVER_EEPROM(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, eeprom, EEPROM)
 
-#define Z_SYSCALL_DRIVER_FUEL_GAUGE_EMUL(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, fuel_gauge_emul, FUEL_GAUGE_EMUL)
-
 #define Z_SYSCALL_DRIVER_ENTROPY(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, entropy, ENTROPY)
 
 #define Z_SYSCALL_DRIVER_ESPI(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, espi, ESPI)
@@ -47,6 +37,10 @@
 #define Z_SYSCALL_DRIVER_FPGA(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, fpga, FPGA)
 
 #define Z_SYSCALL_DRIVER_FUEL_GAUGE(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, fuel_gauge, FUEL_GAUGE)
+
+#define Z_SYSCALL_DRIVER_GPIO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, gpio, GPIO)
+
+#define Z_SYSCALL_DRIVER_I2C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2c, I2C)
 
 #define Z_SYSCALL_DRIVER_I2S(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2s, I2S)
 
@@ -82,11 +76,15 @@
 
 #define Z_SYSCALL_DRIVER_SDHC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sdhc, SDHC)
 
+#define Z_SYSCALL_DRIVER_SENSOR(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sensor, SENSOR)
+
 #define Z_SYSCALL_DRIVER_SMBUS(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, smbus, SMBUS)
 
 #define Z_SYSCALL_DRIVER_SPI(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, spi, SPI)
 
 #define Z_SYSCALL_DRIVER_SYSCON(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, syscon, SYSCON)
+
+#define Z_SYSCALL_DRIVER_UART(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
 
 #define Z_SYSCALL_DRIVER_W1(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, w1, W1)
 
@@ -99,8 +97,6 @@
 #define Z_SYSCALL_DRIVER_ITS(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, its, ITS)
 
 #define Z_SYSCALL_DRIVER_PCIE_CTRL(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, pcie_ctrl, PCIE_CTRL)
-
-#define Z_SYSCALL_DRIVER_SVC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, svc, SVC)
 
 #define Z_SYSCALL_DRIVER_BC12_EMUL(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, bc12_emul, BC12_EMUL)
 

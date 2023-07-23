@@ -142,56 +142,6 @@ static inline int sensor_channel_get(const struct device * dev, enum sensor_chan
 #endif
 
 
-extern int z_impl_sensor_get_decoder(const struct device * dev, const struct sensor_decoder_api ** decoder);
-
-__pinned_func
-static inline int sensor_get_decoder(const struct device * dev, const struct sensor_decoder_api ** decoder)
-{
-#ifdef CONFIG_USERSPACE
-	if (z_syscall_trap()) {
-		union { uintptr_t x; const struct device * val; } parm0 = { .val = dev };
-		union { uintptr_t x; const struct sensor_decoder_api ** val; } parm1 = { .val = decoder };
-		return (int) arch_syscall_invoke2(parm0.x, parm1.x, K_SYSCALL_SENSOR_GET_DECODER);
-	}
-#endif
-	compiler_barrier();
-	return z_impl_sensor_get_decoder(dev, decoder);
-}
-
-#if defined(CONFIG_TRACING_SYSCALL)
-#ifndef DISABLE_SYSCALL_TRACING
-
-#define sensor_get_decoder(dev, decoder) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_GET_DECODER, sensor_get_decoder, dev, decoder); 	retval = sensor_get_decoder(dev, decoder); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_GET_DECODER, sensor_get_decoder, dev, decoder, retval); 	retval; })
-#endif
-#endif
-
-
-extern int z_impl_sensor_reconfigure_read_iodev(struct rtio_iodev * iodev, const struct device * sensor, const enum sensor_channel * channels, size_t num_channels);
-
-__pinned_func
-static inline int sensor_reconfigure_read_iodev(struct rtio_iodev * iodev, const struct device * sensor, const enum sensor_channel * channels, size_t num_channels)
-{
-#ifdef CONFIG_USERSPACE
-	if (z_syscall_trap()) {
-		union { uintptr_t x; struct rtio_iodev * val; } parm0 = { .val = iodev };
-		union { uintptr_t x; const struct device * val; } parm1 = { .val = sensor };
-		union { uintptr_t x; const enum sensor_channel * val; } parm2 = { .val = channels };
-		union { uintptr_t x; size_t val; } parm3 = { .val = num_channels };
-		return (int) arch_syscall_invoke4(parm0.x, parm1.x, parm2.x, parm3.x, K_SYSCALL_SENSOR_RECONFIGURE_READ_IODEV);
-	}
-#endif
-	compiler_barrier();
-	return z_impl_sensor_reconfigure_read_iodev(iodev, sensor, channels, num_channels);
-}
-
-#if defined(CONFIG_TRACING_SYSCALL)
-#ifndef DISABLE_SYSCALL_TRACING
-
-#define sensor_reconfigure_read_iodev(iodev, sensor, channels, num_channels) ({ 	int retval; 	sys_port_trace_syscall_enter(K_SYSCALL_SENSOR_RECONFIGURE_READ_IODEV, sensor_reconfigure_read_iodev, iodev, sensor, channels, num_channels); 	retval = sensor_reconfigure_read_iodev(iodev, sensor, channels, num_channels); 	sys_port_trace_syscall_exit(K_SYSCALL_SENSOR_RECONFIGURE_READ_IODEV, sensor_reconfigure_read_iodev, iodev, sensor, channels, num_channels, retval); 	retval; })
-#endif
-#endif
-
-
 #ifdef __cplusplus
 }
 #endif

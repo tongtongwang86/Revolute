@@ -1,6 +1,6 @@
 add_custom_target(devicetree_target)
 
-set_target_properties(devicetree_target PROPERTIES "DT_CHOSEN|zephyr,entropy" "/soc/random@4000d000")
+set_target_properties(devicetree_target PROPERTIES "DT_CHOSEN|zephyr,entropy" "/soc/crypto@5002a000")
 set_target_properties(devicetree_target PROPERTIES "DT_CHOSEN|zephyr,flash-controller" "/soc/flash-controller@4001e000")
 set_target_properties(devicetree_target PROPERTIES "DT_CHOSEN|zephyr,console" "/soc/usbd@40027000/cdc_acm_uart0")
 set_target_properties(devicetree_target PROPERTIES "DT_CHOSEN|zephyr,shell-uart" "/soc/uart@40002000")

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/T0ngx/Documents/zephyrproject/zephyr/subsys/usb
+# Install script for directory: /opt/nordic/ncs/v2.4.0/zephyr/subsys/usb
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/Zephyr-Kernel")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,11 +34,11 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "/opt/nordic/ncs/toolchains/4ef6631da0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/T0ngx/Documents/Revolute/Software/Sourcev2/app/build/zephyr/subsys/usb/device/cmake_install.cmake")
+  include("/Users/tongtong/Projects/revolute/software/sourcev2/app/build/zephyr/subsys/usb/device/cmake_install.cmake")
 endif()
 
