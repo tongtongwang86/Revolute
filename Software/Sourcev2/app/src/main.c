@@ -5,9 +5,13 @@
 #include <zephyr/drivers/uart.h>
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/usb/class/usb_hid.h>
+ 
+#define KEY_1_CONFIGURE HID_KEY_S //clockwise key
+#define KEY_1_MODIFYER 0b00000010  // | RGUI| RALT| RSHIFT| RCONTROL | LGUI| LALT| LSHIFT| LCONTROL|
 
-#define KEY_1_CONFIGURE HID_KEY_Z //clockwise key
-#define KEY_2_CONFIGURE HID_KEY_G //counter clockwise key
+#define KEY_2_CONFIGURE HID_KEY_S //counter clockwise key'
+#define KEY_2_MODIFYER 0b00000000  // | RGUI| RALT| RSHIFT| RCONTROL | LGUI| LALT| LSHIFT| LCONTROL|
+
 #define STACKSIZE 1024
 #define PRIORITY 1
 #define SLEEPTIME 500
@@ -109,10 +113,11 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 
 		
 		if (deltadegrees > 0){
+			rep[0] = KEY_1_MODIFYER;
 			rep[7] = KEY_1_CONFIGURE; 
 
 		}else{
-
+			rep[0] = KEY_2_MODIFYER;
 			rep[7] = KEY_2_CONFIGURE; 
 		}
 
