@@ -396,7 +396,7 @@
     (property "Reference" "U1" (at 109.22 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "~" (at 109.22 85.09 0)
+    (property "Value" "AS5600" (at 109.22 85.09 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm" (at 109.22 85.09 0)
