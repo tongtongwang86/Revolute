@@ -6,6 +6,65 @@
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/usb/class/usb_hid.h>
  
+// #define HID_REVOLUTE_REPORT_DESC() {				\
+// 	HID_USAGE_PAGE(HID_USAGE_GEN_DESKTOP),			\
+// 	HID_USAGE(HID_USAGE_GEN_DESKTOP_MOUSE),			\
+// 	HID_COLLECTION(HID_COLLECTION_APPLICATION),		\
+// 		HID_COLLECTION(HID_COLLECTION_PHYSICAL),	\
+// 			HID_USAGE_PAGE(HID_USAGE_GEN_DESKTOP),	\
+// 			HID_USAGE(HID_USAGE_GEN_DESKTOP_WHEEL),	\
+// 			HID_LOGICAL_MIN8(-127),			\
+// 			HID_LOGICAL_MAX8(127),	
+// 			HID_REPORT_SIZE(8),			\
+// 			HID_REPORT_COUNT(1),			\
+// 			/* HID_INPUT (Data,Var,Rel) */		\
+// 			HID_INPUT(0x06),			\
+// 		HID_END_COLLECTION,				\
+// 	HID_END_COLLECTION,					\
+// }
+
+#define HID_REVLOTUE_REPORT_DESC(bcnt) {				\
+	HID_USAGE_PAGE(HID_USAGE_GEN_DESKTOP),			\
+	HID_USAGE(HID_USAGE_GEN_DESKTOP_MOUSE),			\
+	HID_COLLECTION(HID_COLLECTION_APPLICATION),		\
+		HID_USAGE(HID_USAGE_GEN_DESKTOP_POINTER),	\
+		HID_COLLECTION(HID_COLLECTION_PHYSICAL),	\
+			/* Bits used for button signalling */	\
+			HID_USAGE_PAGE(HID_USAGE_GEN_BUTTON),	\
+			HID_USAGE_MIN8(1),			\
+			HID_USAGE_MAX8(bcnt),			\
+			HID_LOGICAL_MIN8(0),			\
+			HID_LOGICAL_MAX8(1),			\
+			HID_REPORT_SIZE(1),			\
+			HID_REPORT_COUNT(bcnt),			\
+			/* HID_INPUT (Data,Var,Abs) */		\
+			HID_INPUT(0x02),			\
+			/* Unused bits */			\
+			HID_REPORT_SIZE(8 - bcnt),		\
+			HID_REPORT_COUNT(1),			\
+			/* HID_INPUT (Cnst,Ary,Abs) */		\
+			HID_INPUT(1),				\
+			/* X and Y axis, scroll */		\
+			HID_USAGE_PAGE(HID_USAGE_GEN_DESKTOP),	\
+			HID_USAGE(HID_USAGE_GEN_DESKTOP_X),	\
+			HID_USAGE(HID_USAGE_GEN_DESKTOP_Y),	\
+			HID_USAGE(HID_USAGE_GEN_DESKTOP_WHEEL),	\
+			HID_LOGICAL_MIN8(-127),			\
+			HID_LOGICAL_MAX8(127),			\
+			HID_REPORT_SIZE(8),			\
+			HID_REPORT_COUNT(3),			\
+			/* HID_INPUT (Data,Var,Rel) */		\
+			HID_INPUT(0x06),			\
+		HID_END_COLLECTION,				\
+	HID_END_COLLECTION,					\
+}
+
+#define wheelResolution 1
+#define MOUSE_X_REPORT_POS	3
+// #define MOUSE_X_REPORT_POS	3
+uint8_t report[4] = { 0x00 };
+static volatile uint8_t status[4];
+
 #define KEY_1_CONFIGURE HID_KEY_S //clockwise key
 #define KEY_1_MODIFYER 0b00000010  // | RGUI| RALT| RSHIFT| RCONTROL | LGUI| LALT| LSHIFT| LCONTROL|
 
@@ -22,7 +81,7 @@ static struct k_thread threadA_data;
 
 static const struct device *hdev;
 
-static const uint8_t hid_kbd_report_desc[] = HID_KEYBOARD_REPORT_DESC();
+static const uint8_t hid_rvl_report_desc[] = HID_REVLOTUE_REPORT_DESC(2);
 
 K_SEM_DEFINE(my_sem, 0, 10);
 static K_SEM_DEFINE(usb_sem, 1, 1);	/* starts off "available" */
@@ -75,7 +134,7 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 	int lastIdent = (as5600_refresh(as) - (as5600_refresh(as) % 12))/12 ;
 	
 	//int lastDeviation = as5600_refresh(as) % 12;
-	int lastDegree = as5600_refresh(as);
+	
 	
 	ARG_UNUSED(dummy1);
 	ARG_UNUSED(dummy2);
@@ -87,128 +146,103 @@ void threadA(void *dummy1, void *dummy2, void *dummy3)
 
 	while (1)
 	{
-		
-		int degrees = as5600_refresh(as)  ;//+ 6;
+		uint8_t state = status[MOUSE_X_REPORT_POS];
+		int degrees = as5600_refresh(as) ;
+		int usefulDegrees = as5600_refresh(as) ;
+		int lastDegree = as5600_refresh(as);
 		int deltadegrees = 0;
+		int lastDeltadegrees = 0;
+		int deltaDeltadegrees = 0;
+		int lastdeltaDeltadegrees = 0;
+		deltadegrees = (degrees-lastDegree);
+		deltaDeltadegrees = (deltadegrees-lastDeltadegrees);
+
 		//int deviation = degrees % 12;
-		if (degrees-lastDegree < -200 ){
-			deltadegrees = (degrees-lastDegree) + 360 + 50;
+		// if (degrees-lastDegree < -200 ){
+		// 	if((degrees-lastDegree)-deltadegrees < -360){
 
-		} else if (degrees-lastDegree > 200){
+		// 		deltadegrees = 360*2 -(degrees-lastDegree);
+		// 		printk("aaaaa");
 
-			deltadegrees = (degrees-lastDegree) - 360 - 50;
+		// 	}else{
 
-		} else {
+		// 		deltadegrees = 360 +(degrees-lastDegree);
+		// 	}
+			
 
-			deltadegrees = (degrees-lastDegree);
+		// } else if (degrees-lastDegree > 200){
+
+		// 	if((degrees-lastDegree)-deltadegrees > 20){
+
+		// 		deltadegrees = 360*2 -(degrees-lastDegree);
+		// 		printk("eeeee");
+
+		// 	}else{
+
+		// 		deltadegrees = 360 -(degrees-lastDegree);
+		// 	}
+
+		// } else {
+
+		// 	deltadegrees = (degrees-lastDegree);
+
+		// }
+
+		if (deltaDeltadegrees < -200){
+			usefulDegrees = lastDeltadegrees ;
+			deltaDeltadegrees = lastdeltaDeltadegrees;
+
+		} else if(deltaDeltadegrees > 200) {
+			usefulDegrees = lastDeltadegrees ;
+			deltaDeltadegrees = lastdeltaDeltadegrees;
+
+		}else{
+			usefulDegrees = (degrees-lastDegree) ;
 
 		}
-
+		// lastDegree = degrees;
+		
 		//printk("%d\n", (degrees - (degrees % 12))/12);
-		//printk("%d\n", deltadegrees);
-
+		// printk("%d\n", usefulDegrees);
+if (degrees != lastDegree){
 		if (lastIdent != (((degrees+6+IDENT_OFFSET)) - ((degrees+6+IDENT_OFFSET) % 12))/12 && (((degrees+6+IDENT_OFFSET)) - ((degrees+6+IDENT_OFFSET) % 12))/12!= 30) {
 
+		// if (degrees != lastDegree){
+
+
+		
 		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 		
-		if (deltadegrees > 0){
-			rep[0] = KEY_1_MODIFYER;
-			rep[7] = KEY_1_CONFIGURE; 
+		if (deltaDeltadegrees > 0){
+			// state += (deltaDeltadegrees);
+			state += 1U;
 
 		}else{
-			rep[0] = KEY_2_MODIFYER;
-			rep[7] = KEY_2_CONFIGURE; 
+			// state += (deltaDeltadegrees);
+			state -= 1U;
 		}
 
-			//lastIdent = (degrees - deviation)/12 ;
+		status[MOUSE_X_REPORT_POS] = state;
+		report[MOUSE_X_REPORT_POS] = status[MOUSE_X_REPORT_POS];
+		status[MOUSE_X_REPORT_POS] = 0U;
 
-		// printk("%d\n", degrees-lastDegree);
-
-
-		//if (deviation > 6) {deviation = deviation - 12; }
-
-
-
-
-		// if ((lastDegree % 12)>6 && (degrees % 12 ) < 5 && lastIdent != (degrees - (degrees % 12))/12 ){
-		// 	rep[7] = KEY_1_CONFIGURE; 
-		// 	lastIdent = (degrees - (degrees % 12))/12 ;
-
-		// }else if ((lastDegree % 12)< 5 && (degrees % 12 ) >6 && lastIdent != (degrees - (degrees % 12))/12){
-
-		// 	rep[7] = KEY_2_CONFIGURE; 
-		// 	lastIdent = (degrees - (degrees % 12))/12 ;
-		// }
-
-
-		// if (lastDegree > 180 && degrees < 179) {
-		// 	// clockwize transition (360 -> 0)
-		// 	//isOnIdent (degrees,lastDegree);
-
-		// 	if (degrees % 12 == 0 && degrees % 12 != currentident) {
-
-		// 	rep[7] = KEY_1_CONFIGURE;
-
-		// 	currentident = degrees / 12;
-		// 	} else if (((lastDegree % 12) - 12 )< 0 && (degrees % 12)> 0){
-
-		// 	rep[7] = KEY_1_CONFIGURE;
-
-		// 	currentident = degrees - (degrees%12);
-
-		// 	}
-
-
-		// } else if (degrees < 179 && lastDegree > 180) {
-		// 	// counter clockwize transition (0 -> 360)
-
-		// 	if (degrees % 12 == 0 && degrees % 12 != currentident) {
-
-		// 		rep[7] = KEY_2_CONFIGURE;
-
-		// 	}	else if (((degrees % 12) - 12 )< 0 && (lastDegree % 12)> 0){
-
-		// 	rep[7] = KEY_2_CONFIGURE;
-
-		// 	currentident = degrees - (degrees%12);
-
-		// 	}
-
-
-		// }
-
-
-
-			//degree is getting bigger
-		// if (lastDegree < degrees) {
-
-		// 	if (lastDegree == 1 && degrees == 349 ){
-		// 	rep[7] = KEY_2_CONFIGURE;
-		// 	}else{
-		// 		rep[7] = KEY_1_CONFIGURE;
-		// 	}
-
-		// 	}else{
-		// 	if (lastDegree == 349 && degrees == 1 ){
-		// 	rep[7] = KEY_1_CONFIGURE;
-		// 	}else{
-		// 		rep[7] = KEY_2_CONFIGURE;
-		// 	}
-		// }
-
+	
 
 		k_sem_take(&usb_sem, K_FOREVER);
-		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+		int ret = hid_int_ep_write(hdev,report,sizeof(report), NULL);
 		// printk("snap:%d\n",degrees);
 		// printk("degrees:%d\n",as5600_refresh(as));
 		
 	
 		k_sem_give(&my_sem);
+		}
 			lastIdent = ((degrees+6+IDENT_OFFSET) - ((degrees+6+IDENT_OFFSET) % 12))/12;
 			lastDegree = degrees;
+			lastDeltadegrees = deltadegrees;
+			lastdeltaDeltadegrees = deltaDeltadegrees;
 			//lastDeviation = deviation;
-		} 
+		}
 
 
 	}
@@ -290,10 +324,10 @@ while (1)
 		
 		
 
-		uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+		// uint8_t rep[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 	
-		k_sem_take(&usb_sem, K_FOREVER);
-		int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
+		// k_sem_take(&usb_sem, K_FOREVER);
+		// int ret = hid_int_ep_write(hdev,rep,sizeof(rep), NULL);
 
 		
 		
@@ -315,7 +349,7 @@ static int composite_pre_init(void)
 	}
 
 
-	usb_hid_register_device(hdev, hid_kbd_report_desc,sizeof(hid_kbd_report_desc), &ops);
+	usb_hid_register_device(hdev, hid_rvl_report_desc,sizeof(hid_rvl_report_desc), &ops);
 
 	return usb_hid_init(hdev);
 }

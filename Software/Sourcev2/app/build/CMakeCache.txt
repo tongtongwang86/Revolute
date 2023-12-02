@@ -27,7 +27,7 @@ BOARD:STRING=revolute
 BOARD_DIR:PATH=/Users/tongtong/Library/Mobile Documents/com~apple~CloudDocs/Personal/Projects/Revolute/Software/Sourcev2/boards/arm/revolute
 
 //No help, variable specified on the command line.
-BOARD_ROOT:STRING=/Users/tongtong/Library/Mobile Documents/com~apple~CloudDocs/Personal/Projects/Revolute/Software/Sourcev2
+BOARD_ROOT:UNINITIALIZED=/Users/tongtong/Library/Mobile Documents/com~apple~CloudDocs/Personal/Projects/Revolute/Software/Sourcev2
 
 //Path to a program.
 BOSSAC:FILEPATH=BOSSAC-NOTFOUND
@@ -299,7 +299,11 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Path to a program.
 DTC:FILEPATH=/opt/nordic/ncs/toolchains/4ef6631da0/bin/dtc
 
-//No help, variable specified on the command line.
+//If desired, you can build the application using the DT configuration
+// settings specified in an alternate .overlay file using this
+// parameter. These settings will override the settings in the
+// board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
+// dts2.overlay"
 DTC_OVERLAY_FILE:STRING=/Users/tongtong/Projects/revolute/software/sourcev2/app/app.overlay
 
 //Linker BFD compatibility (compiler reported)
@@ -312,7 +316,7 @@ GPERF:FILEPATH=/opt/nordic/ncs/toolchains/4ef6631da0/bin/gperf
 IMGTOOL:FILEPATH=/opt/nordic/ncs/toolchains/4ef6631da0/bin/imgtool
 
 //No help, variable specified on the command line.
-NCS_TOOLCHAIN_VERSION:STRING=NONE
+NCS_TOOLCHAIN_VERSION:UNINITIALIZED=NONE
 
 //NRFXLIB root directory
 NRFXLIB_DIR:PATH=/opt/nordic/ncs/v2.4.0/nrfxlib

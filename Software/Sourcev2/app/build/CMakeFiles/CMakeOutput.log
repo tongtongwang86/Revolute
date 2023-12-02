@@ -1,5 +1,5 @@
 The target system is: Generic - 3.3.99 - arm
-The host system is: Darwin - 22.6.0 - arm64
+The host system is: Darwin - 23.1.0 - arm64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /opt/nordic/ncs/toolchains/4ef6631da0/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc 
 Build flags: 
