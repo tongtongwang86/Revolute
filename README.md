@@ -64,4 +64,7 @@ PCB
 </br>
 
 
+Ideas for v3:
+modular connector, reset button ,smaller connector, type c, *interrupts, driver, user customizable gui
+
 
