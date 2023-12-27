@@ -36,7 +36,7 @@
         "pads": {
           "drill": 0.0,
           "height": 3.0,
-          "width": 3.0
+          "width": 4.0
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -173,17 +173,12 @@
         }
       ],
       "track_widths": [
-        0.0,
-        0.1
+        0.0
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 0.25,
-          "drill": 0.15
         }
       ],
       "zones_allow_external_fillets": false,
@@ -441,10 +436,10 @@
     "net_colors": {
       "Batteryin": "rgb(255, 154, 0)",
       "GND": "rgb(74, 112, 255)",
+      "Net-(U2-P0.28{slash}AIN4)": "rgb(255, 37, 51)",
       "VBUS": "rgb(99, 255, 8)",
       "VDD_nRF": "rgb(255, 0, 132)",
-      "vBAT": "rgb(255, 0, 226)",
-      "vSYSTEM": "rgb(255, 37, 51)"
+      "vBAT": "rgb(255, 0, 226)"
     },
     "netclass_assignments": null,
     "netclass_patterns": []
