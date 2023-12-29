@@ -451,7 +451,7 @@
       "netlist": "",
       "specctra_dsn": "",
       "step": "revo.step",
-      "vrml": "../../../../../../../../Desktop/Revolute.wrl"
+      "vrml": "../../../Revolute.wrl"
     },
     "page_layout_descr_file": ""
   },
