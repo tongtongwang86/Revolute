@@ -1,0 +1,24 @@
+# Revolute wireless
+# Copyright (c) 2024 Tongtong Wang
+
+
+if BOARD_REVOLUTEWIRELESS
+
+config BOARD_ENABLE_DCDC
+	bool "DCDC mode"
+	select SOC_DCDC_NRF52X
+	default y
+
+config BOARD_HAS_NRF5_BOOTLOADER
+	bool "Board has nRF5 bootloader"
+	default y
+	help
+	  If selected, applications are linked so that they can be loaded by Nordic
+	  nRF5 bootloader.
+
+#config I2C
+#	default y
+
+
+
+endif # BOARD_REVOLUTE

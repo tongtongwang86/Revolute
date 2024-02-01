@@ -1,0 +1,123 @@
+
+
+/dts-v1/;
+#include <nordic/nrf52833_qiaa.dtsi>
+
+
+/ {
+	model = "revolutewireless";
+	compatible = "revolutewireless";
+
+	chosen {
+
+		zephyr,console = &uart0;
+		zephyr,shell-uart = &uart0;
+		zephyr,uart-mcumgr = &uart0;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,code-partition = &slot0_partition;
+
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		led0_red: led_0 {
+			gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+			label = "Red LED 0";
+		};
+	
+	};
+
+
+
+ 	buttons {
+ 	compatible = "gpio-keys";
+	reset_button: button_0 {
+ 		gpios = <&gpio0 28 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+ 		label = "reset button";
+ 	};
+	};
+
+	/* These aliases are provided for compatibility with samples */
+	aliases {
+		led0 = &led0_red;
+		led0-red   = &led0_red;	
+
+
+	};
+};
+
+&gpiote {
+	status = "okay";
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&gpio1 {
+	status = "okay";
+};
+
+
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x0 0xc000>;
+		};
+		slot0_partition: partition@c000 {
+			label = "image-0";
+			reg = <0xc000 0x37000>;
+		};
+		slot1_partition: partition@43000 {
+			label = "image-1";
+			reg = <0x43000 0x37000>;
+		};
+		storage_partition: partition@7a000 {
+			label = "storage";
+			reg = <0x7a000 0x6000>;
+		};
+	};
+};
+
+
+&i2c0 {
+
+	status = "okay";
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-names = "default";
+	//clock-frequency = <200000>;
+	// pinctrl-0 = <&i2c0_default>;
+	// pinctrl-1 = <&i2c0_sleep>;
+	// pinctrl-names = "default", "sleep";
+	//reg = <0x40003000 0x1000>;
+	as5600: as5600@36 {
+		compatible = "ams,as5600";
+		
+		reg = <0x36>;
+		status = "okay";
+	};
+};
+
+
+&pinctrl {
+	i2c0_default: i2c0_default {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SCL, 0,15)>, <NRF_PSEL(TWIM_SDA, 0, 17)>;
+		};
+	};
+};
+
+
+// #include "fstab-stock.dts"
+
+zephyr_udc0: &usbd {
+	compatible = "nordic,nrf-usbd";
+	status = "okay";
+};

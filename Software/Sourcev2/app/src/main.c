@@ -232,7 +232,7 @@ if (degrees != lastDegree){
 		k_sem_take(&usb_sem, K_FOREVER);
 		int ret = hid_int_ep_write(hdev,report,sizeof(report), NULL);
 		// printk("snap:%d\n",degrees);
-		// printk("degrees:%d\n",as5600_refresh(as));
+		printk("degrees:%d\n",as5600_refresh(as));
 		
 	
 		k_sem_give(&my_sem);

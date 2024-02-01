@@ -7,7 +7,7 @@
 /* LED
  *------------------------------------------------------------------*/
 #define LEDS_NUMBER       1
-#define LED_PRIMARY_PIN   _PINNUM(0, 03) // Blue
+#define LED_PRIMARY_PIN   3 // Blue
 #define LED_STATE_ON      1
 
 //#define LED_NEOPIXEL          _PINNUM(0, 16)
@@ -18,8 +18,8 @@
 /* BUTTON
  *------------------------------------------------------------------*/
 #define BUTTONS_NUMBER        2
-#define BUTTON_1              _PINNUM(0, 19)
-#define BUTTON_2              _PINNUM(0, 10)
+#define BUTTON_1              28
+#define BUTTON_2              18
 #define BUTTON_PULL           NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
@@ -37,7 +37,7 @@
 
 //------------- UF2 -------------//
 #define UF2_PRODUCT_NAME      "RevoluteWireless"
-#define UF2_VOLUME_LABEL      "RevoluteWireless"
+#define UF2_VOLUME_LABEL      "Revolute"
 #define UF2_BOARD_ID          "RevoluteWireless-nrf52833"
 #define UF2_INDEX_URL         "https://www.tongtonginc.com/revolute"
 
