@@ -931,7 +931,7 @@
         (effects (font (size 1 1) (thickness 0.1)) (justify mirror))
       (tstamp 434eff32-36c8-405d-a8b7-b3e83263fb74)
     )
-    (fp_text value "Button" (at -0.45 9 180 unlocked) (layer "B.Fab")
+    (fp_text value "Button 3x3x1.5" (at -0.45 9 180 unlocked) (layer "B.Fab")
         (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       (tstamp 07ecd835-a957-4e16-a0d8-6f8e75b6210e)
     )
