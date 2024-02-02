@@ -32,16 +32,19 @@
 
  	buttons {
  	compatible = "gpio-keys";
-	reset_button: button_0 {
- 		gpios = <&gpio0 28 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
- 		label = "reset button";
- 	};
+
+	 button1: button_1 {
+		gpios = <&gpio0 28 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+		label = "compliantbutton";
+	};
+
 	};
 
 	/* These aliases are provided for compatibility with samples */
 	aliases {
 		led0 = &led0_red;
 		led0-red   = &led0_red;	
+		sw0 =  &button1;
 
 
 	};
