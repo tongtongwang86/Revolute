@@ -1,2 +1,0 @@
-src/dfu_init.c:105:10:dfu_init_prevalidate	16	static
-src/dfu_init.c:191:10:dfu_init_postvalidate	8	static
