@@ -1,0 +1,3 @@
+src/dfu_ble_svc.c:123:6:C_SVC_Handler	8	static
+src/dfu_ble_svc.c:167:32:SVC_Handler	0	static
+src/dfu_ble_svc.c:215:10:dfu_ble_peer_data_get	16	static
