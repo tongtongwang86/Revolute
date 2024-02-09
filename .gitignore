@@ -1,3 +1,5 @@
 Software/Sourcev2/app/build/*
+Software/Sourcev2/beacon/build/*
 *.blend
+*.blend1
 .DS_Store

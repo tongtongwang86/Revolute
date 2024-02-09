@@ -5,7 +5,10 @@
 #include <zephyr/drivers/uart.h>
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/usb/class/usb_hid.h>
+
  
+
+
 // #define HID_REVOLUTE_REPORT_DESC() {				\
 // 	HID_USAGE_PAGE(HID_USAGE_GEN_DESKTOP),			\
 // 	HID_USAGE(HID_USAGE_GEN_DESKTOP_MOUSE),			\
