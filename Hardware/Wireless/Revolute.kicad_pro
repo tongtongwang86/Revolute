@@ -453,7 +453,6 @@
     "net_colors": {
       "Batteryin": "rgb(255, 154, 0)",
       "GND": "rgb(74, 112, 255)",
-      "Net-(U2-P0.28{slash}AIN4)": "rgb(255, 37, 51)",
       "VBUS": "rgb(99, 255, 8)",
       "VDD_nRF": "rgb(255, 0, 132)",
       "vBAT": "rgb(255, 0, 226)"
