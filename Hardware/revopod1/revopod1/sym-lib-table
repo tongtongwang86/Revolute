@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "library")(type "KiCad")(uri "C:/Users/TT/Desktop/revopod/revopod/library.kicad_sym")(options "")(descr ""))
+  (lib (name "Library(1)")(type "KiCad")(uri "C:/Users/TT/Desktop/old kikad shit/mac my ass/ass my mac/Library(1).kicad_sym")(options "")(descr ""))
+  (lib (name "Library(2)")(type "KiCad")(uri "C:/Users/TT/Desktop/old kikad shit/mac my ass/ass my mac/Library(2).kicad_sym")(options "")(descr ""))
+  (lib (name "Library")(type "KiCad")(uri "C:/Users/TT/Downloads/Revolute-main (1)/Revolute-main/Hardware/Debugger/Library.kicad_sym")(options "")(descr ""))
+)
