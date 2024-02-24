@@ -471,7 +471,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "revo.step",
+      "step": "../../../../../../../../Desktop/revo.step",
       "vrml": "../../../Revolute.wrl"
     },
     "page_layout_descr_file": ""
