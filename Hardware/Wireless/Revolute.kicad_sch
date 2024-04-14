@@ -13427,7 +13427,7 @@
 		(dnp no)
 		(uuid "c2e23554-f6d9-4a67-a106-445167459101")
 		(property "Reference" "U41"
-			(at 130.81 159.385 0)
+			(at 130.048 160.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13831,7 +13831,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm"
+		(property "Footprint" "Library:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.514x3.2mm"
 			(at 170.18 98.425 0)
 			(effects
 				(font
