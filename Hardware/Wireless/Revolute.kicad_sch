@@ -718,6 +718,141 @@
 				)
 			)
 		)
+		(symbol "C_Small_1"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_1_0_1"
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:Antenna"
 			(pin_numbers hide)
 			(pin_names
@@ -8233,6 +8368,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "16"
+			(at 34.925 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "252391bc-67dd-42a2-9750-91b8b29c4b09")
 		)
@@ -8320,6 +8464,15 @@
 		)
 		(property "JLC Part" "C25867"
 			(at 142.875 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "6"
+			(at 142.875 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8678,6 +8831,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "11"
+			(at 59.69 22.225 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d421c368-9c82-4705-9d56-4ac628ae24fe")
 		)
@@ -8737,6 +8899,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 63.5 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "107"
 			(at 63.5 77.47 0)
 			(effects
 				(font
@@ -8931,6 +9102,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "92"
+			(at 62.865 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e349b7cf-57c3-4e28-a34d-f1d9f747c188")
 		)
@@ -9097,6 +9277,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "104"
+			(at 110.49 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a9889e4e-820d-4c22-86f4-ab18a616557d")
 		)
@@ -9157,6 +9346,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 186.055 142.875 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "62"
 			(at 186.055 142.875 0)
 			(effects
 				(font
@@ -9243,35 +9441,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C97607"
-			(at 33.655 65.405 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey" "728-1075-1-ND"
-			(at 33.655 65.405 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part" "SC20S-12.5PF20PPM"
-			(at 33.655 65.405 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Part" "C93231"
-			(at 33.655 65.405 0)
+		(property "ID" "43"
+			(at 33.655 65.405 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9604,6 +9775,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 54.61 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "16"
 			(at 54.61 102.235 0)
 			(effects
 				(font
@@ -10014,6 +10194,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "16"
+			(at 21.59 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7383f2d4-66cd-450b-844b-7d8a3fcdb02b")
 		)
@@ -10212,6 +10401,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "26"
+			(at 97.155 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "483f04e5-ad82-43aa-a051-5d88c6923b55")
 		)
@@ -10274,6 +10472,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 195.58 97.155 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "29"
 			(at 195.58 97.155 0)
 			(effects
 				(font
@@ -10508,6 +10715,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "97"
+			(at 201.93 70.485 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "358814b5-6046-433e-b09f-380e93325b2f")
 		)
@@ -10568,6 +10784,15 @@
 		)
 		(property "Description" ""
 			(at 96.52 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "21"
+			(at 96.52 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10972,6 +11197,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "21"
+			(at 34.925 53.975 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fff6de80-e6c4-4dc6-a28a-09f99ea9dc97")
 		)
@@ -11032,6 +11266,15 @@
 		)
 		(property "Description" ""
 			(at 105.41 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "42"
+			(at 105.41 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11243,6 +11486,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "30"
+			(at 198.12 142.875 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5944fa59-6003-46d2-a678-9b2fe5a08ab0")
 		)
@@ -11302,6 +11554,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 116.84 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "112"
 			(at 116.84 78.74 0)
 			(effects
 				(font
@@ -11370,6 +11631,15 @@
 		)
 		(property "Description" ""
 			(at 46.99 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "30"
+			(at 46.99 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11458,6 +11728,7 @@
 		)
 	)
 	(symbol
+		(lib_name "C_Small_1")
 		(lib_id "Device:C_Small")
 		(at 29.21 69.215 270)
 		(unit 1)
@@ -11502,6 +11773,15 @@
 		)
 		(property "Description" ""
 			(at 29.21 69.215 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "17"
+			(at 29.21 69.215 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11736,6 +12016,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "27"
+			(at 111.76 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2502caee-d955-453d-8eae-fa5e480fab5f")
 		)
@@ -11795,6 +12084,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 100.965 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "18"
 			(at 100.965 78.74 0)
 			(effects
 				(font
@@ -11872,6 +12170,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "30"
+			(at 153.67 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "da643fb4-cec4-4933-8510-5a800d73495f")
 		)
@@ -11910,7 +12217,7 @@
 				)
 			)
 		)
-		(property "Value" "0.47uF"
+		(property "Value" "470nF"
 			(at 86.36 139.7 90)
 			(effects
 				(font
@@ -11938,6 +12245,15 @@
 		)
 		(property "Description" ""
 			(at 90.17 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "12"
+			(at 90.17 139.7 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12012,26 +12328,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C114759"
-			(at 201.93 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part" "RC0402FR-071K5L"
-			(at 201.93 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Part" "C25867"
-			(at 201.93 62.865 0)
+		(property "ID" "82"
+			(at 201.93 62.865 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12178,6 +12476,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "55"
+			(at 74.93 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ec67d330-29f3-41c7-984d-e932822e5f46")
 		)
@@ -12314,6 +12621,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "93"
+			(at 182.88 47.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "832e84e4-497b-4927-9cf7-2dde92e29955")
 		)
@@ -12426,6 +12742,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "83"
+			(at 197.485 42.545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0b92efa2-a920-469a-9bf4-462e429008ee")
 		)
@@ -12493,6 +12818,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "17"
+			(at 111.76 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0efe067e-ad87-446f-bcc4-44f9ee12e643")
 		)
@@ -12526,7 +12860,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Antenna"
+		(property "Value" "2.4G ANT"
 			(at 127.635 81.915 90)
 			(effects
 				(font
@@ -12555,6 +12889,15 @@
 		)
 		(property "Description" ""
 			(at 132.08 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "106"
+			(at 132.08 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12620,6 +12963,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 147.32 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "21"
 			(at 147.32 103.505 0)
 			(effects
 				(font
@@ -12853,6 +13205,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "83"
+			(at 227.965 40.005 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3fcc11a8-bff3-4d4f-9d95-5ca1aa10f66d")
 		)
@@ -12920,25 +13281,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C146215"
-			(at 104.14 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part" "19-217/BHC-ZL1M2RY/3T"
-			(at 104.14 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Part" "C72041"
+		(property "ID" "90"
 			(at 104.14 105.41 0)
 			(effects
 				(font
@@ -13080,6 +13423,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "30"
+			(at 30.48 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "599a44d7-1baf-4709-afb6-d63f747eaab6")
 		)
@@ -13140,6 +13492,15 @@
 		)
 		(property "Description" ""
 			(at 123.19 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "101"
+			(at 123.19 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13214,6 +13575,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "30"
+			(at 180.34 30.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "48036238-77cb-406b-96da-a4791c8d791f")
 		)
@@ -13281,26 +13651,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C114759"
-			(at 167.64 47.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part" "RC0402FR-071K5L"
-			(at 167.64 47.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Part" "C25867"
-			(at 167.64 47.625 0)
+		(property "ID" "7"
+			(at 167.64 47.625 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13375,26 +13727,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C114759"
-			(at 154.94 57.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part" "RC0402FR-071K5L"
-			(at 154.94 57.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Part" "C25867"
-			(at 154.94 57.785 0)
+		(property "ID" "105"
+			(at 154.94 57.785 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13434,7 +13768,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "BK13C06-10DS"
 			(at 119.38 161.925 0)
 			(effects
 				(font
@@ -13461,6 +13795,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 125.73 161.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "41"
 			(at 125.73 161.925 0)
 			(effects
 				(font
@@ -13587,6 +13930,15 @@
 		)
 		(property "Description" ""
 			(at 29.21 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "17"
+			(at 29.21 61.595 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13858,6 +14210,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "73"
+			(at 173.99 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "be3308b5-f2e8-4192-930a-a13c286ec304")
 		)
@@ -14015,6 +14376,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "17"
+			(at 111.76 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "db0bc828-a58f-4c20-b38c-b6932cb61dc2")
 		)
@@ -14082,6 +14452,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "30"
+			(at 67.31 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "652aacac-61c2-4c42-a496-0061141bd6d4")
 		)
@@ -14142,6 +14521,15 @@
 		)
 		(property "Description" ""
 			(at 72.39 113.665 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "21"
+			(at 72.39 113.665 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14281,26 +14669,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C114759"
-			(at 167.005 60.325 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part" "RC0402FR-071K5L"
-			(at 167.005 60.325 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC Part" "C25867"
-			(at 167.005 60.325 0)
+		(property "ID" "77"
+			(at 167.005 60.325 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14368,6 +14738,15 @@
 		)
 		(property "Description" ""
 			(at 167.64 142.875 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "30"
+			(at 167.64 142.875 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14445,6 +14824,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "29"
+			(at 190.5 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e046ab83-deda-4f76-9a7f-61b7c92848db")
 		)
@@ -14511,6 +14899,15 @@
 		)
 		(property "Description" ""
 			(at 111.76 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "56"
+			(at 111.76 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14612,6 +15009,15 @@
 				(hide yes)
 			)
 		)
+		(property "ID" "110"
+			(at 41.91 149.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "935fa1e2-3838-4756-bce7-13b9fe256373")
 		)
@@ -14674,6 +15080,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 217.805 55.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "31"
 			(at 217.805 55.245 0)
 			(effects
 				(font
@@ -14809,6 +15224,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 54.61 27.305 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ID" "57"
 			(at 54.61 27.305 0)
 			(effects
 				(font
