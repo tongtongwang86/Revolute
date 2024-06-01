@@ -2,5 +2,4 @@
   (version 7)
   (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/New_Library.kicad_sym")(options "")(descr ""))
   (lib (name "nrf52832")(type "KiCad")(uri "${KIPRJMOD}/NRF52832-CIAA-R.kicad_sym")(options "")(descr ""))
-  (lib (name "ESP8266")(type "Legacy")(uri "/Users/tongtong/Desktop/pbc/Untitled/kicad-ESP8266-master/ESP8266.lib")(options "")(descr ""))
 )
