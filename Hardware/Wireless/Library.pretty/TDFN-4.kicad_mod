@@ -232,4 +232,15 @@
 		(thermal_bridge_angle 0)
 		(uuid "fe1458fb-f338-4c69-b295-b95bb9ca3fd4")
 	)
+	(model "${KIPRJMOD}/3d/TDFN-4 v1.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -90)
+		)
+	)
 )
