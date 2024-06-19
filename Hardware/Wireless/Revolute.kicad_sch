@@ -3895,7 +3895,7 @@
 				(pin input line
 					(at -6.35 -17.78 90)
 					(length 2.54)
-					(name "D+"
+					(name "D-"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3913,7 +3913,7 @@
 				(pin input line
 					(at -3.81 -17.78 90)
 					(length 2.54)
-					(name "D-"
+					(name "D+"
 						(effects
 							(font
 								(size 1.27 1.27)
