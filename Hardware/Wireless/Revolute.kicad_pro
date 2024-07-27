@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.5,
-          "width": 2.5
+          "height": 0.64,
+          "width": 0.59
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -49,7 +49,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.15
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -510,7 +510,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../../../../../../../Desktop/gerbers/wireless/",
+      "plot": "../../../../../../../../Desktop/RevoluteWireless0201components/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "../../../../../../../../Desktop/revowiriseles.step",

@@ -1,4 +1,4 @@
-24062854977269841
+24064583600900043
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63560,6 +63560,13 @@ ConicCorner
 0
 0
 Library
+FPC
+
+
+0
+15
+15
+Library
 GateronHotswap
 
 
@@ -83668,7 +83675,7 @@ Texas_S-PDSO-N12
 http://www.ti.com/lit/ds/symlink/bq27441-g1.pdf
 SON thermal pads
 0
-44
+36
 13
 Package_SON
 Texas_S-PVSON-N8

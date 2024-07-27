@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 2.5,
-          "width": 2.5
+          "drill": 0.5,
+          "height": 0.85,
+          "width": 0.85
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -471,7 +471,13 @@
     "meta": {
       "version": 3
     },
-    "net_colors": null,
+    "net_colors": {
+      "3.3V": "rgb(99, 255, 119)",
+      "5V": "rgb(123, 8, 0)",
+      "5V(2)": "rgb(255, 0, 208)",
+      "Batteryin": "rgb(16, 3, 255)",
+      "VDD_nRF": "rgb(255, 173, 3)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": []
   },
@@ -480,7 +486,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../../../../../../../Desktop/gerbers/debugger/",
+      "plot": "../../../../../../../../Desktop/debugger2/",
       "pos_files": "",
       "specctra_dsn": "../../../../../../Desktop/SWDProgrammer.dsn",
       "step": "",
