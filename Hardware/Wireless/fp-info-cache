@@ -1,4 +1,4 @@
-24121473961051692
+24123208302338921
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63650,6 +63650,13 @@ MicroPad
 0
 1
 1
+Library
+Mosfet0402
+
+
+0
+3
+3
 Library
 PTH-0.8_0.45mm
 
