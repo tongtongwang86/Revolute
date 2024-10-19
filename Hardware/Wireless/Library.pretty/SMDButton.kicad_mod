@@ -1,25 +1,107 @@
-(footprint "SMDButton" (version 20221018) (generator pcbnew)
-  (layer "F.Cu")
-  (attr smd)
-  (fp_text reference "REF**" (at 0 -0.5 unlocked) (layer "F.SilkS") hide
-      (effects (font (size 1 1) (thickness 0.1)))
-    (tstamp 112e8cd4-1413-45cb-be2f-8fb33fdf9e53)
-  )
-  (fp_text value "SMDButton" (at 0 -3.75 unlocked) (layer "F.Fab")
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 68719300-e0d0-486e-85b4-abd248c88659)
-  )
-  (fp_text user "${REFERENCE}" (at 0 -2.25 unlocked) (layer "F.Fab")
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp c8506e5e-9a43-40bf-b61c-764496868095)
-  )
-  (pad "2" smd roundrect (at -1.625 0 90) (size 1.5 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.05454545455)
-    (thermal_bridge_angle 45) (tstamp caa74dd0-908b-4133-9fd7-a67c2a0d919e))
-  (pad "3" smd roundrect (at 1.625 0 90) (size 1.5 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.05454545455)
-    (thermal_bridge_angle 45) (tstamp 4e245892-7b35-4318-b662-52ef41b53749))
-  (model "${KIPRJMOD}/3d/button v4.step"
-    (offset (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 180 0))
-  )
+(footprint "SMDButton"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "112e8cd4-1413-45cb-be2f-8fb33fdf9e53")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SMDButton"
+		(at 0 -3.75 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "68719300-e0d0-486e-85b4-abd248c88659")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2fe2695-0a53-4fcd-ada7-246f7b7a71f6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cbfdedcf-3c7e-4d96-a21b-b71877c3fbce")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "51f41b84-ebb1-4d88-af63-d5ee63812fdc")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(fp_text user "${REFERENCE}"
+		(at 0 -2.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c8506e5e-9a43-40bf-b61c-764496868095")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "2" smd roundrect
+		(at -1.625 0 90)
+		(size 1.5 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.05454545455)
+		(thermal_bridge_angle 45)
+		(uuid "caa74dd0-908b-4133-9fd7-a67c2a0d919e")
+	)
+	(pad "3" smd roundrect
+		(at 1.625 0 90)
+		(size 1.5 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.05454545455)
+		(thermal_bridge_angle 45)
+		(uuid "4e245892-7b35-4318-b662-52ef41b53749")
+	)
+	(model "${KIPRJMOD}/3d/button v4.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 180 0)
+		)
+	)
 )

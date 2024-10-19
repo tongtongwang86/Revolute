@@ -49,6 +49,15 @@
 				(hide yes)
 			)
 		)
+		(property "ki_fp_filters" "Texas_DSBGA-9_1.62mmx1.58mm_Layout3x3_P0.5mm"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(symbol "BQ27427_0_1"
 			(rectangle
 				(start -7.62 7.62)

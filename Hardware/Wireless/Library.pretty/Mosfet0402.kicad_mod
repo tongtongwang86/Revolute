@@ -160,17 +160,6 @@
 			(type default)
 		)
 		(fill none)
-		(layer "Margin")
-		(uuid "3150a851-2587-4e61-ae3c-b6f41895f8e0")
-	)
-	(fp_rect
-		(start -0.57 -0.38)
-		(end 0.57 0.38)
-		(stroke
-			(width 0.01)
-			(type default)
-		)
-		(fill none)
 		(layer "F.CrtYd")
 		(uuid "4852e108-073e-4732-bc4a-32aa742f3de1")
 	)
