@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Librarys")(type "KiCad")(uri "C:/Users/TT/Desktop/revopod1/revopod1/Librarys.pretty")(options "")(descr ""))
+  (lib (name "motherfuckerslesgo")(type "KiCad")(uri "C:/Users/TT/Desktop/old kikad shit/mac my ass/ass my mac/motherfuckerslesgo.pretty")(options "")(descr ""))
+  (lib (name "Librarym")(type "KiCad")(uri "C:/Users/TT/Desktop/old kikad shit/Macro1/Macro/Librarym.pretty")(options "")(descr ""))
+  (lib (name "LibraryD")(type "KiCad")(uri "C:/Users/TT/Downloads/Revolute-main (1)/Revolute-main/Hardware/Debugger/LibraryD.pretty")(options "")(descr ""))
+)
