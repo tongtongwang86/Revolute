@@ -10,7 +10,7 @@
 
 
 ## Introducing Revolute
- <a href="https://tongtonginc.com/revolute">Visit the product page website</a>
+ <a href="https://tongtonginc.com/revolute">Visit the product page website (Faster loading time, Interactive 3D Models, Demo Videos)</a>
 
 ### The Revolute is a scroll wheel/dial that aims to revolutionize the way we interact with complex software applications.
 
