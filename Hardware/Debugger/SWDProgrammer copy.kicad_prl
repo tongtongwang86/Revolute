@@ -1,18 +1,18 @@
 {
   "board": {
     "active_layer": 0,
-    "active_layer_preset": "",
+    "active_layer_preset": "All Layers",
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
-    "high_contrast_mode": 1,
-    "net_color_mode": 2,
+    "high_contrast_mode": 0,
+    "net_color_mode": 1,
     "opacity": {
-      "images": 1.0,
+      "images": 0.6,
       "pads": 1.0,
       "tracks": 1.0,
       "vias": 1.0,
-      "zones": 0.6399999856948853
+      "zones": 0.6
     },
     "selection_filter": {
       "dimensions": true,
@@ -64,7 +64,7 @@
       39,
       40
     ],
-    "visible_layers": "ff8ffff_ffffffff",
+    "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
   "git": {
@@ -74,7 +74,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "SWDProgrammer.kicad_prl",
+    "filename": "SWDProgrammer copy.kicad_prl",
     "version": 3
   },
   "project": {
