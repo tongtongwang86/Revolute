@@ -177,7 +177,7 @@
 	)
 	(pad "1" smd roundrect
 		(at -0.325 -0.175)
-		(size 0.3 0.2)
+		(size 0.35 0.23)
 		(layers "F.Cu")
 		(roundrect_rratio 0.35)
 		(thermal_bridge_angle 45)
@@ -185,7 +185,7 @@
 	)
 	(pad "2" smd roundrect
 		(at -0.325 0.175)
-		(size 0.3 0.2)
+		(size 0.35 0.23)
 		(layers "F.Cu")
 		(roundrect_rratio 0.35)
 		(thermal_bridge_angle 45)
@@ -193,7 +193,7 @@
 	)
 	(pad "3" smd roundrect
 		(at 0.325 0)
-		(size 0.3 0.55)
+		(size 0.35 0.6)
 		(layers "F.Cu")
 		(roundrect_rratio 0.2333333333)
 		(thermal_bridge_angle 45)
