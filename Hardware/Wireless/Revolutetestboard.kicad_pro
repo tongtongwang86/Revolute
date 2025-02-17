@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.14
+          "min_clearance": 0.1
         }
       },
       "diff_pair_dimensions": [
@@ -493,7 +493,12 @@
       "/pod/BAT_P": "rgb(22, 120, 27)",
       "/pod/SAFE_5V": "rgb(177, 165, 0)",
       "/pod/V": "rgb(18, 255, 69)",
+      "/pod/VBUS": "rgb(40, 13, 91)",
+      "/rev/COM": "rgb(94, 46, 48)",
+      "/rev/MOS_VDD": "rgb(54, 255, 175)",
+      "/rev/VBUS": "rgb(255, 30, 0)",
       "/rev/VDD_nRF": "rgb(255, 119, 86)",
+      "/rev/vSYSTEM": "rgb(255, 127, 125)",
       "3.3V": "rgb(16, 255, 245)",
       "5V": "rgb(255, 37, 160)",
       "5V(2)": "rgb(255, 124, 239)",
