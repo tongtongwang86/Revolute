@@ -1,7 +1,0 @@
-{
-    "nrf-connect.applications": [
-        "${workspaceFolder}\\Software\\Sourcev2\\app"
-    ],
-    "nrf-connect.toolchain.path": "PATH",
-    "C_Cpp.dimInactiveRegions": false
-}

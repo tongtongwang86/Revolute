@@ -1,8 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Library")(type "KiCad")(uri "C:/Users/TT/Desktop/revopod1/Library.pretty")(options "")(descr ""))
-  (lib (name "Librarys")(type "KiCad")(uri "${KIPRJMOD}/Librarys.pretty")(options "")(descr ""))
-  (lib (name "Librarym")(type "KiCad")(uri "C:/Users/TT/Desktop/old kikad shit/Macro1/Macro/Librarym.pretty")(options "")(descr ""))
-  (lib (name "LibraryD")(type "KiCad")(uri "C:/Users/TT/Downloads/Revolute-main (1)/Revolute-main/Hardware/Debugger/LibraryD.pretty")(options "")(descr ""))
-  (lib (name "Librarydddddd")(type "KiCad")(uri "C:/Users/TT/Desktop/revopod/revopod/Library.pretty")(options "")(descr ""))
-)
