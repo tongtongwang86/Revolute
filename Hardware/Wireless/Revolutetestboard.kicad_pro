@@ -488,10 +488,18 @@
       "version": 3
     },
     "net_colors": {
+      "/pod/3V": "rgb(255, 240, 94)",
+      "/pod/5V": "rgb(255, 110, 133)",
+      "/pod/BAT_P": "rgb(22, 120, 27)",
+      "/pod/SAFE_5V": "rgb(177, 165, 0)",
+      "/pod/V": "rgb(18, 255, 69)",
+      "/rev/VDD_nRF": "rgb(255, 119, 86)",
       "3.3V": "rgb(16, 255, 245)",
       "5V": "rgb(255, 37, 160)",
+      "5V(2)": "rgb(255, 124, 239)",
       "GND": "rgb(111, 127, 255)",
       "MOS_VDD": "rgb(93, 255, 63)",
+      "Net-(C35-Pad2)": "rgb(34, 0, 255)",
       "OUT": "rgb(255, 202, 182)",
       "VBUS": "rgb(255, 0, 19)",
       "VDD_nRF": "rgb(255, 127, 47)",
@@ -567,15 +575,75 @@
           "show": true
         },
         {
+          "group_by": false,
+          "label": "ID",
+          "name": "ID",
+          "show": true
+        },
+        {
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Digikey",
+          "name": "Digikey",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLC Part",
+          "name": "JLC Part",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part",
+          "name": "LCSC Part",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Part",
+          "name": "Manufacturer Part",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -607,6 +675,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,
@@ -622,6 +698,18 @@
     [
       "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
       "Root"
+    ],
+    [
+      "9514d9e5-046a-44a2-8645-81320e181549",
+      "rev"
+    ],
+    [
+      "23e4cadd-1cee-4e80-b1f8-bbb8e1d83c4a",
+      "pod"
+    ],
+    [
+      "1ee4eb27-af40-4012-b84d-c5b5165cac1d",
+      "dbg"
     ]
   ],
   "text_variables": {}

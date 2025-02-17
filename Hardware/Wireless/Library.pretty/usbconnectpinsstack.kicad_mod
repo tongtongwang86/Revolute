@@ -1,0 +1,111 @@
+(footprint "usbconnectpinsstack"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e9cd15a0-d0f9-44f4-a923-aeaf3c56e39b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "usbconnectpinsstack"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "d8558572-bd33-4ad9-bf18-d6e93370e9f1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a46b608d-3041-4c69-9020-128836c1f3dc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fa8631a6-1729-47ad-8ff0-05ba8a9c8cd6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8c9388d6-4d00-4f91-bb69-d4dba7ac4a3d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "7e20f04e-b708-4616-ab22-156532e2eff5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 3.5 0 180)
+		(size 1.25 4)
+		(layers "B.Cu" "B.Paste" "B.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "b34cf1e9-7762-45c5-967c-3cf71913e25e")
+	)
+	(pad "2" smd roundrect
+		(at 1 0 180)
+		(size 1.25 4)
+		(layers "B.Cu" "B.Paste" "B.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "862ef480-5ebe-4594-aab7-6dda5bbb7f25")
+	)
+	(pad "3" smd roundrect
+		(at -1 0 180)
+		(size 1.25 4)
+		(layers "B.Cu" "B.Paste" "B.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "7ac6f891-7b30-4c13-911b-96d10c1e1710")
+	)
+	(pad "4" smd roundrect
+		(at -3.5 0 180)
+		(size 1.25 4)
+		(layers "B.Cu" "B.Paste" "B.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "ff35180e-acb6-4ec4-bcd7-f033dd51050b")
+	)
+)

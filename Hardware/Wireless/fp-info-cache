@@ -1,4 +1,4 @@
-24305776240555969
+24396109436734882
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -65268,7 +65268,28 @@ Library
 2
 2
 Library
+8205A
+
+
+0
+6
+6
+Library
+APDS-9960
+
+
+0
+8
+8
+Library
 AQFN-73-1EP_7x7mm_P0.5mm_NRF52840-custom
+http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.nrf52%2Fdita%2Fnrf52%2Fchips%2Fnrf52840.html
+AQFN 7mm 
+0
+90
+74
+Library
+AQFN-73-1EP_7x7mm_P0.5mm_NRF52840-custom_copy
 http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.nrf52%2Fdita%2Fnrf52%2Fchips%2Fnrf52840.html
 AQFN 7mm 
 0
@@ -65288,6 +65309,13 @@ AntennaFlexCustom
 0
 2
 2
+Library
+BGA20N40P5X4_195X155X50N
+
+
+0
+20
+20
 Library
 BGA50N40P7X8_300X320X40
 
@@ -65317,6 +65345,34 @@ Battery Base
 1
 1
 Library
+BatteryHolder_Keystone_1057_1x2032
+SMT (Auto-In/Ultra-Low) Holder for 2032 Cell, 33.2 x 23.9mm, 2mm height above PCB, https://www.keyelco.com/userAssets/file/M65p4.pdf
+Keystone type 1057 coin cell holder
+0
+2
+2
+Library
+BatteryV2
+
+
+0
+2
+2
+Library
+Button
+
+
+0
+4
+4
+Library
+ButtonV2
+
+
+0
+2
+2
+Library
 Capacitor-0201
 
 
@@ -65338,6 +65394,13 @@ capacitor
 2
 2
 Library
+ConicCorner
+
+
+0
+0
+0
+Library
 Crystal_SMD_2012-2Pin_2.0x1.2mm
 SMD Crystal 2012/2 http://txccrystal.com/images/pdf/9ht11.pdf, 2.0x1.2mm^2 package
 SMD SMT crystal
@@ -65351,6 +65414,41 @@ SMD SMT crystal
 0
 4
 4
+Library
+Crystal_SMD_5032-2Pin_5.0x3.2mm
+SMD Crystal SERIES SMD2520/2 http://www.icbase.com/File/PDF/HKC/HKC00061008.pdf, 5.0x3.2mm^2 package
+SMD SMT crystal
+0
+2
+2
+Library
+CustomHotswap
+
+
+0
+2
+2
+Library
+DRV 6PIN
+
+
+0
+7
+7
+Library
+D_0805_2012Metric_Pad1.15x1.40mm_HandSolder
+Diode SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
+diode handsolder
+0
+2
+2
+Library
+D_SMA_Handsoldering
+Diode SMA (DO-214AC) Handsoldering
+Diode SMA (DO-214AC) Handsoldering
+0
+2
+2
 Library
 D_SOD-323F-nosilk
 SOD-323F http://www.nxp.com/documents/outline_drawing/SOD323F.pdf
@@ -65373,12 +65471,33 @@ FPC
 15
 15
 Library
+FS312F-G
+
+
+0
+6
+6
+Library
 Fuse_0402_1005Metric
 Fuse SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
 fuse
 0
 2
 2
+Library
+GateronHotswap
+
+
+0
+2
+2
+Library
+Hole
+
+
+0
+0
+0
 Library
 Inductor_0402_1005M-nosilk
 Inductor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
@@ -65393,6 +65512,13 @@ inductor
 0
 2
 2
+Library
+KailhChocv2_3D
+
+
+0
+0
+0
 Library
 LED_0603_1608Metric-nosilk
 LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
@@ -65415,6 +65541,27 @@ LED castellated
 2
 2
 Library
+Led-ARGB
+
+
+0
+4
+4
+Library
+MST-12C05 SLIDEBUTTON
+
+
+0
+5
+5
+Library
+MT3608
+
+
+0
+6
+6
+Library
 MicroPad
 
 
@@ -65428,6 +65575,13 @@ Mosfet0402
 0
 3
 3
+Library
+MountingHole
+
+
+0
+0
+0
 Library
 PTH-0.8_0.45mm
 
@@ -65485,6 +65639,13 @@ resistor
 2
 2
 Library
+SK1824
+X1-WLB0909, 0.89x0.89mm, 4 Ball, 2x2 Layout, 0.5mm Pitch, https://www.diodes.com/assets/Datasheets/AP22913.pdf
+CSP 4 0.5
+0
+4
+4
+Library
 SMDButton
 
 
@@ -65499,12 +65660,68 @@ SOIC SO
 8
 8
 Library
+SOT-23
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
+Library
 SOT-23-5
 5-pin SOT23 package
 SOT-23-5
 0
 5
 5
+Library
+SOT-23-6-Small
+
+
+0
+6
+6
+Library
+SPK0415HM4H
+
+
+0
+8
+8
+Library
+SPK0641HT4H-1
+
+
+0
+8
+8
+Library
+SS14
+
+
+0
+2
+2
+Library
+SS34 1N5822
+
+
+0
+2
+2
+Library
+SolderBridge
+
+
+0
+2
+2
+Library
+Speaker
+
+
+0
+2
+2
 Library
 TDFN-4
 
@@ -65555,6 +65772,13 @@ USB-C_C168688
 16
 14
 Library
+USB_C_Receptacle_XKB_U262-16XN-4BVC11
+USB Type C, right-angle, SMT, https://datasheet.lcsc.com/szlcsc/1811141824_XKB-Enterprise-U262-161N-4BVC11_C319148.pdf
+USB C Type-C Receptacle SMD
+0
+16
+14
+Library
 USB_Intergrated
 
 
@@ -65590,6 +65814,48 @@ NRF52840-CKAA-R
 94
 94
 Library
+WSON8
+
+
+0
+9
+9
+Library
+a3144
+
+
+0
+3
+3
+Library
+arduino pins
+
+
+0
+8
+8
+Library
+battery
+
+
+0
+2
+2
+Library
+battery1
+
+
+0
+2
+2
+Library
+button 3x3
+
+
+0
+4
+2
+Library
 buttoncompliant
 
 
@@ -65597,7 +65863,35 @@ buttoncompliant
 1
 1
 Library
+buttonholes
+
+
+0
+2
+2
+Library
 crystal 32mhz
+
+
+0
+4
+4
+Library
+debug pads
+
+
+0
+8
+8
+Library
+debug pins
+
+
+0
+4
+4
+Library
+debugpinstack
 
 
 0
@@ -65610,6 +65904,27 @@ flex connector
 0
 39
 13
+Library
+i2c debug pins
+
+
+0
+4
+4
+Library
+joystick contacts
+
+
+0
+5
+5
+Library
+mcp1700 SOT-23
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
 Library
 mikoto-logo
 
@@ -65638,6 +65953,20 @@ mouse-bite-2mm-slot-one-sided
 0
 0
 0
+Library
+nPM1300-CAAA-R
+
+
+0
+14
+14
+Library
+nPM1300-QEAA-R
+
+
+0
+33
+33
 Library
 net-tie-2-0.3mm
 
@@ -65674,6 +66003,13 @@ pogo_T1836
 1
 1
 Library
+pogopin
+
+
+0
+2
+2
+Library
 revision-number
 
 
@@ -65681,12 +66017,47 @@ revision-number
 0
 0
 Library
+side button
+
+
+0
+4
+3
+Library
 square-pad-0.2mm
 
 
 0
 1
 1
+Library
+testPads
+
+
+0
+1
+1
+Library
+usbconnectpinsstack
+
+
+0
+4
+4
+Library
+usbcpads
+
+
+0
+6
+6
+Library
+zener diode
+
+
+0
+2
+2
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
