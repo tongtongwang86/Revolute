@@ -6187,6 +6187,195 @@
 				)
 			)
 		)
+		(symbol "Sensor_Magnetic:TLV493D"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -6.35 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLV493D"
+				(at 5.08 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+				(at -1.27 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-TLV493D-A1B6-DS-v01_00-EN.pdf?fileId=5546d462525dbac40152a6b85c760e80"
+				(at -3.81 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Low power 3D magnetic sensor, I2C interface, SOT-23-6"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "magnetic field i2c"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TLV493D_0_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 6.35 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TLV493D_1_1"
+				(pin bidirectional line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "SCL/INT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "SDA/ADDR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Sensor_Motion:LSM6DS3"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7201,6 +7390,12 @@
 		(uuid "3ce2c4c2-b802-430f-b9a1-33107a4c312d")
 	)
 	(junction
+		(at 191.77 256.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "457fc434-945e-4bd6-b419-bdafc696d934")
+	)
+	(junction
 		(at 46.99 191.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7543,6 +7738,16 @@
 			(type default)
 		)
 		(uuid "0dfbcd00-c3dd-4335-bbba-95a11862706a")
+	)
+	(wire
+		(pts
+			(xy 191.77 232.41) (xy 191.77 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "105198c8-18fa-4b46-a2dc-946bb2cc7915")
 	)
 	(wire
 		(pts
@@ -8033,6 +8238,16 @@
 			(type default)
 		)
 		(uuid "417224e3-2277-4755-869b-0d404c697332")
+	)
+	(wire
+		(pts
+			(xy 189.23 256.54) (xy 191.77 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4432591e-1b17-49e5-8360-16c65a76557e")
 	)
 	(wire
 		(pts
@@ -8946,6 +9161,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 257.81) (xy 191.77 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b998dd04-50d4-4f8f-bd18-a1ef65e810e8")
+	)
+	(wire
+		(pts
 			(xy 189.23 50.8) (xy 195.58 50.8)
 		)
 		(stroke
@@ -9566,6 +9791,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 256.54) (xy 194.31 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcd0b6ed-b6df-4f06-bf56-56bd19721283")
+	)
+	(wire
+		(pts
 			(xy 95.25 31.75) (xy 99.06 31.75)
 		)
 		(stroke
@@ -9681,6 +9916,18 @@
 			(type none)
 		)
 		(uuid b93bb542-9db2-4fa3-9b36-77df77a496b4)
+	)
+	(rectangle
+		(start 158.115 224.79)
+		(end 222.25 269.875)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid c2b14442-274c-440e-98ae-24d91a4db546)
 	)
 	(rectangle
 		(start 86.995 76.2)
@@ -9841,6 +10088,16 @@
 			)
 		)
 		(uuid "85b9e98e-80ee-457c-a01a-253f33fadb7b")
+	)
+	(text "3d magnetic sensor"
+		(exclude_from_sim no)
+		(at 174.244 229.362 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8d50bfdc-2d16-4107-9cca-334a85101ebd")
 	)
 	(text "EXT VCC"
 		(exclude_from_sim no)
@@ -10783,6 +11040,27 @@
 			)
 		)
 	)
+	(label "SCL"
+		(at 181.61 243.84 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4f342ad4-e647-4ce5-bc48-bac1391c2eac")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175.1966 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(label "MOS_VDD"
 		(at 208.28 142.875 0)
 		(fields_autoplaced yes)
@@ -10984,6 +11262,27 @@
 		(uuid "6b108c82-aac4-49b6-9342-313eea1eba87")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 110.6723 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(label "SDA"
+		(at 181.61 246.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6c531115-81ef-4c39-b128-7fba68602877")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175.0567 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11639,6 +11938,27 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(label "MOS_VDD"
+		(at 191.77 232.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bc74d6d3-54ad-4a0c-8588-b8d42555e27f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 201.2786 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -15996,6 +16316,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Sensor_Magnetic:TLV493D")
+		(at 191.77 246.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a51f3cf-0cf1-4831-a6ec-0546a29037d5")
+		(property "Reference" "U25"
+			(at 199.39 243.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TLV493D"
+			(at 199.39 246.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Library:SOT-23-6-Small"
+			(at 190.5 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/Infineon-TLV493D-A1B6-DS-v01_00-EN.pdf?fileId=5546d462525dbac40152a6b85c760e80"
+			(at 187.96 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Low power 3D magnetic sensor, I2C interface, SOT-23-6"
+			(at 191.77 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "d0b7bd95-5678-4a15-ad0f-201fabee7dac")
+		)
+		(pin "3"
+			(uuid "e6863116-bf50-47d2-93a0-a4deb472f653")
+		)
+		(pin "1"
+			(uuid "f1b244e5-9c39-4fbc-b247-b83e90a2d310")
+		)
+		(pin "5"
+			(uuid "e55b42db-ad6b-404c-a19a-cb3e399805a1")
+		)
+		(pin "2"
+			(uuid "eb24725b-3592-477b-9909-641b5f84bef6")
+		)
+		(pin "4"
+			(uuid "2dc694a7-5e48-4d48-8c1a-8ecaed6ce5c9")
+		)
+		(instances
+			(project "Revolutetestboard"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9514d9e5-046a-44a2-8645-81320e181549"
+					(reference "U25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "nrfmicro-rescue:GND")
 		(at 205.105 201.93 0)
 		(unit 1)
@@ -18671,6 +19073,71 @@
 			(project "Revolutetestboard"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9514d9e5-046a-44a2-8645-81320e181549"
 					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "nrfmicro-rescue:GND")
+		(at 191.77 257.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b18824f9-50c5-45a6-b893-9eb61307749e")
+		(property "Reference" "#PWR04"
+			(at 191.77 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 191.897 262.2042 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 191.77 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb7b1c1f-e8ff-4a02-8b04-02939c78825f")
+		)
+		(instances
+			(project "Revolutetestboard"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/9514d9e5-046a-44a2-8645-81320e181549"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
