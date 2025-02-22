@@ -11692,7 +11692,7 @@
 		)
 	)
 	(label "SDA"
-		(at 132.715 259.08 270)
+		(at 132.08 259.08 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11702,7 +11702,7 @@
 		)
 		(uuid "a736bd2d-5a68-4164-bddc-608600ab8b1a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 132.715 265.6333 90)
+			(at 132.08 265.6333 90)
 			(effects
 				(font
 					(size 1.27 1.27)
