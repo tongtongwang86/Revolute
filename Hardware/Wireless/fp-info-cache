@@ -1,4 +1,4 @@
-24397886629235213
+24399626831151425
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -65267,6 +65267,13 @@ Library
 0
 2
 2
+Library
+1615 RGB SMD LED
+
+
+0
+4
+4
 Library
 8205A
 
