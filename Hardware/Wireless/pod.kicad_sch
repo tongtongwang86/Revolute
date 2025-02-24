@@ -12003,7 +12003,7 @@
 	)
 	(text "RX OF NRF"
 		(exclude_from_sim no)
-		(at 109.22 214.63 0)
+		(at 69.85 215.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12034,7 +12034,7 @@
 	)
 	(text "POGOPIN+"
 		(exclude_from_sim no)
-		(at 75.565 211.455 0)
+		(at 103.759 214.503 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13013,22 +13013,22 @@
 		)
 	)
 	(label "COM"
-		(at 79.375 213.995 180)
+		(at 99.695 216.535 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "34eb420d-065c-4817-8681-0cccebad2891")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.3379 213.995 0)
+			(at 104.6679 216.535 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -13160,22 +13160,22 @@
 		)
 	)
 	(label "RX_TS5A3159AYZPR"
-		(at 99.695 216.535 0)
+		(at 79.375 213.995 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "43f96f64-5f7e-4fb9-bdb3-5e6cb3fd5888")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.3672 216.535 0)
+			(at 59.767 213.995 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -24690,7 +24690,7 @@
 				)
 			)
 		)
-		(property "Value" "50r"
+		(property "Value" "*50r"
 			(at 84.582 218.44 90)
 			(effects
 				(font
