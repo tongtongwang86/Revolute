@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\TT\Desktop\revopod1\revopod1\revopod1.kicad_sch</source>
+    <date>2/5/2024 12:32:46 PM</date>
+    <tool>Eeschema (7.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>revopod1.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="B1">
+      <value>300mah</value>
+      <footprint>Librarys:battery</footprint>
+      <libsource lib="library" part="battery" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06ee2b65-2719-4614-8bcf-a88fb96033a4</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>041f482b-3d85-4ed8-8e76-9fd38bdc2cf4</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0.47uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d17b0d81-a11c-452f-b0dd-bdd87de04591</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a8a8b77a-1cec-48b7-af91-4a95975fefae</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da8e4702-3dd2-443e-91c0-639018dafe9f</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f78b8818-d9f0-4fc8-9b8a-8be412534aee</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>37ec6f00-0915-48ca-86d7-8dcd233ad887</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48ac6843-14df-4ed6-be49-c993900be6d5</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>121bbfbb-ceb8-4e0b-aaad-b7f45d9db12d</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LEDR</value>
+      <footprint>LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1b91f93-3bab-4336-b00d-cfee63f00465</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LEDB</value>
+      <footprint>LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5f7124f2-fb4b-4342-8d02-4d8c6dab5c5d</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>SS34</value>
+      <footprint>Librarys:D_SMA_Handsoldering</footprint>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Schottky diode"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1da4db4-1355-442e-bc61-f2064ae556a8</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cab71235-9cb9-423b-a26d-d4bbdb585f70</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>847508a8-a62c-4267-a77d-7e3c35e5ed2b</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fe9edfc4-f06d-4b78-aebe-7b5d4805e423</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e490ef89-d323-4977-81d5-7565a1fc31ad</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79f22b52-305f-42f0-b8a0-6cb76ba504f9</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80de28a6-d0b9-48e0-9fcb-dfe300001b5d</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a1f80e6f-cdae-4214-9c15-510a3ed97612</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>715703b9-e4ad-4faf-9108-1ceeb5aa11a1</tstamps>
+    </comp>
+    <comp ref="D12">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fa9caffa-dc21-4d9f-81b6-35771fe628ba</tstamps>
+    </comp>
+    <comp ref="D13">
+      <value>~</value>
+      <footprint>LibraryD:Led-ARGB</footprint>
+      <libsource lib="library" part="argbled" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4dd40cb5-e99f-45c7-b1c2-954982fbbda2</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>22uH</value>
+      <footprint>Inductor_SMD:L_7.3x7.3_H4.5</footprint>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Inductor"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a88526ca-7e0b-480d-8d2a-dc5ebb2b529a</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>8205A</value>
+      <footprint>Librarys:8205A</footprint>
+      <libsource lib="Library(1)" part="8205A" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ddcb8e8-bb01-4773-a133-07b6e38d9c08</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>BSS84</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://assets.nexperia.com/documents/data-sheet/BSS84.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BSS84" description="-0.13A Id, -50V Vds, P-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="-0.13A Id, -50V Vds, P-Channel MOSFET, SOT-23"/>
+      <property name="ki_keywords" value="P-Channel MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bda5b011-ffc5-453c-a8be-d929b011513b</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>0.01</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9096292-57d0-4a90-9b78-ae9e45e0b27e</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aad34b1d-4e06-4ecd-a8bd-e4152cc65986</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee1e2dfa-4971-44fb-bb2c-819c2e652238</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e424ad03-3c9c-47d1-be48-a56b7dce7930</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>1.1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ec44663-2278-49cb-b339-ab43a9ae375b</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>1.1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6a61cf44-0906-4232-9fa5-4485dbce8728</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3f9fb846-0c87-4698-9e33-a6006ca06451</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a6c41308-7538-44c4-ae44-d66bd0040fd1</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e6afb47-7c78-4d00-ba6f-f2cbd13f90ca</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>100</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ca0fb31-3858-4acd-af7a-c87067f57541</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>7.5k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8690ecd9-b203-4fa9-8581-a23572dc87d0</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>751edbf9-8761-4345-9039-fa4b33c222dd</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d3710bc5-c532-4ade-b67e-78e8fce80688</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>22pF</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c058a1a-7e59-4890-831d-4d5f07838329</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>22pF</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9bc7d5e-6661-4874-b1f2-b9a8280980db</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec9841fb-ccd2-4514-b1db-ef8c78eb0e66</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push</value>
+      <footprint>LibraryD:button 3x3</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd025c0c-333d-42a8-9fe8-7c35ba7f4c1b</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>BQ24075RGT</value>
+      <footprint>Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/bq24075.pdf</datasheet>
+      <libsource lib="Battery_Management" part="BQ24075RGT" description="USB-Friendly Li-Ion Battery Charger and Power-Path Management, VQFN-16"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="USB-Friendly Li-Ion Battery Charger and Power-Path Management, VQFN-16"/>
+      <property name="ki_keywords" value="USB Charger"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ddfd003d-bea2-4c4d-95a3-3897162d1cca</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>BQ27441-G1</value>
+      <footprint>Package_SON:Texas_S-PDSO-N12</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/bq27441-g1.pdf</datasheet>
+      <libsource lib="Battery_Management" part="BQ27441-G1" description="System Side Li Ion/Polymer Fuel Gauge, PDSON-12"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="System Side Li Ion/Polymer Fuel Gauge, PDSON-12"/>
+      <property name="ki_keywords" value="Fuel Gauge"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>685a1fc8-f84b-4018-8341-4d16e36b0cba</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>MT3608</value>
+      <footprint>Librarys:MT3608</footprint>
+      <libsource lib="library" part="MT3608" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a79e9409-3fe4-4ea8-95da-c7cc0fdbd1bc</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>ATmega328-A</value>
+      <footprint>Package_QFP:TQFP-32_7x7mm_P0.8mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf</datasheet>
+      <libsource lib="MCU_Microchip_ATmega" part="ATmega328-A" description="20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, TQFP-32"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, TQFP-32"/>
+      <property name="ki_keywords" value="AVR 8bit Microcontroller MegaAVR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>634ece9f-18e3-4910-b52c-2b6a85067101</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>pogopins</value>
+      <footprint>Librarys:pogopin</footprint>
+      <libsource lib="library" part="pogo_pins" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be66d132-45bb-4557-acf5-6ed4e30b4ba3</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>FS312F-G</value>
+      <footprint>Librarys:FS312F-G</footprint>
+      <libsource lib="library" part="FS312F-G" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0f936071-7b9b-49cd-8429-f5c22e95e4c7</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>arduinnno pinnnns</value>
+      <footprint>Librarys:arduino pins</footprint>
+      <libsource lib="library" part="arduinnno pinnnns" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4228584-5240-4e6b-a07f-e281e4784491</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>A3144</value>
+      <footprint>Librarys:a3144</footprint>
+      <libsource lib="library" part="A3144" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f7c3f377-3709-4d0c-8dec-7e82a538e9b7</tstamps>
+    </comp>
+    <comp ref="U9">
+      <value>~</value>
+      <footprint>Librarys:usbcpads</footprint>
+      <libsource lib="library" part="usbcpads" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1dee9992-c625-41fd-be62-a963814992f3</tstamps>
+    </comp>
+    <comp ref="U11">
+      <value>APE8865NR-19-HF-3</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.tme.eu/fr/Document/ced3461ed31ea70a3c416fb648e0cde7/APE8865-3.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="APE8865NR-19-HF-3" description="300mA Low Dropout Voltage Regulator, Fixed Output 1.9V, SOT-23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="300mA Low Dropout Voltage Regulator, Fixed Output 1.9V, SOT-23"/>
+      <property name="ki_keywords" value="300mA LDO Regulator Fixed Positive"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f3dfbc0-7491-45d4-8e28-1d4f8d6a5f1b</tstamps>
+    </comp>
+    <comp ref="U12">
+      <value>~</value>
+      <libsource lib="library" part="arrow" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7959438-c8e0-4572-8c46-9356bac40530</tstamps>
+    </comp>
+    <comp ref="U13">
+      <value>~</value>
+      <libsource lib="library" part="arrow" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>29a32234-0c06-4df1-821b-8eae514afa2f</tstamps>
+    </comp>
+    <comp ref="U14">
+      <value>~</value>
+      <libsource lib="library" part="arrow" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d7834f9-1355-4c09-878e-c71417fcb643</tstamps>
+    </comp>
+    <comp ref="U15">
+      <value>~</value>
+      <libsource lib="library" part="arrow" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5ade27bf-c7ce-416b-8e97-75bd7543a713</tstamps>
+    </comp>
+    <comp ref="U16">
+      <value>~</value>
+      <libsource lib="library" part="arrow" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a4927628-c10b-485d-ab81-3c92a6620ce0</tstamps>
+    </comp>
+    <comp ref="U17">
+      <value>~</value>
+      <libsource lib="library" part="arrow" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>35f992bd-298d-4d05-81a3-9420d61c706d</tstamps>
+    </comp>
+    <comp ref="U18">
+      <value>~</value>
+      <libsource lib="library" part="arrow" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c1782eee-a219-47ab-bb48-7f53cdc2e98c</tstamps>
+    </comp>
+    <comp ref="Y1">
+      <value>16mhz</value>
+      <footprint>Librarys:Crystal_SMD_5032-2Pin_5.0x3.2mm</footprint>
+      <libsource lib="Device" part="Crystal" description="Two pin crystal"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="revopod1.kicad_sch"/>
+      <property name="ki_description" value="Two pin crystal"/>
+      <property name="ki_keywords" value="quartz ceramic resonator oscillator"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>90061b88-c7f1-4157-bd24-5ded1d9b8b69</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Battery_Management" part="BQ24075RGT">
+      <description>USB-Friendly Li-Ion Battery Charger and Power-Path Management, VQFN-16</description>
+      <docs>http://www.ti.com/lit/ds/symlink/bq24075.pdf</docs>
+      <footprints>
+        <fp>VQFN*1EP*3x3mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ24075RGT</field>
+        <field name="Footprint">Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/bq24075.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TS" type="passive"/>
+        <pin num="2" name="BAT" type="power_out"/>
+        <pin num="3" name="BAT" type="passive"/>
+        <pin num="4" name="~{CE}" type="input"/>
+        <pin num="5" name="EN2" type="input"/>
+        <pin num="6" name="EN1" type="input"/>
+        <pin num="7" name="~{PGOOD}" type="open_collector"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="~{CHG}" type="open_collector"/>
+        <pin num="10" name="OUT" type="power_out"/>
+        <pin num="11" name="OUT" type="passive"/>
+        <pin num="12" name="ILIM" type="passive"/>
+        <pin num="13" name="IN" type="power_in"/>
+        <pin num="14" name="TMR" type="input"/>
+        <pin num="15" name="SYSOFF" type="input"/>
+        <pin num="16" name="ISET" type="passive"/>
+        <pin num="17" name="VSS" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Battery_Management" part="BQ27441-G1">
+      <description>System Side Li Ion/Polymer Fuel Gauge, PDSON-12</description>
+      <docs>http://www.ti.com/lit/ds/symlink/bq27441-g1.pdf</docs>
+      <footprints>
+        <fp>*PDSO*N12*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ27441-G1</field>
+        <field name="Footprint">Package_SON:Texas_S-PDSO-N12</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/bq27441-g1.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SDA" type="bidirectional"/>
+        <pin num="2" name="SCL" type="input"/>
+        <pin num="3" name="V_{SS}" type="power_in"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="V_{DD}" type="power_out"/>
+        <pin num="6" name="BAT" type="power_in"/>
+        <pin num="7" name="SRN" type="input"/>
+        <pin num="8" name="SRP" type="input"/>
+        <pin num="9" name="NC" type="no_connect"/>
+        <pin num="10" name="BIN" type="input"/>
+        <pin num="11" name="NC" type="no_connect"/>
+        <pin num="12" name="GPOUT" type="output"/>
+        <pin num="13" name="PAD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal">
+      <description>Two pin crystal</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Library(1)" part="8205A">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">8205A</field>
+        <field name="Footprint">Library:SOT-23-6-Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S1" type="bidirectional"/>
+        <pin num="2" name="D" type="bidirectional"/>
+        <pin num="3" name="S2" type="bidirectional"/>
+        <pin num="4" name="G2" type="bidirectional"/>
+        <pin num="5" name="NC" type="bidirectional"/>
+        <pin num="6" name="G1" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Microchip_ATmega" part="ATmega328-A">
+      <description>20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, TQFP-32</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf</docs>
+      <footprints>
+        <fp>TQFP*7x7mm*P0.8mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATmega328-A</field>
+        <field name="Footprint">Package_QFP:TQFP-32_7x7mm_P0.8mm</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PD3" type="bidirectional"/>
+        <pin num="2" name="PD4" type="bidirectional"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="VCC" type="power_in"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="VCC" type="passive"/>
+        <pin num="7" name="XTAL1/PB6" type="bidirectional"/>
+        <pin num="8" name="XTAL2/PB7" type="bidirectional"/>
+        <pin num="9" name="PD5" type="bidirectional"/>
+        <pin num="10" name="PD6" type="bidirectional"/>
+        <pin num="11" name="PD7" type="bidirectional"/>
+        <pin num="12" name="PB0" type="bidirectional"/>
+        <pin num="13" name="PB1" type="bidirectional"/>
+        <pin num="14" name="PB2" type="bidirectional"/>
+        <pin num="15" name="PB3" type="bidirectional"/>
+        <pin num="16" name="PB4" type="bidirectional"/>
+        <pin num="17" name="PB5" type="bidirectional"/>
+        <pin num="18" name="AVCC" type="power_in"/>
+        <pin num="19" name="ADC6" type="input"/>
+        <pin num="20" name="AREF" type="passive"/>
+        <pin num="21" name="GND" type="passive"/>
+        <pin num="22" name="ADC7" type="input"/>
+        <pin num="23" name="PC0" type="bidirectional"/>
+        <pin num="24" name="PC1" type="bidirectional"/>
+        <pin num="25" name="PC2" type="bidirectional"/>
+        <pin num="26" name="PC3" type="bidirectional"/>
+        <pin num="27" name="PC4" type="bidirectional"/>
+        <pin num="28" name="PC5" type="bidirectional"/>
+        <pin num="29" name="~{RESET}/PC6" type="bidirectional"/>
+        <pin num="30" name="PD0" type="bidirectional"/>
+        <pin num="31" name="PD1" type="bidirectional"/>
+        <pin num="32" name="PD2" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="APE8865NR-19-HF-3">
+      <description>300mA Low Dropout Voltage Regulator, Fixed Output 1.9V, SOT-23</description>
+      <docs>http://www.tme.eu/fr/Document/ced3461ed31ea70a3c416fb648e0cde7/APE8865-3.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">APE8865NR-19-HF-3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.tme.eu/fr/Document/ced3461ed31ea70a3c416fb648e0cde7/APE8865-3.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="BSS84">
+      <description>-0.13A Id, -50V Vds, P-Channel MOSFET, SOT-23</description>
+      <docs>http://assets.nexperia.com/documents/data-sheet/BSS84.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS84</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://assets.nexperia.com/documents/data-sheet/BSS84.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="A3144">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+      <pins>
+        <pin num="1" name="5V" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+        <pin num="3" name="D" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="FS312F-G">
+      <fields>
+        <field name="Reference">U5</field>
+        <field name="Value">FS312F-G</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OD" type="input"/>
+        <pin num="2" name="CS" type="input"/>
+        <pin num="3" name="OC" type="input"/>
+        <pin num="4" name="TD" type="input"/>
+        <pin num="5" name="VCC" type="input"/>
+        <pin num="6" name="GND" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="MT3608">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SW" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+        <pin num="3" name="FB" type="input"/>
+        <pin num="4" name="EN" type="input"/>
+        <pin num="5" name="IN" type="input"/>
+        <pin num="6" name="NC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="arduinnno pinnnns">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">arduinnno pinnnns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="MISO" type="input"/>
+        <pin num="2" name="VCC" type="input"/>
+        <pin num="3" name="SCK" type="input"/>
+        <pin num="4" name="MOSI" type="input"/>
+        <pin num="5" name="RST" type="input"/>
+        <pin num="6" name="GND" type="input"/>
+        <pin num="7" name="RX" type="input"/>
+        <pin num="8" name="TX" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="argbled">
+      <fields>
+        <field name="Reference">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DO" type="output"/>
+        <pin num="2" name="VDD" type="input"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="DI" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="arrow">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+    </libpart>
+    <libpart lib="library" part="battery">
+      <fields>
+        <field name="Reference">B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="input"/>
+        <pin num="2" name="-" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="pogo_pins">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="input"/>
+        <pin num="2" name="-" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="library" part="usbcpads">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Battery_Management">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Battery_Management.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Library(1)">
+      <uri>C:/Users/TT/Desktop/old kikad shit/mac my ass/ass my mac/Library(1).kicad_sym</uri>
+    </library>
+    <library logical="MCU_Microchip_ATmega">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/MCU_Microchip_ATmega.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Transistor_FET.kicad_sym</uri>
+    </library>
+    <library logical="library">
+      <uri>C:/Users/TT/Desktop/revopod/revopod/library.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="3V">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U11" pin="2" pinfunction="VO" pintype="power_out"/>
+      <node ref="U3" pin="4" pinfunction="EN" pintype="input"/>
+      <node ref="U3" pin="5" pinfunction="IN" pintype="input"/>
+    </net>
+    <net code="2" name="5V">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="D10" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D11" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D12" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D13" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D5" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D6" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D7" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D8" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="D9" pin="2" pinfunction="VDD" pintype="input"/>
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U4" pin="6" pinfunction="VCC" pintype="passive"/>
+      <node ref="U7" pin="2" pinfunction="VCC" pintype="input"/>
+      <node ref="U8" pin="1" pinfunction="5V" pintype="input"/>
+    </net>
+    <net code="3" name="B2">
+      <node ref="D4" pin="4" pinfunction="DI" pintype="input"/>
+      <node ref="U4" pin="14" pinfunction="PB2" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="BAT+">
+      <node ref="B1" pin="1" pinfunction="+" pintype="input"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="BAT" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="SRP" pintype="input"/>
+    </net>
+    <net code="5" name="BAT-">
+      <node ref="B1" pin="2" pinfunction="-" pintype="input"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="D10" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D11" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D12" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D13" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D4" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D5" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D6" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D7" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D8" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="D9" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="Q1" pin="1" pinfunction="S1" pintype="bidirectional"/>
+      <node ref="Q1" pin="3" pinfunction="S2" pintype="bidirectional"/>
+      <node ref="Q2" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="TMR" pintype="input"/>
+      <node ref="U1" pin="17" pinfunction="VSS" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="EN2" pintype="input"/>
+      <node ref="U1" pin="6" pinfunction="EN1" pintype="input"/>
+      <node ref="U1" pin="8" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U11" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="13" pinfunction="PAD" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="V_{SS}" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND" pintype="input"/>
+      <node ref="U4" pin="21" pinfunction="GND" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="5" pinfunction="GND" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="-" pintype="input"/>
+      <node ref="U7" pin="5" pinfunction="RST" pintype="input"/>
+      <node ref="U7" pin="6" pinfunction="GND" pintype="input"/>
+      <node ref="U8" pin="2" pinfunction="GND" pintype="input"/>
+      <node ref="U9" pin="2" pinfunction="GND" pintype="input"/>
+    </net>
+    <net code="6" name="CE">
+      <node ref="U1" pin="4" pinfunction="~{CE}" pintype="input"/>
+    </net>
+    <net code="7" name="FB">
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="FB" pintype="input"/>
+    </net>
+    <net code="8" name="GPOUT">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="GPOUT" pintype="output"/>
+      <node ref="U4" pin="1" pinfunction="PD3" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="Net-(D1-K)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(D2-K)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(D3-A)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="SW" pintype="input"/>
+    </net>
+    <net code="12" name="Net-(D4-DO)">
+      <node ref="D4" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D5" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="13" name="Net-(D5-DO)">
+      <node ref="D5" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D6" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="14" name="Net-(D6-DO)">
+      <node ref="D6" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D7" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="15" name="Net-(D7-DO)">
+      <node ref="D7" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D8" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="16" name="Net-(D8-DO)">
+      <node ref="D8" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D9" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="17" name="Net-(D10-DI)">
+      <node ref="D10" pin="4" pinfunction="DI" pintype="input"/>
+      <node ref="D9" pin="1" pinfunction="DO" pintype="output"/>
+    </net>
+    <net code="18" name="Net-(D10-DO)">
+      <node ref="D10" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D11" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(D11-DO)">
+      <node ref="D11" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D12" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(D12-DO)">
+      <node ref="D12" pin="1" pinfunction="DO" pintype="output"/>
+      <node ref="D13" pin="4" pinfunction="DI" pintype="input"/>
+    </net>
+    <net code="21" name="Net-(Q2-S)">
+      <node ref="Q2" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="U5" pin="1" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="22" name="Net-(R4-Pad1)">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(U1-ILIM)">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="ILIM" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(U1-ISET)">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="ISET" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(U1-~{CHG})">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="~{CHG}" pintype="open_collector"/>
+    </net>
+    <net code="26" name="Net-(U2-V_{DD})">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="V_{DD}" pintype="power_out"/>
+    </net>
+    <net code="27" name="Net-(U4-~{RESET}{slash}PC6)">
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U4" pin="29" pinfunction="~{RESET}/PC6" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="Net-(U6-CS)">
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U6" pin="2" pinfunction="CS" pintype="input"/>
+    </net>
+    <net code="29" name="Net-(U6-GND)">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="U6" pin="6" pinfunction="GND" pintype="input"/>
+    </net>
+    <net code="30" name="Net-(U6-VCC)">
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U6" pin="5" pinfunction="VCC" pintype="input"/>
+    </net>
+    <net code="31" name="OC">
+      <node ref="Q1" pin="4" pinfunction="G2" pintype="bidirectional"/>
+      <node ref="U6" pin="3" pinfunction="OC" pintype="input"/>
+    </net>
+    <net code="32" name="OD">
+      <node ref="Q1" pin="6" pinfunction="G1" pintype="bidirectional"/>
+      <node ref="U6" pin="1" pinfunction="OD" pintype="input"/>
+    </net>
+    <net code="33" name="OUT">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="OUT" pintype="power_out"/>
+      <node ref="U1" pin="11" pinfunction="OUT" pintype="passive"/>
+      <node ref="U11" pin="1" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="34" name="PB3">
+      <node ref="U4" pin="15" pinfunction="PB3" pintype="bidirectional"/>
+      <node ref="U7" pin="4" pinfunction="MOSI" pintype="input"/>
+    </net>
+    <net code="35" name="PB4">
+      <node ref="U4" pin="16" pinfunction="PB4" pintype="bidirectional"/>
+      <node ref="U7" pin="1" pinfunction="MISO" pintype="input"/>
+    </net>
+    <net code="36" name="PB5">
+      <node ref="U4" pin="17" pinfunction="PB5" pintype="bidirectional"/>
+      <node ref="U7" pin="3" pinfunction="SCK" pintype="input"/>
+    </net>
+    <net code="37" name="PB6">
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="U4" pin="7" pinfunction="XTAL1/PB6" pintype="bidirectional"/>
+      <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="38" name="PB7">
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="U4" pin="8" pinfunction="XTAL2/PB7" pintype="bidirectional"/>
+      <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="39" name="PD6">
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="U4" pin="10" pinfunction="PD6" pintype="bidirectional"/>
+      <node ref="U8" pin="3" pinfunction="D" pintype="input"/>
+    </net>
+    <net code="40" name="PGOOD">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="~{PGOOD}" pintype="open_collector"/>
+    </net>
+    <net code="41" name="RX">
+      <node ref="U4" pin="30" pinfunction="PD0" pintype="bidirectional"/>
+      <node ref="U7" pin="7" pinfunction="RX" pintype="input"/>
+    </net>
+    <net code="42" name="SCL">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="SCL" pintype="input"/>
+      <node ref="U4" pin="9" pinfunction="PD5" pintype="bidirectional"/>
+    </net>
+    <net code="43" name="SDA">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U4" pin="2" pinfunction="PD4" pintype="bidirectional"/>
+    </net>
+    <net code="44" name="SYSOFF">
+      <node ref="U1" pin="15" pinfunction="SYSOFF" pintype="input"/>
+    </net>
+    <net code="45" name="TS">
+      <node ref="U1" pin="1" pinfunction="TS" pintype="passive"/>
+      <node ref="U2" pin="10" pinfunction="BIN" pintype="input"/>
+    </net>
+    <net code="46" name="TX">
+      <node ref="U4" pin="31" pinfunction="PD1" pintype="bidirectional"/>
+      <node ref="U7" pin="8" pinfunction="TX" pintype="input"/>
+    </net>
+    <net code="47" name="VBUS">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="IN" pintype="power_in"/>
+      <node ref="U9" pin="1" pinfunction="VBUS" pintype="input"/>
+    </net>
+    <net code="48" name="V_BATT">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="BAT" pintype="power_out"/>
+      <node ref="U1" pin="3" pinfunction="BAT" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="SRN" pintype="input"/>
+    </net>
+    <net code="49" name="unconnected-(D13-DO-Pad1)">
+      <node ref="D13" pin="1" pinfunction="DO" pintype="output+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(Q1-D-Pad2)">
+      <node ref="Q1" pin="2" pinfunction="D" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(Q1-NC-Pad5)">
+      <node ref="Q1" pin="5" pinfunction="NC" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U2-NC-Pad4)">
+      <node ref="U2" pin="4" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U2-NC-Pad9)">
+      <node ref="U2" pin="9" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U2-NC-Pad11)">
+      <node ref="U2" pin="11" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U3-NC-Pad6)">
+      <node ref="U3" pin="6" pinfunction="NC" pintype="input+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U4-ADC6-Pad19)">
+      <node ref="U4" pin="19" pinfunction="ADC6" pintype="input+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U4-ADC7-Pad22)">
+      <node ref="U4" pin="22" pinfunction="ADC7" pintype="input+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U4-AREF-Pad20)">
+      <node ref="U4" pin="20" pinfunction="AREF" pintype="passive+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U4-AVCC-Pad18)">
+      <node ref="U4" pin="18" pinfunction="AVCC" pintype="power_in+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U4-PB0-Pad12)">
+      <node ref="U4" pin="12" pinfunction="PB0" pintype="bidirectional"/>
+    </net>
+    <net code="61" name="unconnected-(U4-PB1-Pad13)">
+      <node ref="U4" pin="13" pinfunction="PB1" pintype="bidirectional"/>
+    </net>
+    <net code="62" name="unconnected-(U4-PC0-Pad23)">
+      <node ref="U4" pin="23" pinfunction="PC0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U4-PC1-Pad24)">
+      <node ref="U4" pin="24" pinfunction="PC1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U4-PC2-Pad25)">
+      <node ref="U4" pin="25" pinfunction="PC2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U4-PC3-Pad26)">
+      <node ref="U4" pin="26" pinfunction="PC3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U4-PC4-Pad27)">
+      <node ref="U4" pin="27" pinfunction="PC4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U4-PC5-Pad28)">
+      <node ref="U4" pin="28" pinfunction="PC5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U4-PD2-Pad32)">
+      <node ref="U4" pin="32" pinfunction="PD2" pintype="bidirectional"/>
+    </net>
+    <net code="69" name="unconnected-(U4-PD7-Pad11)">
+      <node ref="U4" pin="11" pinfunction="PD7" pintype="bidirectional"/>
+    </net>
+    <net code="70" name="unconnected-(U6-TD-Pad4)">
+      <node ref="U6" pin="4" pinfunction="TD" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

@@ -1,0 +1,137 @@
+
+
+
+
+
+
+/dts-v1/;
+#include <dt-bindings/led/led.h>
+#include <nordic/nrf52840_qiaa.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
+
+
+/ {
+	model = "Division";
+	compatible = "Tongtong.inc,division";
+
+	chosen {
+		zephyr,code-partition = &code_partition;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,console = &cdc_acm_uart;
+		zmk,kscan = &kscan0;
+		zmk,battery = &vbatt;
+	};
+
+
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-direct";
+		label = "KSCAN";
+
+		input-gpios
+		= <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //0   18
+		, <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //1   19
+		, <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //2   20
+		, <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //3   21
+		, <&gpio0 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //4   22
+		, <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //5   23
+		, <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //6   24
+		, <&gpio0 30 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //7   25
+		, <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //8   26
+		, <&gpio0 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //9   27
+		, <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //10  28
+		, <&gpio0 25 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //11  29
+		, <&gpio0 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //12  30
+		, <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //13  31
+		, <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //14  32
+		, <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //15  33
+		, <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //16  34
+		, <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //17  35
+		;
+		};
+
+	vbatt: vbatt {
+		compatible = "zmk,battery-voltage-divider";
+		label = "BATTERY";
+		io-channels = <&adc 2>;
+		output-ohms = <2000000>;
+		full-ohms = <(2000000 + 806000)>;
+	};
+	
+
+};
+
+
+
+&adc {
+	status = "okay";
+};
+
+&gpiote {
+	status = "okay";
+};
+
+&gpio0 {
+	status = "okay";
+};
+
+&gpio1 {
+	status = "okay";
+};
+
+
+
+&uart0 {
+	compatible = "nordic,nrf-uarte";
+	tx-pin = <6>;
+	rx-pin = <8>;
+};
+
+&usbd {
+	status = "okay";
+	cdc_acm_uart: cdc_acm_uart {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};
+
+
+&flash0 {
+	/*
+	 * For more information, see:
+	 * http://docs.zephyrproject.org/latest/devices/dts/flash_partitions.html
+	 */
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		sd_partition: partition@0 {
+			label = "softdevice";
+			reg = <0x00000000 0x00026000>;
+		};
+		code_partition: partition@26000 {
+			label = "code_partition";
+			reg = <0x00026000 0x000c6000>;
+		};
+
+		/*
+		 * The flash starting at 0x000ec000 and ending at
+		 * 0x000f3fff is reserved for use by the application.
+		 */
+
+		/*
+		 * Storage partition will be used by FCB/LittleFS/NVS
+		 * if enabled.
+		 */
+		storage_partition: partition@ec000 {
+			label = "storage";
+			reg = <0x000ec000 0x00008000>;
+		};
+
+		boot_partition: partition@f4000 {
+			label = "adafruit_boot";
+			reg = <0x000f4000 0x0000c000>;
+		};
+	};
+};

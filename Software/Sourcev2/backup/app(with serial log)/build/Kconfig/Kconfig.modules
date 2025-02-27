@@ -1,0 +1,192 @@
+menu "acpica (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/acpica)"
+osource "$(ZEPHYR_ACPICA_KCONFIG)"
+config ZEPHYR_ACPICA_MODULE
+	bool
+	default y
+endmenu
+menu "canopennode (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/canopennode)"
+osource "$(ZEPHYR_CANOPENNODE_KCONFIG)"
+config ZEPHYR_CANOPENNODE_MODULE
+	bool
+	default y
+endmenu
+menu "chre (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/chre)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/lib/chre/platform/zephyr/Kconfig"
+config ZEPHYR_CHRE_MODULE
+	bool
+	default y
+endmenu
+menu "fatfs (C:/Users/T0ngx/Documents/zephyrproject/modules/fs/fatfs)"
+osource "$(ZEPHYR_FATFS_KCONFIG)"
+config ZEPHYR_FATFS_MODULE
+	bool
+	default y
+endmenu
+menu "hal_espressif (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/espressif)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/hal/espressif/zephyr/Kconfig"
+config ZEPHYR_HAL_ESPRESSIF_MODULE
+	bool
+	default y
+endmenu
+menu "hal_ethos_u (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/ethos_u)"
+osource "$(ZEPHYR_HAL_ETHOS_U_KCONFIG)"
+config ZEPHYR_HAL_ETHOS_U_MODULE
+	bool
+	default y
+endmenu
+menu "hal_gigadevice (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/gigadevice)"
+osource "$(ZEPHYR_HAL_GIGADEVICE_KCONFIG)"
+config ZEPHYR_HAL_GIGADEVICE_MODULE
+	bool
+	default y
+endmenu
+menu "hal_infineon (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/infineon)"
+osource "$(ZEPHYR_HAL_INFINEON_KCONFIG)"
+config ZEPHYR_HAL_INFINEON_MODULE
+	bool
+	default y
+endmenu
+menu "hal_nordic (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/nordic)"
+osource "$(ZEPHYR_HAL_NORDIC_KCONFIG)"
+config ZEPHYR_HAL_NORDIC_MODULE
+	bool
+	default y
+endmenu
+menu "hal_nxp (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/nxp)"
+osource "$(ZEPHYR_HAL_NXP_KCONFIG)"
+config ZEPHYR_HAL_NXP_MODULE
+	bool
+	default y
+endmenu
+menu "hal_rpi_pico (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/rpi_pico)"
+osource "$(ZEPHYR_HAL_RPI_PICO_KCONFIG)"
+config ZEPHYR_HAL_RPI_PICO_MODULE
+	bool
+	default y
+endmenu
+menu "silabs (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/silabs)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/hal/silabs/zephyr/Kconfig"
+config ZEPHYR_SILABS_MODULE
+	bool
+	default y
+endmenu
+menu "hal_telink (C:/Users/T0ngx/Documents/zephyrproject/modules/hal/telink)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/hal/telink/Kconfig"
+config ZEPHYR_HAL_TELINK_MODULE
+	bool
+	default y
+endmenu
+menu "liblc3 (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/liblc3)"
+osource "$(ZEPHYR_LIBLC3_KCONFIG)"
+config ZEPHYR_LIBLC3_MODULE
+	bool
+	default y
+endmenu
+menu "littlefs (C:/Users/T0ngx/Documents/zephyrproject/modules/fs/littlefs)"
+osource "$(ZEPHYR_LITTLEFS_KCONFIG)"
+config ZEPHYR_LITTLEFS_MODULE
+	bool
+	default y
+endmenu
+menu "loramac-node (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/loramac-node)"
+osource "$(ZEPHYR_LORAMAC_NODE_KCONFIG)"
+config ZEPHYR_LORAMAC_NODE_MODULE
+	bool
+	default y
+endmenu
+menu "lvgl (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/gui/lvgl)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/lib/gui/lvgl/zephyr/Kconfig"
+config ZEPHYR_LVGL_MODULE
+	bool
+	default y
+endmenu
+menu "lz4 (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/lz4)"
+osource "$(ZEPHYR_LZ4_KCONFIG)"
+config ZEPHYR_LZ4_MODULE
+	bool
+	default y
+endmenu
+menu "mbedtls (C:/Users/T0ngx/Documents/zephyrproject/modules/crypto/mbedtls)"
+osource "$(ZEPHYR_MBEDTLS_KCONFIG)"
+config ZEPHYR_MBEDTLS_MODULE
+	bool
+	default y
+endmenu
+menu "nanopb (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/nanopb)"
+osource "$(ZEPHYR_NANOPB_KCONFIG)"
+config ZEPHYR_NANOPB_MODULE
+	bool
+	default y
+endmenu
+menu "openthread (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/openthread)"
+osource "$(ZEPHYR_OPENTHREAD_KCONFIG)"
+config ZEPHYR_OPENTHREAD_MODULE
+	bool
+	default y
+endmenu
+menu "picolibc (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/picolibc)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/lib/picolibc/zephyr/Kconfig"
+config ZEPHYR_PICOLIBC_MODULE
+	bool
+	default y
+endmenu
+menu "segger (C:/Users/T0ngx/Documents/zephyrproject/modules/debug/segger)"
+osource "$(ZEPHYR_SEGGER_KCONFIG)"
+config ZEPHYR_SEGGER_MODULE
+	bool
+	default y
+endmenu
+menu "sof (C:/Users/T0ngx/Documents/zephyrproject/modules/audio/sof)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/audio/sof/zephyr/Kconfig"
+config ZEPHYR_SOF_MODULE
+	bool
+	default y
+endmenu
+menu "tflite-micro (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/tflite-micro)"
+osource "$(ZEPHYR_TFLITE_MICRO_KCONFIG)"
+config ZEPHYR_TFLITE_MICRO_MODULE
+	bool
+	default y
+endmenu
+menu "TraceRecorder (C:/Users/T0ngx/Documents/zephyrproject/modules/debug/TraceRecorder)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/debug/TraceRecorder/kernelports/Zephyr/Kconfig"
+config ZEPHYR_TRACERECORDER_MODULE
+	bool
+	default y
+endmenu
+menu "trusted-firmware-m (C:/Users/T0ngx/Documents/zephyrproject/modules/tee/tf-m/trusted-firmware-m)"
+osource "$(ZEPHYR_TRUSTED_FIRMWARE_M_KCONFIG)"
+config ZEPHYR_TRUSTED_FIRMWARE_M_MODULE
+	bool
+	default y
+endmenu
+menu "trusted-firmware-a (C:/Users/T0ngx/Documents/zephyrproject/modules/tee/tf-a/trusted-firmware-a)"
+osource "$(ZEPHYR_TRUSTED_FIRMWARE_A_KCONFIG)"
+config ZEPHYR_TRUSTED_FIRMWARE_A_MODULE
+	bool
+	default y
+endmenu
+menu "uoscore-uedhoc (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/uoscore-uedhoc)"
+osource "$(ZEPHYR_UOSCORE_UEDHOC_KCONFIG)"
+config ZEPHYR_UOSCORE_UEDHOC_MODULE
+	bool
+	default y
+endmenu
+menu "zcbor (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/zcbor)"
+osource "$(ZEPHYR_ZCBOR_KCONFIG)"
+config ZEPHYR_ZCBOR_MODULE
+	bool
+	default y
+endmenu
+menu "zscilib (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/zscilib)"
+osource "C:/Users/T0ngx/Documents/zephyrproject/modules/lib/zscilib/Kconfig.zscilib"
+config ZEPHYR_ZSCILIB_MODULE
+	bool
+	default y
+endmenu
+menu "thrift (C:/Users/T0ngx/Documents/zephyrproject/modules/lib/thrift)"
+osource "$(ZEPHYR_THRIFT_KCONFIG)"
+config ZEPHYR_THRIFT_MODULE
+	bool
+	default y
+endmenu
