@@ -1,0 +1,100 @@
+(footprint "Pogo-pin-recepticle"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -0.43 -12.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8ff4f659-9ad5-49aa-88aa-daf2d32454c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Pogo-pin-recepticle"
+		(at -0.43 -11.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "159e46c4-0d72-410f-8197-d6feab2a0c48")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at -0.43 -12.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f5651b30-8dab-4cfb-9c87-a96c87a580e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -0.43 -12.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aa5a52d8-c2b1-4cf2-8d63-0ae316646ad9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at -0.43 -12.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "afd1f691-9fdd-4bec-85b7-ef6659ae6051")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_text user "${REFERENCE}"
+		(at -0.43 -9.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b3636c73-efc3-42ab-a741-526edd7d6f00")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd circle
+		(at 0 0 180)
+		(size 2.7 2.7)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "02afac1d-b3da-4b8f-b44e-0ccc7bfb39a7")
+	)
+	(model "${KIPRJMOD}/3d/pogo_T1836 v1.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

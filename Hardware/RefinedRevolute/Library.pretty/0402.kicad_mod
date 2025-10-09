@@ -1,0 +1,225 @@
+(footprint "0402"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.04 -1.829999 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "e204096a-cabe-4dce-bb2a-0484dbf342e3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "0402"
+		(at 0.04 1.37 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "810ffe78-6752-4e0f-a3bc-e035b98a31a1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "953b3051-1bae-4668-84f5-81794ff511dd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d0604eae-39d5-4cab-af2c-2a506f861d0a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8cbbc137-6aae-4d8c-8cfd-5028b5e33b9d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.17 -0.3)
+		(end 0.17 -0.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7df2220d-7db5-47b6-89d3-9cc9dbdf376c")
+	)
+	(fp_line
+		(start -0.17 0.3)
+		(end 0.17 0.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "233e2a4b-1934-431d-81c6-68cf2e096512")
+	)
+	(fp_rect
+		(start -0.8 -0.35)
+		(end 0.79 0.35)
+		(stroke
+			(width 0.001)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "0afec8e7-1d09-4d51-85a6-9068ada177f2")
+	)
+	(fp_rect
+		(start -0.254 -0.127)
+		(end 0.254 0.127)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "User.1")
+		(uuid "183c265a-4afc-470d-b463-65cf17dbc2cc")
+	)
+	(fp_rect
+		(start -0.508 -0.254)
+		(end 0.508 0.254)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "User.2")
+		(uuid "1907ae98-2939-40b7-891a-4ff0a9ef6d9b")
+	)
+	(fp_line
+		(start -0.5 0)
+		(end 0.5 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "User.3")
+		(uuid "7943a2e7-3559-4288-a609-1cc50d1f71dd")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.04 2.870001 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "388d2412-fcae-4c5b-b692-914bade25b43")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd custom
+		(at -0.5 0 90)
+		(size 0.5 0.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy -0.3 -0.125) (xy -0.290485 -0.172835) (xy -0.263388 -0.213388) (xy -0.222835 -0.240485) (xy -0.175 -0.25)
+					(xy 0.175 -0.25) (xy 0.222835 -0.240485) (xy 0.263388 -0.213388) (xy 0.290485 -0.172835) (xy 0.3 -0.125)
+					(xy 0.3 0.125) (xy 0.290485 0.172835) (xy 0.263388 0.213388) (xy 0.222835 0.240485) (xy 0.175 0.25)
+					(xy -0.175 0.25) (xy -0.222835 0.240485) (xy -0.263388 0.213388) (xy -0.290485 0.172835) (xy -0.3 0.125)
+				)
+				(width 0)
+				(fill yes)
+			)
+			(gr_rect
+				(start -0.125 0.09)
+				(end 0.125 0.26)
+				(width 0.1)
+				(fill yes)
+			)
+		)
+		(uuid "8ba32301-6413-4f40-a542-ea4856bb0a7b")
+	)
+	(pad "2" smd custom
+		(at 0.5 0 270)
+		(size 0.5 0.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy -0.3 -0.125) (xy -0.290485 -0.172835) (xy -0.263388 -0.213388) (xy -0.222835 -0.240485) (xy -0.175 -0.25)
+					(xy 0.175 -0.25) (xy 0.222835 -0.240485) (xy 0.263388 -0.213388) (xy 0.290485 -0.172835) (xy 0.3 -0.125)
+					(xy 0.3 0.125) (xy 0.290485 0.172835) (xy 0.263388 0.213388) (xy 0.222835 0.240485) (xy 0.175 0.25)
+					(xy -0.175 0.25) (xy -0.222835 0.240485) (xy -0.263388 0.213388) (xy -0.290485 0.172835) (xy -0.3 0.125)
+				)
+				(width 0)
+				(fill yes)
+			)
+			(gr_rect
+				(start -0.125 0.09)
+				(end 0.125 0.26)
+				(width 0.1)
+				(fill yes)
+			)
+		)
+		(uuid "c4fba060-2c11-4cc0-9493-8d7d12bc8176")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0201_0603Metric.step"
+		(hide yes)
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,18 @@
+(footprint "MountingHole" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 638BD884)
+  (attr through_hole)
+  (fp_text reference "REF**" (at 0 -0.5 unlocked) (layer "F.SilkS") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 0956bf30-bcee-4eae-a3ba-3dae855eece5)
+  )
+  (fp_text value "MountingHole" (at 0 1 unlocked) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp c2fb85cb-e9b3-4fe9-a2ad-904eb84a3e27)
+  )
+  (fp_text user "${REFERENCE}" (at 0 2.5 unlocked) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp a115b7aa-3872-45bc-abff-1b8f1defec8f)
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 3.62 3.62) (drill 3.62) (layers F&B.Cu *.Mask) (tstamp 28076d2e-6224-49d7-9792-2c4c910e5474))
+)

@@ -1,0 +1,120 @@
+(footprint "Antenna 2450AT42A100"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.1 -10.475 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "fb386bd0-2da3-464c-8853-8106fab42c9a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Antenna 2450AT42A100"
+		(at 0.1 -8.975 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b2b4747a-cdc4-4d13-92b6-a95dacc3ce9e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0.1 -9.975 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "09e4b93a-9194-4385-b380-c17d734a7c74")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0.1 -9.975 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b7c9dc69-1b46-49fd-ad06-c4cb819ae6f8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0.1 -9.975 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d5f02655-12bd-4301-963c-42553a6855c6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start 2.5 -0.9)
+		(end 5.95 0.9)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Cu")
+		(uuid "b0a24ed2-810d-45ac-acf2-bebd3cde653b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.1 -7.475 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9bd0fc51-80d8-4ddc-8905-500c64692c3c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -2.45 0)
+		(size 1 1.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(thermal_bridge_angle 45)
+		(uuid "83b3a004-4ca1-4c23-88e7-5a1315625ce4")
+	)
+	(pad "2" smd roundrect
+		(at 2.45 0)
+		(size 1 1.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(thermal_bridge_angle 45)
+		(uuid "14a5e185-7af0-4d5a-8551-726615359830")
+	)
+	(model "${KIPRJMOD}/3d/Chip Antenna.step"
+		(offset
+			(xyz 2.5 -1 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -90)
+		)
+	)
+)
