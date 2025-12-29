@@ -11246,7 +11246,7 @@
 				)
 			)
 		)
-		(property "Value" "BQ27427"
+		(property "Value" "TI BQ27427YZFR"
 			(at 39.4286 115.57 0)
 			(effects
 				(font
@@ -11354,7 +11354,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 247.65 55.88 0)
 			(effects
 				(font
@@ -11382,6 +11382,15 @@
 			)
 		)
 		(property "ID" "31"
+			(at 247.65 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C77131"
 			(at 247.65 57.15 0)
 			(effects
 				(font
@@ -11638,7 +11647,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 186.69 122.555 0)
 			(effects
 				(font
@@ -11772,7 +11781,7 @@
 				)
 			)
 		)
-		(property "Value" "PMOS-CSD25483F4"
+		(property "Value" "TI CSD25483F4"
 			(at 87.249 157.988 0)
 			(effects
 				(font
@@ -11886,7 +11895,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 59.055 126.365 0)
 			(effects
 				(font
@@ -11964,7 +11973,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 187.833 85.09 90)
 			(effects
 				(font
@@ -12033,7 +12042,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x14_Socket"
+		(property "Value" "JUSHUO AFH26-S13FIA-1H"
 			(at 174.244 159.512 0)
 			(effects
 				(font
@@ -12361,7 +12370,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 187.325 140.335 0)
 			(effects
 				(font
@@ -12437,7 +12446,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 203.2 39.37 0)
 			(effects
 				(font
@@ -12715,7 +12724,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "32.768 kHz"
+		(property "Value" "Seiko SC-20S,32.768kHz,20PPM,12.5pF"
 			(at 35.814 60.452 90)
 			(effects
 				(font
@@ -12760,6 +12769,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C97607"
+			(at 56.515 64.135 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0d895f6b-a347-49c1-a1b6-719827e258cd")
 		)
@@ -12793,7 +12811,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS709"
+		(property "Value" "TI TPS70933DRVT"
 			(at 229.235 118.11 0)
 			(effects
 				(font
@@ -12901,7 +12919,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 137.795 104.14 0)
 			(effects
 				(font
@@ -12977,7 +12995,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 127 136.525 0)
 			(effects
 				(font
@@ -13053,7 +13071,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 78.105 152.4 0)
 			(effects
 				(font
@@ -13281,7 +13299,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 199.39 49.53 0)
 			(effects
 				(font
@@ -13984,7 +14002,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 139.065 133.35 0)
 			(effects
 				(font
@@ -14052,7 +14070,7 @@
 				)
 			)
 		)
-		(property "Value" "NMOS-CSD17381F4"
+		(property "Value" "TI CSD17381F4"
 			(at 61.595 154.432 0)
 			(effects
 				(font
@@ -14242,7 +14260,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 151.765 156.845 0)
 			(effects
 				(font
@@ -14515,7 +14533,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 26.67 122.555 0)
 			(effects
 				(font
@@ -14584,7 +14602,7 @@
 				)
 			)
 		)
-		(property "Value" "BQ25180"
+		(property "Value" "TI BQ25180YBGR"
 			(at 223.52 20.32 0)
 			(effects
 				(font
@@ -14667,7 +14685,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp yes)
 		(uuid "862d5a39-e32d-4136-9066-88016bc1a97e")
 		(property "Reference" "C20"
@@ -14831,7 +14849,7 @@
 				)
 			)
 		)
-		(property "Value" "PMOS-CSD25483F4"
+		(property "Value" "TI CSD25483F4"
 			(at 180.975 111.76 0)
 			(effects
 				(font
@@ -15091,7 +15109,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PMOS-CSD25483F4"
+		(property "Value" "TI CSD25483F4"
 			(at 146.05 133.604 90)
 			(effects
 				(font
@@ -15198,7 +15216,7 @@
 				)
 			)
 		)
-		(property "Value" "nrf52833_qfn40"
+		(property "Value" "NORDIC nRF52833-QDAA-R"
 			(at 90.17 71.755 0)
 			(effects
 				(font
@@ -15533,7 +15551,7 @@
 				)
 			)
 		)
-		(property "Value" "NMOS-CSD17381F4"
+		(property "Value" "TI CSD17381F4"
 			(at 65.405 177.038 0)
 			(effects
 				(font
@@ -15934,7 +15952,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uH"
+		(property "Value" "Shikues SKSHC0402-100M"
 			(at 78.74 27.3049 0)
 			(effects
 				(font
@@ -15971,6 +15989,15 @@
 			)
 		)
 		(property "ID" "57"
+			(at 77.47 26.035 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C18212629"
 			(at 77.47 26.035 0)
 			(effects
 				(font
@@ -16723,7 +16750,7 @@
 				)
 			)
 		)
-		(property "Value" "32MHZ"
+		(property "Value" "NX1612SA-32MHZ-STD-CIS-3"
 			(at 128.27 43.18 90)
 			(effects
 				(font
@@ -16813,7 +16840,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 193.04 40.64 0)
 			(effects
 				(font
@@ -16948,7 +16975,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TLV493D"
+		(property "Value" "Infineon TLV493DA1B6HTSA2"
 			(at 209.042 84.963 0)
 			(effects
 				(font
@@ -17480,7 +17507,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
 			(at 130.175 104.14 90)
 			(effects
 				(font
@@ -17548,7 +17575,7 @@
 				)
 			)
 		)
-		(property "Value" "PMOS-CSD25483F4"
+		(property "Value" "TI CSD25483F4"
 			(at 85.979 179.578 0)
 			(effects
 				(font
@@ -17655,7 +17682,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x14_Socket"
+		(property "Value" "JUSHUO AFH26-S13FIA-1H"
 			(at 131.699 166.497 0)
 			(effects
 				(font
@@ -17778,7 +17805,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 187.833 95.25 90)
 			(effects
 				(font
@@ -18130,7 +18157,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 78.105 186.69 0)
 			(effects
 				(font
@@ -18471,7 +18498,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Library:0402"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 171.45 116.205 0)
 			(effects
 				(font
@@ -18616,7 +18643,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS22910A"
+		(property "Value" "TI TPS22910AYZVT"
 			(at 233.68 144.526 0)
 			(effects
 				(font
